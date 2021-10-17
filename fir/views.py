@@ -1,7 +1,12 @@
-from django.shortcuts import render
+# from django.shortcuts import render
+from django.views.generic import TemplateView
 
-from django.http import HttpResponse
+
+class Home(TemplateView):  # homePage requests
+    template_name = 'index.html'  # Home Template
 
 
-def home(request):  # homePage requests
-    return HttpResponse('Hello World!')
+class About(TemplateView):  # AboutUs requests
+    template_name = 'aboutus.html'  # About Us Template
+
+    # return render(request, 'index.html')  # render index.html from templates
