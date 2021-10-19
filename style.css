@@ -46,14 +46,14 @@ html {
   padding: 0%;
 }
 
-.container-fluid {
+/* .container-fluid {
   background-color: aqua;
-}
+} */
 
 .main {
   width: 95%;
   margin: 0 2.5%;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
 }
 
 a,
@@ -122,7 +122,7 @@ a:hover {
 }
 
 .aboutcompany p {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .aboutcompany a:hover {
