@@ -38,7 +38,6 @@ footer {
   padding: 0%;
   list-style: none;
   font-family: proxima;
-  overflow-x: hidden;
 }
 
 body,
@@ -719,6 +718,10 @@ footer a:hover {
     z-index: 1;
     box-shadow: 0.2em 0.2em 0.5em rgb(22, 22, 22);
   }
+  .featureimg .imgright img {
+    border: 0.1em solid black;
+    width: 45vh;
+  }
 
   /* ends */
 
@@ -1347,3 +1350,5 @@ footer a:hover {
   }
   /* footer ends */
 }
+
+/* Large devices */
