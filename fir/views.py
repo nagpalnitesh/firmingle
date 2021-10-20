@@ -1,8 +1,12 @@
 # from django.shortcuts import render
 from django.views.generic import TemplateView
+from django.views.generic import ListView
+
+from .models import *
 
 
-class Home(TemplateView):  # homePage requests
+class Home(ListView):  # homePage requests
+    model = Test
     template_name = 'index.html'  # Home Template
 
 

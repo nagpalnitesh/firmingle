@@ -12,5 +12,13 @@
 {% extends 'components/navbar.html' %} {% block content %}
 
 <h1>Hello World</h1>
-
+<ul style="list-style: none">
+  {% for c in object_list %}
+  <li>
+    <input type="radio" id="f-option" name="selector" />
+    <label for="f-optio">{{ c }}</label>
+    <div class="check"></div>
+  </li>
+  {% endfor %}
+</ul>
 {% endblock %}
