@@ -1,0 +1,328 @@
+/* Small Devices (576 to 767.98px) */
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  .main {
+    width: 100%;
+    margin: 0 0%;
+    background-color: aqua;
+  }
+  /* navbar */
+  .logo {
+    width: 50%;
+  }
+  .logo img {
+    width: 100%;
+  }
+
+  .menu-icon i {
+    font-size: 16px;
+  }
+
+  .menu ul {
+    background-color: aqua;
+    width: 90%;
+    margin-left: 0%;
+    overflow-x: hidden;
+  }
+
+  .menu ul li {
+    margin: 1em 25%;
+    padding: 0 2em;
+    text-align: center;
+    width: 50%;
+  }
+  /* ends */
+
+  /* homePage Section */
+  .homePage {
+    margin: 1em 0;
+    text-align: justify;
+  }
+
+  /* About Section */
+  .aboutcompany {
+    margin: 5% 1em;
+    width: 90%;
+  }
+
+  /* Image Section */
+  .aboutimg img {
+    width: 100%;
+  }
+  /* ends */
+
+  /* featuredIn section */
+  /* Trusted Users */
+  .trustedusers {
+    margin: 5% 1em;
+    width: 90%;
+  }
+  .trustedusers ul li {
+    display: inline;
+    margin: 0 1%;
+  }
+
+  .trustedusers img {
+    width: 30%;
+  }
+
+  /* ends */
+
+  /* features section */
+  /* Features Image */
+
+  .featuretxt {
+    width: 90%;
+    background-color: aqua;
+  }
+
+  .featureimg img {
+    margin: 1em 0%;
+    width: 90%;
+  }
+  /* ends */
+
+  /* how it works section */
+  .howitheader {
+    position: relative;
+    margin: 5% 0;
+  }
+
+  .howitheader h1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .howitheader .howimg1,
+  .howitheader .howimg2 {
+    position: absolute;
+    width: 30vh;
+  }
+
+  .howimg1 {
+    top: 33%;
+    left: -10%;
+    transform: translate(-50%, -50%);
+  }
+
+  .howimg2 {
+    top: 70%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+  }
+
+  .howitheader .howimg3 {
+    transform: rotate(45deg);
+  }
+
+  .howitheader .howimg4 {
+    transform: rotate(90deg);
+  }
+
+  .div1 {
+    text-align: center;
+    width: 90%;
+    margin: 0 0 0 0%;
+  }
+
+  .div2 {
+    text-align: center;
+    width: 90%;
+    margin: 25vh 0 0 0%;
+  }
+
+  .div3 {
+    text-align: center;
+    width: 90%;
+    margin: 25vh 0% 0 0%;
+  }
+  /* ends */
+
+  /* Investors Section */
+  .invest,
+  .entre {
+    text-align: center;
+    margin: 5% 0;
+    width: 90%;
+  }
+
+  /* ends */
+
+  /* Plans Section */
+  .plans {
+    display: none;
+  }
+  .plans h1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .plans p {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .plans h2 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .plans h4 {
+    margin: 1em 0;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .plans h4 span {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .planbox {
+    height: fit-content;
+    width: 100%;
+    border: 0.2em solid black;
+    border-radius: 1em;
+    padding: 2em;
+  }
+
+  .pb1,
+  .pb2,
+  .pb3 {
+    margin: 5% 0%;
+  }
+  .pb1 ul li {
+    padding: 7.5% 0;
+  }
+
+  .pb2 ul li {
+    padding: 3% 0;
+  }
+
+  .pb3 ul li {
+    padding: 1.2% 0;
+  }
+
+  .pb1 p,
+  .pb2 p,
+  .pb3 p {
+    padding: 1em 0;
+  }
+
+  .pb1 p span,
+  .pb2 p span,
+  .pb3 p span {
+    background-color: rgb(5, 36, 94);
+    padding: 1em 3em;
+    border: 0.1em solid rgb(5, 36, 94);
+    border-radius: 0.5em;
+    color: azure;
+    font-weight: bold;
+  }
+
+  .pb2 {
+    position: relative;
+  }
+
+  .pb2 .ribbon {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    position: absolute;
+  }
+
+  .pb2 .ribbon::before,
+  .pb2 .ribbon::after {
+    z-index: -1;
+    display: block;
+    position: absolute;
+    content: "";
+  }
+
+  .pb2 .ribbon span {
+    position: absolute;
+    display: block;
+    width: 225px;
+    padding: 2px 0;
+    background-color: rgb(5, 36, 94);
+    box-shadow: 0 0.2em 0.5em rgba(2, 2, 99, 0.63);
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 0.6em;
+    font-weight: bolder;
+  }
+
+  /* ribbon top right*/
+  .pb2 .ribbon-top-right {
+    top: 0px;
+    right: 0px;
+  }
+  .pb2 .ribbon-top-right::before,
+  .pb2 .ribbon-top-right::after {
+    border-top-color: transparent;
+    border-right-color: transparent;
+  }
+  .pb2 .ribbon-top-right::before {
+    top: 0;
+    left: 0;
+  }
+  .pb2 .ribbon-top-right::after {
+    bottom: 0;
+    right: 0;
+  }
+  .pb2 .ribbon-top-right span {
+    left: -10px;
+    top: 20px;
+    transform: rotate(45deg);
+  }
+
+  /* ends */
+
+  /* footer */
+  footer {
+    margin: 5% 1.5em;
+    width: 90%;
+  }
+
+  footer .inputsubs input {
+    height: 5vh;
+  }
+
+  footer h2 {
+    font-size: 28px;
+  }
+
+  footer p {
+    font-size: 16px;
+  }
+
+  footer .inputsubs span button {
+    background-color: rgb(5, 36, 94);
+    height: 5vh;
+    text-align: center;
+    border: 0.1em solid rgb(5, 36, 94);
+    margin: 0 0.5em 0 0.5em;
+    padding: 0 1em;
+    color: white;
+    font-size: 16px;
+  }
+
+  footer a:hover {
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  /* footer ends */
+}
+/* Medium Devices (768 to 991.98px) */
+@media screen and(min-width:768px) and (max-width: 991.98px) {
+}
+/* Large Devices (992 to 1199.98px)*/
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+}
+/* Extra Large Devices (1200px and above) */
+@media screen and (min-width: 1200px) {
+}
