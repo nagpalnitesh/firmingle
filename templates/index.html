@@ -1,9 +1,12 @@
+{% extends  'base.html' %}
+{% load static %}
+{% block content %}
 <div class="container-fluid">
     <div class="main">
         <div class="wrapper">
             <div class="content">
                 <!-- navbar -->
-                {% extends 'base.html' %} {% block content %}
+                {% include 'components/navbar.html' %}
                 <!-- ends -->
                 <!-- home section -->
                 <section id="home">
@@ -17,16 +20,7 @@
                                         Company
                                     </h1>
                                     <p>
-                                        We are India's one of the leading online platforms for
-                      Investment opportunities of Small to Medium Businesses &
-                      Startups through technology platforms and advisory
-                      services. Firmingle helps promising start-ups connect with
-                      high quality investors to fulfil their capital needs with
-                      the best possible outcomes. It is an A.I. based platform
-                      that connects start-ups with multiple investors and
-                      enterprises. Founded in 20xx by X and Z, this online
-                      platform is all about helping young companies to raise
-                      funds that gives wings to their entrepreneurial ideas.
+                                        We are India's one of the leading online platforms for Investment opportunities of Small to Medium Businesses & Startups through technology platforms and advisoryservices. Firmingle helps promising start-ups connect with high quality investors to fulfil their capital needs with the best possible outcomes. It is an A.I. based platform that connects start-ups with multiple investors and enterprises. Founded in 20xx by X and Z, this online platform is all about helping young companies to raise funds that gives wings to their entrepreneurial ideas.
                                     </p>
                                     <p class="getstarted">
                                         <a href="#">
@@ -40,17 +34,7 @@
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-auto col-lg-6 aboutimg">
-                                <!-- <span class="circle"></span>
-                    <div class="img1 imgleft">
-                      <img src="./person.jpg" alt="" />
-                    </div>
-                    <div class="img1 imgright">
-                      <img src="./person.jpg" alt="" />
-                    </div>
-                    <div class="dotimg">
-                      <img src="./dots_blue_320.png" alt="" />
-                    </div> -->
-                                <img src="Why Choose by Er.png" alt="Why Choose Us">
+                                <img src="{% static 'assets/Why_Choose.png'%}" alt="Why Choose Us">
                             </div>
                         </div>
                     </div>
@@ -59,7 +43,7 @@
                 <!-- featuredin section -->
                 <section id="featuredIn">
                     <div class="row">
-                        <div class="col-sm-12 col-md-auto col-md-6">
+                        <!-- <div class="col-sm-12 col-md-auto col-md-6">
                             <div class="row userdata">
                                 <div class="col-sm-12 col-md-auto col-lg-6 activeuser">
                                     <h1>15k</h1>
@@ -90,23 +74,22 @@
                                     </p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-sm-12 col-md-auto col-md-6 trustedusers">
+                        </div> -->
+                        <div class="col-sm-12 col-md-auto col-lg-12">
                             <div class="trustedusers">
                                 <h1>
-                                    Trusted by 5000+ happy Entrepreneurs around the world since
-                    2021
+                                    Trusted by thousands  happy Entrepreneurs around the world since 2021
                                 </h1>
                                 <p>Also featured in</p>
                                 <ul>
                                     <li>
-                                        <img src="./slack.png" alt="">
+                                        <img src="{% static 'assets/slack.png'%}" alt="">
                                     </li>
                                     <li>
-                                        <img src="./Microsoft.png" alt="">
+                                        <img src="{% static 'assets/Microsoft.png'%}" alt="">
                                     </li>
                                     <li>
-                                        <img src="./facebook.png" alt="">
+                                        <img src="{% static 'assets/facebook.png'%}" alt="">
                                     </li>
                                 </ul>
                             </div>
@@ -122,25 +105,20 @@
                                 <h1>Features</h1>
                                 <p>
                                     <span>
-                                        Access India's latest and most active investor community.
-                      Track commitments in real-time and close deals super
-                      quickly. Whether you’re an individual or a company, you
-                      can easily raise funds and enjoy the benefits of
-                      high-class investors simply with the click of a button.
+                                        Access India's latest and most active investor community. Track commitments in real-time and close deals super quickly. Whether you’re an individual or a company, you can easily raise funds and enjoy the benefits of high-class investors simply with the click of a button.
                                     </span>
                                 </p>
                                 <ul>
                                     <li>
-                                        <img src="connect.png" alt="">
-                                        Connect Startups with
-                      potential Investors
+                                        <img src="{% static 'assets/connect.png'%}" alt="">
+                                        Connect Startups with potential Investors
                                     </li>
                                     <li>
-                                        <img src="chart-growth.png" alt="">
+                                        <img src="{% static 'assets/chart-growth.png'%}" alt="">
                                         Assured Confidentiality
                                     </li>
                                     <li>
-                                        <img src="ic_storage_48px.png" alt="">
+                                        <img src="{% static 'assets/ic_storage_48px.png'%}" alt="">
                                         Advisory services
                                     </li>
                                 </ul>
@@ -148,14 +126,7 @@
                         </div>
                         <div class="col-sm-12 col-md-auto col-lg-6">
                             <div class="featureimg">
-                                <!-- <span class="circle"></span>
-                    <div class="img1 imgleft">
-                      <img src="./person.jpg" alt="" />
-                    </div>
-                    <div class="img1 imgright">
-                      <img src="./business.jpg" alt="" />
-                    </div> -->
-                                <img src="Group 1671.png" alt="">
+                                <img src="{% static 'assets/Group 1671.png'%}" alt="">
                             </div>
                         </div>
                     </div>
@@ -165,40 +136,34 @@
                 <section id="howit">
                     <div class="howitheader">
                         <h1>How it Works?</h1>
-                        <img src="arrow.png" alt="" class="howimg3 howimg1">
-                        <img src="arrow_copy.png" alt="" class="howimg4 howimg2">
+                        <img src="{% static 'assets/arrow.png'%}" alt="" class="howimg3 howimg1">
+                        <img src="{% static 'assets/arrow_copy.png'%}" alt="" class="howimg4 howimg2">
                         <div class="row">
                             <div class="col-sm-12 col-md-auto col-lg-4">
                                 <div class="div1">
-                                    <img src="ICON.png" alt="">
+                                    <img src="{% static 'assets/ICON.png'%}" alt="">
                                     <h2>Get Funded</h2>
                                     <p>
                                         Our platform helps Startups raise to ₹1 Cr (please enter
-                      real-time amount). Our team is committed to providing
-                      well-defined strategic inputs and guidance to youngsters.
-                      All you need to do is get started by introducing yourself
-                      to an investor and discuss your plan and send them your
-                      detailed proposal.
+                                        real-time amount). Our team is committed to providing well-defined strategic inputs and guidance to youngsters. All you need to do is get started by introducing yourself to an investor and discuss your plan and send them your detailed proposal.
                                     </p>
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-auto col-lg-4">
                                 <div class="div2">
-                                    <img src="Group 7.png" alt="">
+                                    <img src="{% static 'assets/Group 7.png'%}" alt="">
                                     <h2>Invest with Us</h2>
                                     <p>
-                                        Our top investors include Giant Businesses, Corporates,
-                      Private Equity Firms, VC Firms, and Banks, etc.
+                                        Our top investors include Giant Businesses, Corporates, Private Equity Firms, VC Firms, and Banks, etc.
                                     </p>
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-auto col-lg-4">
                                 <div class="div3">
-                                    <img src="Group 8.png" alt="">
+                                    <img src="{% static 'assets/Group 8.png'%}" alt="">
                                     <h2>Grow with Us</h2>
                                     <p>
-                                        "We have a motto in Firmingle if you have a Big Dream, we
-                      have a bigger platform to achieve it".
+                                        "We have a motto in Firmingle if you have a Big Dream, we have a bigger platform to achieve it".
                                     </p>
                                 </div>
                             </div>
@@ -213,9 +178,7 @@
                             <strong>Are you an Investor?</strong>
                         </h1>
                         <p>
-                            If you want to invest in some business, you simply to register
-                  as an investor and shortlist the best suitable businesses and
-                  connect with them.
+                            If you want to invest in some business, you simply to registeras an investor and shortlist the best suitable businesses and connect with them.
                             <br>
                             <span>
                                 <a href="">Join Us</a>
@@ -227,9 +190,7 @@
                             <strong>Are you an Entrepreneur?</strong>
                         </h1>
                         <p>
-                            If you are an Entrepreneur/ Business Owner/Founder, all you
-                  need to do is to register your business on Firmingle to get
-                  connected with the world- class investors.
+                            If you are an Entrepreneur/ Business Owner/Founder, all you need to do is to register your business on Firmingle to get connected with the world- class investors.
                             <br>
                             <span>
                                 <a href="">Join Us</a>
@@ -239,12 +200,11 @@
                 </section>
                 <!-- investors section ends -->
                 <!-- Plans Section -->
-                <section id="plan">
+                <!-- <section id="plan">
                     <div class="plans">
                         <h1>Plans</h1>
                         <p>
-                            This is a big one and I consider it one of the most important
-                  things in life to get right.
+                            This is a big one and I consider it one of the most important things in life to get right.
                         </p>
                         <div class="row">
                             <div class="col-sm-12 col-md-auto col-lg-4">
@@ -257,17 +217,14 @@
                                     <ul>
                                         <li>profile activation within 1 business day</li>
                                         <li>
-                                            Profile marked as 'Premium Plan' and gets higher
-                          visibility
+                                            Profile marked as 'Premium Plan' and gets higher visibility
                                         </li>
                                         <li>
-                                            You can send up to 80 business proposals to investors
-                          and buyers
+                                            You can send up to 80 business proposals to investors and buyers
                                         </li>
                                         <li>Quick email support for all your queries</li>
                                         <li>
-                                            Plan valid for 1 year or deal clousre, whichever is
-                          earlier
+                                            Plan valid for 1 year or deal clousre, whichever is earlier
                                         </li>
                                     </ul>
                                     <p>
@@ -350,66 +307,13 @@
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> -->
                 <!-- Plan Section ends -->
-                {% endblock %}
             </div>
+            <!-- footer -->
+            {% include 'components/footer.html' %}
+            <!-- ends -->
         </div>
-        <footer>
-            <div class="row">
-                <div class="col-sm-12 col-md-auto col-lg-3">
-                    <h2>Community</h2>
-                    <p>
-                        <a href="#">For Talents</a>
-                    </p>
-                    <p>
-                        <a href="#">For Companies</a>
-                    </p>
-                    <p>
-                        <a href="#">Facebook Groups</a>
-                    </p>
-                    <p>
-                        <a href="#">FAQ</a>
-                    </p>
-                </div>
-                <div class="col-sm-12 col-md-auto col-lg-3">
-                    <h2>About Us</h2>
-                    <p>
-                        <a href="#">Meet the Team</a>
-                    </p>
-                    <p>
-                        <a href="#">Our Story</a>
-                    </p>
-                    <p>
-                        <a href="#">Career</a>
-                    </p>
-                </div>
-                <div class="col-sm-12 col-md-auto col-lg-3">
-                    <h2>Policies</h2>
-                    <p>
-                        <a href="#">Privacy</a>
-                    </p>
-                    <p>
-                        <a href="#">Terms and Conditions</a>
-                    </p>
-                    <p>
-                        <a href="#">Career Blog</a>
-                    </p>
-                </div>
-                <div class="col-sm-12 col-md-auto col-lg-3">
-                    <h2>Subscribe to Our Newsletter</h2>
-                    <p>
-                        Time is the most precious thing you have when bootstrapping. You can't
-        take time.
-                    </p>
-                    <div class="input-group inputsubs">
-                        <input type="text" class="form-control" placeholder="Enter your email">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">Subscribe</button>
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </footer>
     </div>
 </div>
+{% endblock %}

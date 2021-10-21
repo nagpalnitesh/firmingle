@@ -1,0 +1,23 @@
+{% extends  'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+    <div class="main">
+        <div class="wrapper">
+            <div class="content">
+                <!-- navbar -->
+                {% include 'components/navbar.html' %}
+                <!-- ends -->
+                <!-- Privacy -->
+                <div class="privacy">
+                    <h1>Privacy Policy</h1>
+                </div>
+                <!-- ends -->
+            </div>
+            <!-- footer -->
+            {% include 'components/footer.html' %}
+            <!-- ends -->
+        </div>
+    </div>
+</div>
+{% endblock %}

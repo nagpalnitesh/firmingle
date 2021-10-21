@@ -1,51 +1,66 @@
+{% extends  'base.html' %}
+{% load static %}
 {% block content %}
-<div class="global-container">
-    <div class="card login-form">
-        <div class="card-body">
-            <h3 class="card-title text-center">Log in to Django</h3>
-            {% if messages %}
+<div class="container-fluid">
+    <div class="main">
+        <div class="wrapper">
+            <div class="content">
+                <!-- navbar -->
+                {% include 'components/navbar.html' %}
+                <!-- ends -->
+                <!-- Login -->
+                <div class="logindetails">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-aut col-lg-6">
+                            <h1>Login Image Here!!</h1>
+                        </div>
+                        <div class="col-sm-12 col-md-aut col-lg-6">
+                            <h1>Login to Firmingle</h1>
+                            {% if messages %}
 
             {% for message in messages %}
-            <div class="alert alert-info">
-                {{ message }}
+                            <div class="alert alert-info">
+                                {{ message }}
+                            </div>
+                            {% endfor %}
+            {% endif %}
+                            <form method="post">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Email address</label>
+                                    <input
+                                        type="email"
+                                        class="form-control"
+                                        id="exampleInputEmail1"
+                                        aria-describedby="emailHelp"
+                                    >
+                                    <small id="emailHelp" class="form-text text-muted">
+                                        We'll never share your email with anyone else.
+                                    </small
+                    >
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                </div>
+                                <a href="#">
+                                    <p>Forgot Password?</p>
+                                </a>
+                                <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                                <div class="sign-up">
+                                    Don't have an account?
+                                    <a href="{% url 'signup' %}">Create One</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- ends -->
             </div>
-            {% endfor %}
-      
-        {% endif %}
-            <div class="card-text">
-                <!--
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">Incorrect username or password.</div> -->
-                <form method="post">
-                    {% csrf_token %}
-                    <!-- to error: add class "has-danger" -->
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Username</label>
-                        <input
-                            type="text"
-                            name="username"
-                            class="form-control form-control-sm"
-                            id="exampleInputEmail1"
-                            aria-describedby="emailHelp"
-                        >
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <a href="#" style="float:right;font-size:12px;">Forgot password?</a>
-                        <input
-                            type="password"
-                            name="password"
-                            class="form-control form-control-sm"
-                            id="exampleInputPassword1"
-                        >
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block">Sign in</button>
-                    <div class="sign-up">
-                        Don't have an account?
-                        <a href="{% url 'signup' %}">Create One</a>
-                    </div>
-                </form>
-            </div>
+            <!-- footer -->
+            {% include 'components/footer.html' %}
+            <!-- ends -->
         </div>
     </div>
 </div>
-{% endblock content %}
+{% endblock %}

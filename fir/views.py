@@ -11,10 +11,43 @@ from .helpers import send_forget_password_token
 
 
 @login_required(login_url='/')
+# index/ home page function
 def index(request):
     return render(request, 'index.html')
 
 
+# About Us Page function
+def about(request):
+    return render(request, 'aboutus.html')
+
+
+# Press Page Function
+def press(request):
+    return render(request, 'press.html')
+
+# Privacy Page function
+
+
+def privacy(request):
+    return render(request, 'privacy.html')
+
+
+# Terms and Conditions Page function
+def terms(request):
+    return render(request, 'tnc.html')
+
+
+# Contact Us Page Function
+def contact(request):
+    return render(request, 'contact.html')
+
+
+# FAQ Page function
+def faq(request):
+    return render(request, 'faq.html')
+
+
+# Login Function
 def login(request):
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -26,7 +59,7 @@ def login(request):
             return redirect('/login')
 
         profile_obj = Profile.objects.filter(user__username=username).first()
-        if not profile_obj.is_verified:
+        if not profile_obj.isVerified:
             messages.error(request, 'Account not verified. Check your mail')
             return redirect('/login')
         user = authenticate(username=username, password=password)
@@ -41,20 +74,21 @@ def login(request):
     return render(request, 'registration/login.html')
 
 
+# SignUp Function
 def signup(request):
     if request.method == 'POST':
-        username = request.POST.get('username')
+        #username = request.POST.get('username')
         email = request.POST.get('email')
         password = request.POST.get('password')
         try:
-            if User.objects.filter(username=username).first():
-                messages.success(request, 'Username already exists')
-                return redirect(request, '/signup')
+            # if User.objects.filter(email=email).first():
+            #     messages.success(request, 'Username already exists')
+            #     return redirect(request, '/signup')
             if User.objects.filter(email=email).first():
                 messages.success(request, 'Email already exists')
                 return redirect(request, '/signup')
 
-            user_obj = User(username=username, email=email)
+            user_obj = User(email=email)
             user_obj.set_password(password)
             user_obj.save()
             auth_token = str(uuid.uuid4())
@@ -69,14 +103,17 @@ def signup(request):
     return render(request, 'registration/signup.html')
 
 
+# success function
 def success(request):
     return render(request, 'success.html')
 
 
+# token send function
 def token_send(request):
     return render(request, 'token_send.html')
 
 
+# activate account function
 def activate_account(email, token):
     subject = 'Activate your account'
     message = f'Hi, verify your account: http://127.0.0.1:8000/verify/{token}'
@@ -84,17 +121,16 @@ def activate_account(email, token):
     recipient_list = [email]
     send_mail(subject, message, email_from, recipient_list)
 
+
 # verification function
-
-
 def verify(request, auth_token):
     try:
         profile_obj = Profile.objects.filters(auth_token=auth_token)
         if profile_obj:
-            if profile_obj.is_verified:
+            if profile_obj.isVerified:
                 messages.success(request, 'Account already activated')
                 return redirect('/login')
-            profile_obj.is_verified = True
+            profile_obj.isVerified = True
             profile_obj.save()
             messages.success(request, 'Account verified successfully')
             return redirect('/login')
@@ -105,6 +141,7 @@ def verify(request, auth_token):
         print(e)
 
 
+# error function
 def error(request):
     return render(request, 'error.html')
 
@@ -131,9 +168,8 @@ def forget_password(request):
         print(e)
     return render(request, 'registration/forget.html')
 
+
 # change password
-
-
 def change_password(request, token):
     context = {}
     try:
