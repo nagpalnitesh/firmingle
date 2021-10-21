@@ -1,34 +1,34 @@
 from django.db import models
-
+from django.contrib.auth.models import User
 # Create your models here.
 
 
-class User(models.Model):
-    username = models.CharField(max_length=50)
-    password = models.CharField(max_length=50)
-    email = models.EmailField(max_length=50)
-    phone = models.CharField(max_length=50)
-
-    def __str__(self):
-        return self.username
-
-
-class Test(models.Model):
-    text = models.TextField()
-
-    def __str__(self):
-        return self.text
-
-
 class Person(models.Model):
-    Name = models.ForeignKey(
+    user_name = models.ForeignKey(
         'auth.User',
         on_delete=models.CASCADE,
     )
-    Company = models.TextField()
+    Name = models.CharField(max_length=100)
+    Company = models.CharField(max_length=100)
     Designation = models.CharField(max_length=100)
-    GST_Number = models.TextField()
-    Address = models.TextField()
+    GST_Number = models.CharField(max_length=100)
+    Address = models.CharField(max_length=100)
 
     def __str__(self):
         return self.Name
+
+
+# Login/ SignUp Token
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    # authenication token
+    auth_token = models.CharField(max_length=100)
+    # check account is verified or not
+    isVerified = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now_add=True)
+    # forget password token
+    forget_password_token = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.user.username

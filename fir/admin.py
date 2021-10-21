@@ -2,8 +2,12 @@ from django.contrib import admin
 
 # Register your models here.
 
-from .models import User, Test
+from .models import *
 
-admin.site.register(User)
+# admin.site.register(User)
 
-admin.site.register(Test)
+# admin.site.register(Test)
+
+admin.site.register(Person)
+
+admin.site.register(Profile)
