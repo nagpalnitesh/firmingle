@@ -1,0 +1,68 @@
+.dash {
+  background-color: aqua;
+}
+
+.profilebx {
+  background-color: aliceblue;
+  margin: 5% 0;
+  padding: 5% 0;
+  border-radius: 0.5em;
+}
+
+.profileimg .proimg img {
+  width: 100%;
+  margin: 5% 0%;
+}
+
+.profileimg .protxt {
+  padding: 5% 2%;
+}
+
+.profileimg .protxt span {
+  color: rgb(59, 59, 59);
+}
+
+.profileimg .proedit {
+  padding: 2% 7%;
+}
+
+.profileimg .proedit i {
+  font-size: 24px;
+  float: right;
+}
+
+.profileinfo ul li {
+  display: inline-block;
+  width: 40%;
+  text-align: justify;
+  margin: 2% 4.7%;
+}
+
+.profileinfo ul li h1 {
+  font-size: 24px;
+  padding: 0 10%;
+}
+
+.profileinfo ul li p {
+  font-size: 16px;
+  padding: 0 10%;
+}
+
+.profilebx hr {
+  background-color: rgba(59, 59, 59, 0.808);
+  width: 90%;
+  margin: 2% 5%;
+}
+
+.profilebx .btnpro {
+  margin: 5% 0% 0% 0%;
+  text-align: center;
+}
+
+.profilebx .probtn {
+  padding: 2% 30%;
+  margin: 0% 5%;
+  background-color: blue;
+  color: white;
+  border-radius: 0.5em;
+}
