@@ -54,6 +54,7 @@ html {
 .main {
   width: 95%;
   margin: 0 2.5%;
+  /* background-color: aquamarine; */
 }
 
 a,
@@ -110,4 +111,47 @@ a:hover {
 .signup:hover {
   background-color: rgb(230, 230, 230);
 }
+
+.signup:hover a {
+  color: rgb(5, 36, 94);
+}
+
+.row {
+  width: 100%;
+  margin: 0%;
+}
 /* ends */
+
+/* Login SignUp Modal */
+.loginpop {
+  margin-top: 10%;
+}
+
+.signuppop {
+  margin-top: 5%;
+}
+
+.loginpop h4,
+.signuppop h4 {
+  font-weight: bold;
+}
+
+.modallogo {
+  width: 50%;
+  margin: 0 0% 0.5em 0%;
+}
+
+.modal-content {
+  border-radius: 1em;
+}
+
+.close {
+  transform: scale(1.5);
+}
+
+.loginpop .sign-up,
+.signuppop .sign-up {
+  margin-top: 1em;
+}
+
+/* Login SignUp Modal ends */

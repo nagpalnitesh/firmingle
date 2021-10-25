@@ -37,12 +37,22 @@
                 <a class="nav-link" href="#">About</a>
             </li>
             <li class="nav-item login">
-                <a class="nav-link" href="{% url 'login' %}">
+                <a
+                    class="nav-link login-trigger"
+                    href="#"
+                    data-target="#login"
+                    data-toggle="modal"
+                >
                     <span> Login</span>
                 </a>
             </li>
             <li class="nav-item signup">
-                <a class="nav-link" href="{% url 'signup' %}">
+                <a
+                    class="nav-link login-trigger"
+                    href="#"
+                    data-target="#signup"
+                    data-toggle="modal"
+                >
                     <span> Sign Up</span>
                 </a>
             </li>
@@ -50,4 +60,132 @@
     </div>
 </nav>
 <!-- navbar ends -->
+<!-- Login Pop UP -->
+<div
+    id="login"
+    class="modal fade loginpop"
+    role="dialog"
+    aria-labelledby="login"
+    aria-hidden="true"
+    tabindex="-1"
+>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button data-dismiss="modal" class="close">&times;</button>
+                <img class="modallogo" src="{% static 'assets/logo.png'%}" alt="Firmingle">
+                <h4>Login to Firmingle</h4>
+                {% if messages %}
+                        {% for message in messages %}
+                <div class="alert alert-info">
+                    {{ message }}
+                </div>
+                {% endfor %}
+                        {% endif %}
+                <form action="/login" method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="username"
+                            placeholder="Enter your username"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="loginpassword">Password</label>
+                        <input type="password" class="form-control" id="loginpassword">
+                    </div>
+                    <a href="#">
+                        <p>Forgot Password?</p>
+                    </a>
+                    <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                    <div class="sign-up">
+                        Don't have an account?
+                        <a href="#signup">Create One</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Login Pop Up Ends -->
+<!-- SignUp Pop UP -->
+<div
+    id="signup"
+    class="modal fade signuppop"
+    role="dialog"
+    tabindex="-1"
+    aria-labelledby="signup"
+    aria-hidden="true"
+>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button data-dismiss="modal" class="close">&times;</button>
+                <img class="modallogo" src="{% static 'assets/logo.png'%}" alt="Firmingle">
+                <h4>SignUp to Firmingle</h4>
+                {% if messages %}
+                        {% for message in messages %}
+                <div class="alert alert-info">
+                    {{ message }}
+                </div>
+                {% endfor %}
+                        {% endif %}
+                <form action="/signup" method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="username"
+                            placeholder="Choose a unique username"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="name"
+                            placeholder="Enter your Full Name"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="email"
+                            aria-describedby="emailHelp"
+                            placeholder="name@example.com"
+                        >
+                        <small id="emailHelp" class="form-text text-muted">
+                            We'll never share your email with anyone else.
+                        </small>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password">
+                    </div>
+                    <div class="form-group">
+                        <label for="confpassword">Confirm Password</label>
+                        <input type="password" class="form-control" id="confpassword">
+                    </div>
+                    <a href="#">
+                        <p>Forgot Password?</p>
+                    </a>
+                    <button type="submit" class="btn btn-primary btn-block mt-2">Sign in</button>
+                    <div class="sign-up mt-2">
+                        Already have an account?
+                        <a href="/login">Login Here</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- SignUp Pop Up Ends -->
 {% endblock %}

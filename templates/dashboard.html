@@ -1,0 +1,89 @@
+{% extends  'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+    <div class="main">
+        <div class="wrapper">
+            <div class="content">
+                <!-- navbar -->
+                {% include 'components/navbar.html' %}
+                <!-- ends -->
+                <!-- Dashboard -->
+                <div class="dash">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-auto col-lg-3">
+                            <div class="profilebx">
+                                <div class="profileimg">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-auto col-lg-3 proimg">
+                                            <img src="{% static 'assets/ICON.png' %}" alt="profile">
+                                        </div>
+                                        <div class="col-sm-12 col-md-auto col-lg-6 protxt">
+                                            Jagmohan Singh
+                                            <br>
+                                            <span>jmsingh6871@gmail.com</span>
+                                        </div>
+                                        <div class="col-sm-12 col-md-auto col-lg-3 proedit">
+                                            <i class="fas fa-pen"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="profileinfo">
+                                    <ul>
+                                        <li>
+                                            <h1>
+                                                Industries
+                                            </h1>
+                                            <p>
+                                                All Industries
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <h1>
+                                                Locations
+                                            </h1>
+                                            <p>
+                                                India
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <h1>
+                                                Deal Size
+                                            </h1>
+                                            <p>
+                                                ----
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <h1>
+                                                Recent Payments
+                                            </h1>
+                                            <p>
+                                                Free Trail
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <hr>
+                                <p class="btnpro">
+                                    <span class="probtn">
+                                        No active Profiles
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-auto col-lg-6"></div>
+                    <div class="col-sm-12 col-md-auto col-lg-3"></div>
+                </div>
+            </div>
+            <!-- ends -->
+        </div>
+        <!-- footer -->
+        {% include 'components/footer.html' %}
+        <!-- ends -->
+    </div>
+</div>
+</div>
+{% endblock %}

@@ -1,17 +1,17 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, HttpResponse, redirect
 from django.contrib.auth.models import User
 from django.contrib import messages
 import uuid
 from .models import *
 from django.conf import settings
 from django.core.mail import send_mail
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from .helpers import send_forget_password_token
 
-
-@login_required(login_url='/')
 # index/ home page function
+
+
 def index(request):
     return render(request, 'index.html')
 
@@ -47,70 +47,89 @@ def faq(request):
     return render(request, 'faq.html')
 
 
+# Dashboard Page function
+def dashboard(request):
+    return render(request, 'dashboard.html')
+
+# logout function
+
+
+def handlelogout(request):
+    logout(request)
+    messages.success(request, 'Logged out successfully')
+    return redirect('/')
+
+
 # Login Function
 def login(request):
     if request.method == 'POST':
-        username = request.POST.get('username')
-        password = request.POST.get('password')
+        username = request.POST.get('loginusername')
+        password = request.POST.get('loginpassword')
 
-        user_obj = User.objects.filter(username=username).first()
+        user_obj = User.objects.filter(
+            username=username, password=password).first()
+        user = authenticate(username=username, password=password)
         if user_obj is None:
             messages.error(request, 'Invalid username')
-            return redirect('/login')
+            return redirect('/')
 
         profile_obj = Profile.objects.filter(user__username=username).first()
         if not profile_obj.isVerified:
             messages.error(request, 'Account not verified. Check your mail')
-            return redirect('/login')
-        user = authenticate(username=username, password=password)
+            return redirect('/')
 
-        if user is None:
-            messages.error(request, 'Account not verified. Check your mail')
-            return redirect('/login')
+        if user is not None:
+            login(request, user)
+            messages.success(request, 'Logged in successfully')
+            return redirect('/')
+        else:
+            messages.error(request, 'Invalid Credentials! Please Try Again')
+            return redirect('/')
 
-        login(request, user)
-        return redirect('/')
-
-    return render(request, 'registration/login.html')
+    return HttpResponse('login')
 
 
 # SignUp Function
 def signup(request):
-    if request.method == 'POST':
-        #username = request.POST.get('username')
+    if request.method == "POST":
+        # Get the post parameters
+        username = request.POST.get('username')
         email = request.POST.get('email')
+        name = request.POST.get('name')
         password = request.POST.get('password')
-        try:
-            # if User.objects.filter(email=email).first():
-            #     messages.success(request, 'Username already exists')
-            #     return redirect(request, '/signup')
-            if User.objects.filter(email=email).first():
-                messages.success(request, 'Email already exists')
-                return redirect(request, '/signup')
-
-            user_obj = User(email=email)
-            user_obj.set_password(password)
-            user_obj.save()
-            auth_token = str(uuid.uuid4())
-            profile_obj = Profile.objects.create(
-                user=user_obj, auth_token=auth_token)
-            profile_obj.save()
-            activate_account(email, auth_token)
-            return redirect('/token')
-
-        except Exception as e:
-            print(e)
-    return render(request, 'registration/signup.html')
-
-
-# success function
-def success(request):
-    return render(request, 'success.html')
-
-
-# token send function
-def token_send(request):
-    return render(request, 'token_send.html')
+        confpassword = request.POST.get('confpassword')
+        if User.objects.filter(username=username).first():
+            messages.success(request, 'Username already exists')
+            return redirect(request, '/')
+        if len(str(username)) < 6:
+            messages.error(
+                request, 'Username must be atleast 6 characters')
+            return redirect('/')
+        if not username.isalnum():
+            messages.error(
+                request, 'Username should contain only letters and numbers')
+            return redirect('/')
+        if User.objects.filter(email=email).first():
+            messages.success(request, 'Email already exists')
+            return redirect(request, '/')
+        if password != confpassword:
+            messages.error(request, 'Password does not match')
+            return redirect('/')
+            # Create the user
+        user_obj = User(name, username, email)
+        user_obj.set_password(password)
+        user_obj.save()
+        auth_token = str(uuid.uuid4())
+        profile_obj = Profile(user=user_obj, auth_token=auth_token)
+        activate_account(email, auth_token)
+        profile_obj.save()
+        messages.success(
+            request, " Your account has been successfully created")
+        messages.success(
+            request, " Check your email and verify your account")
+    else:
+        return HttpResponse("404 - Page Not Found")
+    return HttpResponse('signup')
 
 
 # activate account function

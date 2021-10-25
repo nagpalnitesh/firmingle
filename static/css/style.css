@@ -123,12 +123,17 @@
 }
 
 /* Trusted Users */
+.trustedusers {
+  padding: 5% 0;
+}
 .trustedusers h1 {
-  font-size: 28px;
+  font-size: 30px;
+  text-align: center;
 }
 
 .trustedusers p {
-  font-size: 16px;
+  text-align: center;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -176,7 +181,7 @@
 /* Features Image */
 
 .featureimg img {
-  margin: 0 25%;
+  margin: 1% 30%;
 }
 
 /* .featureimg {
@@ -485,7 +490,7 @@
 
 /* footer */
 footer {
-  margin: 5% 1.5em 2% 1.5em;
+  margin: 2% 0%;
 }
 
 footer .inputsubs input {
