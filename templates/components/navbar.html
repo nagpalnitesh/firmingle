@@ -36,6 +36,14 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">About</a>
             </li>
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link" href="/dashboard">{{user.first_name}}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="logout">Logout</a>
+            </li>
+            {% else %}
             <li class="nav-item login">
                 <a
                     class="nav-link login-trigger"
@@ -43,7 +51,7 @@
                     data-target="#login"
                     data-toggle="modal"
                 >
-                    <span> Login</span>
+                    <span>Login</span>
                 </a>
             </li>
             <li class="nav-item signup">
@@ -56,6 +64,7 @@
                     <span> Sign Up</span>
                 </a>
             </li>
+            {% endif %}
         </ul>
     </div>
 </nav>
@@ -76,34 +85,41 @@
                 <img class="modallogo" src="{% static 'assets/logo.png'%}" alt="Firmingle">
                 <h4>Login to Firmingle</h4>
                 {% if messages %}
-                        {% for message in messages %}
+                {% for message in messages %}
                 <div class="alert alert-info">
                     {{ message }}
                 </div>
                 {% endfor %}
-                        {% endif %}
+                {% endif %}
                 <form action="/login" method="post">
                     {% csrf_token %}
                     <div class="form-group">
-                        <label for="username">Username</label>
+                        <label for="loginusername">Username</label>
                         <input
                             type="text"
                             class="form-control"
-                            id="username"
+                            id="loginusername"
+                            name="loginusername"
                             placeholder="Enter your username"
                         >
                     </div>
                     <div class="form-group">
                         <label for="loginpassword">Password</label>
-                        <input type="password" class="form-control" id="loginpassword">
+                        <input
+                            type="password"
+                            class="form-control"
+                            id="loginpassword"
+                            name="loginpassword"
+                            placeholder="Enter your password"
+                        >
                     </div>
-                    <a href="#">
+                    <a href="#" onclick="forget()">
                         <p>Forgot Password?</p>
                     </a>
                     <button type="submit" class="btn btn-primary btn-block">Sign in</button>
                     <div class="sign-up">
                         Don't have an account?
-                        <a href="#signup">Create One</a>
+                        <span onclick="signup()">Create One</span>
                     </div>
                 </form>
             </div>
@@ -136,23 +152,106 @@
                 <form action="/signup" method="post">
                     {% csrf_token %}
                     <div class="form-group">
+                        <label for="fname">First Name</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="fname"
+                            name="fname"
+                            placeholder="Enter your First Name"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="lname">Last Name</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="lname"
+                            name="lname"
+                            placeholder="Enter your Last Name"
+                        >
+                    </div>
+                    <div class="form-group">
                         <label for="username">Username</label>
                         <input
                             type="text"
                             class="form-control"
                             id="username"
+                            name="username"
                             placeholder="Choose a unique username"
                         >
                     </div>
                     <div class="form-group">
-                        <label for="name">Name</label>
+                        <label for="email">Email address</label>
                         <input
-                            type="text"
+                            type="email"
                             class="form-control"
-                            id="name"
-                            placeholder="Enter your Full Name"
+                            id="email"
+                            name="email"
+                            aria-describedby="emailHelp"
+                            placeholder="name@example.com"
+                        >
+                        <small id="emailHelp" class="form-text text-muted">
+                            We'll never share your email with anyone else.
+                        </small>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input
+                            type="password"
+                            class="form-control"
+                            id="password"
+                            name="password"
+                            placeholder="Choose your password"
                         >
                     </div>
+                    <div class="form-group">
+                        <label for="confpassword">Confirm Password</label>
+                        <input
+                            type="password"
+                            class="form-control"
+                            id="confpassword"
+                            name="confpassword"
+                            placeholder="Enter your password again"
+                        >
+                    </div>
+                    <a href="#" onclick="forget()">
+                        <p>Forgot Password?</p>
+                    </a>
+                    <button type="submit" class="btn btn-primary btn-block mt-2">Sign Up</button>
+                    <div class="sign-up mt-2">
+                        Already have an account?
+                        <span onclick="login()">Login Here</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Forget Password Pop Up -->
+<div
+    id="forget"
+    class="modal fade forgetpop"
+    role="dialog"
+    tabindex="-1"
+    aria-labelledby="forget"
+    aria-hidden="true"
+>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button data-dismiss="modal" class="close">&times;</button>
+                <img class="modallogo" src="{% static 'assets/logo.png'%}" alt="Firmingle">
+                <h4>Reset Password</h4>
+                {% if messages %}
+                        {% for message in messages %}
+                <div class="alert alert-info">
+                    {{ message }}
+                </div>
+                {% endfor %}
+                        {% endif %}
+                <form action="/forget-password" method="post">
+                    {% csrf_token %}
                     <div class="form-group">
                         <label for="email">Email address</label>
                         <input
@@ -166,26 +265,41 @@
                             We'll never share your email with anyone else.
                         </small>
                     </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password">
-                    </div>
-                    <div class="form-group">
-                        <label for="confpassword">Confirm Password</label>
-                        <input type="password" class="form-control" id="confpassword">
-                    </div>
-                    <a href="#">
-                        <p>Forgot Password?</p>
-                    </a>
-                    <button type="submit" class="btn btn-primary btn-block mt-2">Sign in</button>
-                    <div class="sign-up mt-2">
-                        Already have an account?
-                        <a href="/login">Login Here</a>
-                    </div>
+                    <button type="submit" class="btn btn-primary btn-block mt-2">Reset Password</button>
                 </form>
             </div>
         </div>
     </div>
 </div>
+<!-- Script for login and signup change -->
+<script>
+    function login() {
+        $('#login').modal('show');
+        $('#signup').modal('hide');
+        $('#forget').modal('hide');
+        $("body").css({'overflow':'hidden'})
+        $('.close').click(function(){
+            $("body").css({'overflow':'auto'})
+        })
+    }
+    function signup() {
+        $('#login').modal('hide');
+        $('#signup').modal('show');
+        $('#forget').modal('hide');
+        $("body").css({'overflow':'hidden'})
+        $('.close').click(function(){
+            $("body").css({'overflow':'auto'})
+        })
+    }
+    function forget() {
+        $('#forget').modal('show');
+        $('#login').modal('hide');
+        $('#signup').modal('hide');
+        $("body").css({'overflow':'hidden'})
+        $('.close').click(function(){
+            $("body").css({'overflow':'auto'})
+        });
+    }
+</script>
 <!-- SignUp Pop Up Ends -->
 {% endblock %}

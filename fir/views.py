@@ -8,10 +8,10 @@ from django.core.mail import send_mail
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from .helpers import send_forget_password_token
+from django.views.decorators.csrf import csrf_exempt
+
 
 # index/ home page function
-
-
 def index(request):
     return render(request, 'index.html')
 
@@ -48,6 +48,7 @@ def faq(request):
 
 
 # Dashboard Page function
+@login_required
 def dashboard(request):
     return render(request, 'dashboard.html')
 
@@ -56,27 +57,27 @@ def dashboard(request):
 
 def handlelogout(request):
     logout(request)
-    messages.success(request, 'Logged out successfully')
     return redirect('/')
 
 
 # Login Function
-def login(request):
+@csrf_exempt
+def handlelogin(request):
     if request.method == 'POST':
-        username = request.POST.get('loginusername')
-        password = request.POST.get('loginpassword')
+        loginusername = request.POST.get('loginusername')
+        loginpassword = request.POST.get('loginpassword')
 
-        user_obj = User.objects.filter(
-            username=username, password=password).first()
-        user = authenticate(username=username, password=password)
-        if user_obj is None:
-            messages.error(request, 'Invalid username')
-            return redirect('/')
+        # user_obj = User.objects.filter(
+        #     username=username, password=password).first()
+        user = authenticate(username=loginusername, password=loginpassword)
+        # if user_obj is None:
+        #     messages.error(request, 'Invalid username')
+        #     return redirect('/')
 
-        profile_obj = Profile.objects.filter(user__username=username).first()
-        if not profile_obj.isVerified:
-            messages.error(request, 'Account not verified. Check your mail')
-            return redirect('/')
+        # profile_obj = Profile.objects.filter(user__username=username).first()
+        # if not profile_obj.isVerified:
+        #     messages.error(request, 'Account not verified. Check your mail')
+        #     return redirect('/')
 
         if user is not None:
             login(request, user)
@@ -86,50 +87,54 @@ def login(request):
             messages.error(request, 'Invalid Credentials! Please Try Again')
             return redirect('/')
 
-    return HttpResponse('login')
-
 
 # SignUp Function
+@csrf_exempt
 def signup(request):
     if request.method == "POST":
         # Get the post parameters
         username = request.POST.get('username')
+        fname = request.POST.get('fname')
+        lname = request.POST.get('lname')
         email = request.POST.get('email')
-        name = request.POST.get('name')
         password = request.POST.get('password')
         confpassword = request.POST.get('confpassword')
-        if User.objects.filter(username=username).first():
-            messages.success(request, 'Username already exists')
-            return redirect(request, '/')
-        if len(str(username)) < 6:
-            messages.error(
-                request, 'Username must be atleast 6 characters')
-            return redirect('/')
-        if not username.isalnum():
-            messages.error(
-                request, 'Username should contain only letters and numbers')
-            return redirect('/')
-        if User.objects.filter(email=email).first():
-            messages.success(request, 'Email already exists')
-            return redirect(request, '/')
-        if password != confpassword:
-            messages.error(request, 'Password does not match')
-            return redirect('/')
-            # Create the user
-        user_obj = User(name, username, email)
+
+        # Check errorness of the form
+        # if User.objects.filter(username=username).first():
+        #     messages.success(request, 'Username already exists')
+        # if len(str(username)) < 6:
+        #     messages.error(
+        #         request, 'Username must be atleast 6 characters')
+        # if not username.isalnum():
+        #     messages.error(
+        #         request, 'Username should contain only letters and numbers')
+        # if User.objects.filter(email=email).first():
+        #     messages.success(request, 'Email already exists')
+        # if password != confpassword:
+        #     messages.error(request, 'Password does not match')
+
+        # Create the user
+        user_obj = User.objects.create_user(username, password)
+        user_obj.email = email
+        user_obj.first_name = fname
+        user_obj.last_name = lname
         user_obj.set_password(password)
         user_obj.save()
         auth_token = str(uuid.uuid4())
-        profile_obj = Profile(user=user_obj, auth_token=auth_token)
+        # profile_obj = Profile(
+        #     user=user_obj, auth_token=auth_token)
         activate_account(email, auth_token)
-        profile_obj.save()
+        # profile_obj.save()
         messages.success(
-            request, " Your account has been successfully created")
+            request, " Your Firmingle account has been successfully created")
         messages.success(
             request, " Check your email and verify your account")
+
     else:
         return HttpResponse("404 - Page Not Found")
-    return HttpResponse('signup')
+
+    return redirect('/')
 
 
 # activate account function

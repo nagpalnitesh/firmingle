@@ -22,11 +22,11 @@ urlpatterns = [
     path('terms-and-contion', views.terms, name='terms'),  # termsPage
     path('faq', views.faq, name='faq'),  # faqPage
     path('signup', views.signup, name='signup'),  # signupPage
-    path('login/', views.login, name='login'),  # loginPage
-    path('logout/', views.handlelogout, name='logout'),  # logoutPage
+    path('login', views.handlelogin, name='login'),  # loginPage
+    path('logout', views.handlelogout, name='logout'),  # logoutPage
     path('verify/<auth_token>', views.verify, name='verify'),  # verifyPage
     path('error/', views.error, name='error'),  # errorPage
-    path('forget-password/', views.forget_password,
+    path('forget-password', views.forget_password,
          name='forget_password'),  # forget_passwordPage
     path('reset-password/<token>', views.change_password,
          name="reset password"),  # reset_passwordPage

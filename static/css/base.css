@@ -123,13 +123,6 @@ a:hover {
 /* ends */
 
 /* Login SignUp Modal */
-.loginpop {
-  margin-top: 10%;
-}
-
-.signuppop {
-  margin-top: 5%;
-}
 
 .loginpop h4,
 .signuppop h4 {
@@ -149,9 +142,16 @@ a:hover {
   transform: scale(1.5);
 }
 
-.loginpop .sign-up,
-.signuppop .sign-up {
+.loginpop .sign-up span,
+.signuppop .sign-up span {
   margin-top: 1em;
+  cursor: pointer;
+}
+
+.loginpop .sign-up span:hover,
+.signuppop .sign-up span:hover {
+  color: rgb(5, 36, 94);
+  font-weight: bold;
 }
 
 /* Login SignUp Modal ends */

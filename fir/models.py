@@ -3,19 +3,19 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 
-class Person(models.Model):
-    user_name = models.ForeignKey(
-        'auth.User',
-        on_delete=models.CASCADE,
-    )
-    Name = models.CharField(max_length=100)
-    Company = models.CharField(max_length=100)
-    Designation = models.CharField(max_length=100)
-    GST_Number = models.CharField(max_length=100)
-    Address = models.CharField(max_length=100)
+# class Person(models.Model):
+#     user_name = models.ForeignKey(
+#         'auth.User',
+#         on_delete=models.CASCADE,
+#     )
+#     Name = models.CharField(max_length=100)
+#     Company = models.CharField(max_length=100)
+#     Designation = models.CharField(max_length=100)
+#     GST_Number = models.CharField(max_length=100)
+#     Address = models.CharField(max_length=100)
 
-    def __str__(self):
-        return self.Name
+#     def __str__(self):
+#         return self.Name
 
 
 # Login/ SignUp Token
@@ -31,4 +31,4 @@ class Profile(models.Model):
     forget_password_token = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.user.username
+        return self.user.first_name
