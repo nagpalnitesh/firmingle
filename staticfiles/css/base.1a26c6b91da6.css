@@ -1,0 +1,157 @@
+/* fonts added */
+@font-face {
+  font-family: proxima;
+  src: url("../assets/fonts/ProximaNova-Regular.410504d49238.otf");
+}
+/* ends */
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 0.5em;
+  height: 0.2em;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(117, 117, 117);
+  border-radius: 1em;
+}
+/* ends */
+
+/* wrapper content and footer */
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  height: fit-content;
+}
+
+.content {
+  flex-grow: 1;
+}
+/* ends */
+
+/* main content */
+* {
+  margin: 0%;
+  padding: 0%;
+  list-style: none;
+  font-family: proxima;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0%;
+  padding: 0%;
+}
+
+/* .container-fluid {
+  background-color: aqua;
+} */
+
+.main {
+  width: 95%;
+  margin: 0 2.5%;
+  /* background-color: aquamarine; */
+}
+
+a,
+a:link,
+a:visited {
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: rgb(5, 36, 94);
+  font-weight: bold;
+}
+
+/* ends */
+
+/* navbar */
+.logo {
+  width: 10%;
+}
+.logo img {
+  width: 100%;
+}
+
+/* .menu {
+  background-color: blueviolet;
+} */
+
+.menu ul {
+  width: fit-content;
+  margin-left: 10%;
+}
+
+.menu ul li {
+  margin: 0 0 0 2em;
+  padding: 0 2em;
+  text-align: center;
+}
+
+.login {
+  background-color: rgb(230, 230, 230);
+  border-radius: 0.5em;
+}
+
+.signup {
+  background-color: rgb(0, 89, 255);
+  border-radius: 0.5em;
+}
+
+.signup a {
+  color: white;
+}
+
+.signup:hover {
+  background-color: rgb(230, 230, 230);
+}
+
+.signup:hover a {
+  color: rgb(5, 36, 94);
+}
+
+.row {
+  width: 100%;
+  margin: 0%;
+}
+/* ends */
+
+/* Login SignUp Modal */
+
+.loginpop h4,
+.signuppop h4 {
+  font-weight: bold;
+}
+
+.modallogo {
+  width: 50%;
+  margin: 0 0% 0.5em 0%;
+}
+
+.modal-content {
+  border-radius: 1em;
+}
+
+.close {
+  transform: scale(1.5);
+}
+
+.loginpop .sign-up span,
+.signuppop .sign-up span {
+  margin-top: 1em;
+  cursor: pointer;
+}
+
+.loginpop .sign-up span:hover,
+.signuppop .sign-up span:hover {
+  color: rgb(5, 36, 94);
+  font-weight: bold;
+}
+
+/* Login SignUp Modal ends */

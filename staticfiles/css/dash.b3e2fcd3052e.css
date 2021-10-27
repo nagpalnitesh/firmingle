@@ -1,0 +1,195 @@
+.dash {
+  margin: 2% 0;
+}
+
+.profilebx {
+  background-color: white;
+  margin: 10% 0;
+  padding: 5% 0;
+  border-radius: 1em;
+  box-shadow: 0.2em 0.2em 0.7em rgba(63, 62, 62, 0.445);
+}
+
+.profileimg .proimg img {
+  width: 100%;
+  margin: 5% 0%;
+}
+
+.profileimg .protxt {
+  padding: 5% 2%;
+}
+
+.profileimg .protxt span {
+  color: rgb(59, 59, 59);
+}
+
+.profileimg .proedit {
+  padding: 2% 7%;
+}
+
+.profileimg .proedit i {
+  font-size: 24px;
+  float: right;
+}
+
+.profileinfo ul li {
+  display: inline-block;
+  width: 40%;
+  text-align: justify;
+  margin: 2% 4.7%;
+}
+
+.profileinfo ul li h1 {
+  font-size: 24px;
+  padding: 0 10%;
+}
+
+.profileinfo ul li p {
+  font-size: 16px;
+  padding: 0 10%;
+}
+
+.profilebx hr {
+  background-color: rgba(59, 59, 59, 0.808);
+  width: 90%;
+  margin: 2% 5%;
+}
+
+.prodetail ul li {
+  display: inline-block;
+  width: 45%;
+  margin: 0% 2%;
+  padding: 0 3%;
+}
+
+.profilebx .btnpro {
+  margin: 5% 0% 0% 0%;
+  text-align: center;
+}
+
+.profilebx .probtn {
+  padding: 2% 30%;
+  margin: 0% 5%;
+  background-color: blue;
+  color: white;
+  border-radius: 0.5em;
+}
+
+/* Recent Articles */
+.recentboard h1 {
+  font-size: 30px;
+}
+
+.recentboard span {
+  font-size: 24px;
+}
+
+.recentboard p {
+  font-size: 16px;
+}
+
+.recentbx {
+  background-color: white;
+  border-radius: 1em;
+  padding: 0 5%;
+  margin: 0 0 5% 0;
+  box-shadow: 0.2em 0.2em 0.7em rgba(63, 62, 62, 0.445);
+}
+
+.recentbximg {
+  width: 100%;
+  border-radius: 1em;
+  padding: 5% 0 0 0;
+}
+
+.recentbximg img {
+  width: 100%;
+  height: 50%;
+  border-radius: 1em;
+}
+
+.recentbxtxt {
+  padding: 0 0 0.5em 0;
+}
+/* ends */
+
+/* News Board */
+
+.newsboard {
+  padding: 0 2% 2% 2%;
+}
+
+.newsboard .latestbx {
+  background-color: white;
+  padding: 3% 3% 2% 5%;
+  border-radius: 1em;
+  box-shadow: 0.2em 0.2em 0.7em rgba(63, 62, 62, 0.445);
+  margin: 3% 0;
+}
+
+.newsboard h1 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.newsboard h2 {
+  font-size: 30px;
+}
+
+.newsboard p {
+  font-size: 16px;
+}
+
+.newsboard .welcomebx {
+  background-color: white;
+  padding: 3% 3% 4% 5%;
+  margin: 0 0 4% 0;
+  border-radius: 1em;
+  box-shadow: 0.2em 0.2em 0.7em rgba(63, 62, 62, 0.445);
+}
+
+.newsboard .welcomebx ul li {
+  display: inline-block;
+  width: 45%;
+  margin: 0% 2% 0 0;
+}
+
+.newsboard .welcomebx ul li p {
+  background-color: white;
+  width: fit-content;
+  padding: 5% 5%;
+  font-size: 20px;
+  border-radius: 0.5em;
+  box-shadow: 0.2em 0.2em 0.7em rgba(63, 62, 62, 0.445);
+  border: 0.1em solid blue;
+  margin: 2% 0 0 0;
+}
+
+.newsboard .welcomebx ul li p i {
+  font-size: 50px;
+  float: left;
+  margin: 2% 5%;
+  color: blue;
+}
+
+.newsboard .latestbx ul li {
+  display: inline-block;
+  width: 45%;
+}
+
+.newsboard .contactbtn {
+  background-color: white;
+  width: fit-content;
+  border-radius: 0.5em;
+  box-shadow: 0.2em 0.2em 0.7em rgba(63, 62, 62, 0.445);
+  border: 0.1em solid blue;
+  padding: 2% 3%;
+  font-size: 20px;
+}
+
+.newsboard .contactbtn i {
+  color: blue;
+  margin: 0 0.5em;
+}
+
+/* ends */

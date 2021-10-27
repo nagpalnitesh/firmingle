@@ -1,0 +1,51 @@
+.confinfo h1 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.confform {
+  background-color: white;
+  padding: 2% 3% 2% 3%;
+  margin: 0 0 2% 0;
+  border-radius: 1em;
+  box-shadow: 0.2em 0.2em 0.7em rgba(63, 62, 62, 0.445);
+  font-size: 16px;
+}
+
+.confinf span {
+  font-size: 20px;
+}
+
+.confinf .form-control {
+  border-color: transparent;
+  border-bottom: 0.1em solid black;
+  border-radius: 0;
+  width: 90%;
+  margin: 1% 0;
+}
+
+.confinf input {
+  border-bottom: 0.1em solid black;
+  font-size: 16px;
+}
+
+.confinf .form-control:focus {
+  border-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-bottom: 0.1em solid black;
+}
+
+.confbtn {
+  width: 100%;
+  padding: 1% 0;
+  background-color: blue;
+  border-radius: 0.5em;
+  color: white;
+}
+
+.confbtn:hover {
+  color: white;
+  font-weight: bold;
+  box-shadow: 0.2em 0.2em 0.7em rgba(63, 62, 62, 0.445);
+}

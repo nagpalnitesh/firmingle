@@ -1,0 +1,39 @@
+.tnc {
+  scroll-behavior: smooth;
+  text-align: justify;
+}
+
+.tnc h1 {
+  width: fit-content;
+  margin: 0.5em 2%;
+}
+
+.tnccol {
+  padding: 0.5em 2%;
+}
+
+.tncp {
+  width: fit-content;
+  background-color: blue;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  margin: 0.5em 2%;
+  color: white;
+}
+
+.sectionbox {
+  width: 60%;
+  margin-left: 10%;
+  box-shadow: 0.2em 0.2em 0.7em rgb(59, 59, 59);
+  border-radius: 0.5em;
+  border: 0.1em solid rgba(0, 0, 0, 0.3);
+}
+
+.sectionbox p {
+  padding: 1em 15%;
+}
+
+.privacy p,
+.privacy h5 {
+  padding: 0.5em 2%;
+}
