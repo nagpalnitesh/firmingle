@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'firmingle.wsgi.application'
 # POSTGRESQL
 DATABASES = {
     'default': {
-        'ENGINE': config('DB_ENGINE'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': config('DB_NAME'),
         'USER': config('DB_USER'),
         'PASSWORD': config('DB_PASSWORD'),
