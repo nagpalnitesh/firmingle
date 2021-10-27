@@ -124,7 +124,6 @@ def signup(request):
         auth_token = str(uuid.uuid4())
         # profile_obj = Profile(
         #     user=user_obj, auth_token=auth_token)
-        activate_account(email, auth_token)
         # profile_obj.save()
         messages.success(
             request, " Your Firmingle account has been successfully created")
