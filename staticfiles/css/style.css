@@ -1,3 +1,10 @@
+/* fonts added */
+@font-face {
+  font-family: proxima;
+  src: url("../assets/fonts/ProximaNova-Regular.otf");
+}
+/* ends */
+
 /* homePage Section */
 .homePage {
   margin: 1em 0;
@@ -1972,13 +1979,6 @@ footer a:hover {
 }
 /* Large Devices (992 to 1199.98px)*/
 @media screen and (min-width: 992px) and (max-width: 1199.98px) {
-  /* fonts added */
-  @font-face {
-    font-family: proxima;
-    src: url(./fonts/Proxima\ Nova\ Alt\ Regular.otf);
-  }
-  /* ends */
-
   /* scrollbar */
   ::-webkit-scrollbar {
     width: 0.5em;
@@ -2608,13 +2608,6 @@ footer a:hover {
 }
 /* Extra Large Devices (1200px and above) */
 @media screen and (min-width: 1200px) and (max-width: 1439px) {
-  /* fonts added */
-  @font-face {
-    font-family: proxima;
-    src: url(./fonts/Proxima\ Nova\ Alt\ Regular.otf);
-  }
-  /* ends */
-
   /* scrollbar */
   ::-webkit-scrollbar {
     width: 0.5em;
