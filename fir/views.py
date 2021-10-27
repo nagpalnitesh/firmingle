@@ -220,3 +220,28 @@ def change_password(request, token):
         print(e)
 
     return render(request, 'registration/change_password.html', context)
+
+
+# Profile Function
+def profile(request):
+    return render(request, 'profile/confidential.html')
+
+
+# Business Function
+def business(request):
+    return render(request, 'profile/business.html')
+
+
+# Business Function
+def business1(request):
+    return render(request, 'profile/business1.html')
+
+
+# Business Function
+def business2(request):
+    return render(request, 'profile/business2.html')
+
+
+# Profile Function
+def plan(request):
+    return render(request, 'profile/plan.html')

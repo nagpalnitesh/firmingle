@@ -1,0 +1,130 @@
+{% extends  'base.html' %}
+{% load static %}
+{% block content %}
+<!-- Confidential Information -->
+<div class="confinfo">
+    <h1>Business Information</h1>
+    <p>
+        Information entered here is displayed publicly to match you with the right set of investors and buyers. Do not mention business name/information which can identify the business.
+    </p>
+    <div class="confinf">
+        <form action="/profile" method="post" class="confform">
+            <h1>Select a Plan</h1>
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck4">
+                    <label class="form-check-label" for="gridCheck4">
+                        Active Business
+                        <a href="#">
+                            <span style="color: blue; font-size: 12px;">Know more</span>
+                        </a>
+                        <span style="color: blue; font-size: 16px; float: right;">Free</span>
+                    </label>
+                    <hr>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck4">
+                    <label class="form-check-label" for="gridCheck4">
+                        Fast Track Business
+                        <span style="color: green; font-weight: bold;">[Recommended]</span>
+                        <a href="#">
+                            <span style="color: blue; font-size: 12px;">Know more</span>
+                        </a>
+                        <span style="color: blue; font-size: 16px; float: right;">Rs. 2000</span>
+                        <hr>
+                        <ul>
+                            <li>
+                                <span style="color: blue;">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                                speed profile activation within 1 business day
+                            </li>
+                            <li>
+                                <span style="color: blue;">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                                Profile marked as 'Premium Plan' and gets higher visibility
+                            </li>
+                            <li>
+                                <span style="color: blue;">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                                FIRMINGLE promotes your profile actively in regular investor newsletter
+                            </li>
+                            <li>
+                                <span style="color: blue;">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                                you can send upto 80 business proposals to investors and buyers
+                            </li>
+                            <li>
+                                <span style="color: blue;">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                                FIRMINGLE sends your business proposals to top 20 active investors and buyers in your sector
+                            </li>
+                            <li>
+                                <span style="color: blue;">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                                Option to send NDA to maintain confidentiality
+                            </li>
+                            <li>
+                                <span style="color: blue;">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                                Quick email support for your queries
+                            </li>
+                        </ul>
+                    </label>
+                </div>
+            </div>
+            <hr>
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck5">
+                    <label class="form-check-label" for="gridCheck5">
+                        Active Business
+                        <span style="color: blue; font-size: 16px; float: right;">Rs. 5000</span>
+                        <a href="#">
+                            <span style="color: blue; font-size: 12px;">Know more</span>
+                        </a>
+                    </label>
+                </div>
+            </div>
+            <hr>
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck6">
+                    <label class="form-check-label" for="gridCheck6">
+                        <a href="#">
+                            <span style="color: blue; font-size: 16px;">Select Individual Services</span>
+                        </a>
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck6">
+                    <label class="form-check-label" for="gridCheck6">
+                        I accept 1% finder's fee (payable post transaction) and other
+                        <a href="#">
+                            <span style="color: blue; font-size: 16px;">terms of engagement</span>
+                        </a>
+                    </label>
+                </div>
+            </div>
+            <!-- <div class="faqques1" style="font-size: 16px;">
+                <input id="q1" type="checkbox" class="panel">
+                <div class="plus">+</div>
+                <label for="q1" class="panel-title">+ Select Individual Services</label>
+                <div class="panel-content"></div>
+            </div> -->
+        </form>
+        <button type="submit" class="btn confbtn">Submit</button>
+    </div>
+</div>
+<!-- ends -->
+{% endblock %}

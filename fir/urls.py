@@ -33,5 +33,12 @@ urlpatterns = [
     path('press', views.press, name='press'),  # pressPage
     path('aboutus', views.about, name='aboutus'),  # aboutusPage
     path('contactus', views.contact, name='contactus'),  # contactusPage
-    path('dashboard', views.dashboard, name='dashboard'),  # dashboardPage
+    path('dashboard', views.dashboard,
+         name='dashboard'),  # dashboardPage
+    path('profile', views.profile, name='profile'),  # profilePage
+    path('business', views.business, name='business'),  # businessPage
+    path('business-detail', views.business1, name='business'),  # businessPage1
+    path('business-extrainfo', views.business2,
+         name='business'),  # businessPage2
+    path('select-plan', views.plan, name='plans'),  # businessPage
 ]

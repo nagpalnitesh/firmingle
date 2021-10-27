@@ -1,49 +1,42 @@
 {% extends  'base.html' %}
 {% load static %}
 {% block content %}
-<div class="container-fluid">
-    <div class="main">
-        <div class="wrapper">
-            <div class="content">
-                <!-- navbar -->
-                {% include 'components/navbar.html' %}
-                <!-- ends -->
-                <!-- home section -->
-                <section id="home">
-                    <div class="homePage">
-                        <div class="row">
-                            <div class="col-sm-12 col-md-auto col-lg-6">
-                                <div class="aboutcompany">
-                                    <h1>
-                                        About
-                                        <br>
-                                        Company
-                                    </h1>
-                                    <p>
-                                        We are India's one of the leading online platforms for Investment opportunities of Small to Medium Businesses & Startups through technology platforms and advisoryservices. Firmingle helps promising start-ups connect with high quality investors to fulfil their capital needs with the best possible outcomes. It is an A.I. based platform that connects start-ups with multiple investors and enterprises. Founded in 20xx by X and Z, this online platform is all about helping young companies to raise funds that gives wings to their entrepreneurial ideas.
-                                    </p>
-                                    <p class="getstarted">
-                                        <a href="#">
-                                            <span> Get Started for Free</span>
-                                        </a>
-                                    </p>
-                                    <p>
-                                        Still confused?
-                                        <a href="#">Check our 1 min video</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-md-auto col-lg-6 aboutimg">
-                                <img src="{% static 'assets/Why_Choose.png'%}" alt="Why Choose Us">
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- home section ends -->
-                <!-- featuredin section -->
-                <section id="featuredIn">
-                    <div class="row">
-                        <!-- <div class="col-sm-12 col-md-auto col-md-6">
+<!-- home section -->
+<section id="home">
+    <div class="homePage">
+        <div class="row">
+            <div class="col-sm-12 col-md-auto col-lg-6">
+                <div class="aboutcompany">
+                    <h1>
+                        About
+                        <br>
+                        Company
+                    </h1>
+                    <p>
+                        We are India's one of the leading online platforms for Investment opportunities of Small to Medium Businesses & Startups through technology platforms and advisoryservices. Firmingle helps promising start-ups connect with high quality investors to fulfil their capital needs with the best possible outcomes. It is an A.I. based platform that connects start-ups with multiple investors and enterprises. Founded in 20xx by X and Z, this online platform is all about helping young companies to raise funds that gives wings to their entrepreneurial ideas.
+                    </p>
+                    <p class="getstarted">
+                        <a href="#">
+                            <span> Get Started for Free</span>
+                        </a>
+                    </p>
+                    <p>
+                        Still confused?
+                        <a href="#">Check our 1 min video</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-auto col-lg-6 aboutimg">
+                <img src="{% static 'assets/Why_Choose.png'%}" alt="Why Choose Us">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- home section ends -->
+<!-- featuredin section -->
+<section id="featuredIn">
+    <div class="row">
+        <!-- <div class="col-sm-12 col-md-auto col-md-6">
                             <div class="row userdata">
                                 <div class="col-sm-12 col-md-auto col-lg-6 activeuser">
                                     <h1>15k</h1>
@@ -75,132 +68,132 @@
                                 </div>
                             </div>
                         </div> -->
-                        <div class="col-sm-12 col-md-auto col-lg-12">
-                            <div class="trustedusers">
-                                <h1>
-                                    Trusted by thousands  happy Entrepreneurs around the world since 2021
-                                </h1>
-                                <p>Also featured in</p>
-                                <ul>
-                                    <li>
-                                        <img src="{% static 'assets/slack.png'%}" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="{% static 'assets/Microsoft.png'%}" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="{% static 'assets/facebook.png'%}" alt="">
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- featuredin section ends -->
-                <!-- features section -->
-                <section id="features">
-                    <div class="row">
-                        <div class="col-sm-12 col-md-auto col-lg-6">
-                            <div class="featuretxt">
-                                <h1>Features</h1>
-                                <p>
-                                    <span>
-                                        Access India's latest and most active investor community. Track commitments in real-time and close deals super quickly. Whether you’re an individual or a company, you can easily raise funds and enjoy the benefits of high-class investors simply with the click of a button.
-                                    </span>
-                                </p>
-                                <ul>
-                                    <li>
-                                        <img src="{% static 'assets/connect.png'%}" alt="">
-                                        Connect Startups with potential Investors
-                                    </li>
-                                    <li>
-                                        <img src="{% static 'assets/chart-growth.png'%}" alt="">
-                                        Assured Confidentiality
-                                    </li>
-                                    <li>
-                                        <img src="{% static 'assets/ic_storage_48px.png'%}" alt="">
-                                        Advisory services
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-auto col-lg-6">
-                            <div class="featureimg">
-                                <img src="{% static 'assets/Group 1671.png'%}" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- feature section ends -->
-                <!-- how it works section -->
-                <section id="howit">
-                    <div class="howitheader">
-                        <h1>How it Works?</h1>
-                        <img src="{% static 'assets/arrow.png'%}" alt="" class="howimg3 howimg1">
-                        <img src="{% static 'assets/arrow_copy.png'%}" alt="" class="howimg4 howimg2">
-                        <div class="row">
-                            <div class="col-sm-12 col-md-auto col-lg-4">
-                                <div class="div1">
-                                    <img src="{% static 'assets/ICON.png'%}" alt="">
-                                    <h2>Get Funded</h2>
-                                    <p>
-                                        Our platform helps Startups raise to ₹1 Cr (please enter
+        <div class="col-sm-12 col-md-auto col-lg-12">
+            <div class="trustedusers">
+                <h1>
+                    Trusted by thousands  happy Entrepreneurs around the world since 2021
+                </h1>
+                <p>Also featured in</p>
+                <ul>
+                    <li>
+                        <img src="{% static 'assets/slack.png'%}" alt="">
+                    </li>
+                    <li>
+                        <img src="{% static 'assets/Microsoft.png'%}" alt="">
+                    </li>
+                    <li>
+                        <img src="{% static 'assets/facebook.png'%}" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- featuredin section ends -->
+<!-- features section -->
+<section id="features">
+    <div class="row">
+        <div class="col-sm-12 col-md-auto col-lg-6">
+            <div class="featuretxt">
+                <h1>Features</h1>
+                <p>
+                    <span>
+                        Access India's latest and most active investor community. Track commitments in real-time and close deals super quickly. Whether you’re an individual or a company, you can easily raise funds and enjoy the benefits of high-class investors simply with the click of a button.
+                    </span>
+                </p>
+                <ul>
+                    <li>
+                        <img src="{% static 'assets/connect.png'%}" alt="">
+                        Connect Startups with potential Investors
+                    </li>
+                    <li>
+                        <img src="{% static 'assets/chart-growth.png'%}" alt="">
+                        Assured Confidentiality
+                    </li>
+                    <li>
+                        <img src="{% static 'assets/ic_storage_48px.png'%}" alt="">
+                        Advisory services
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-auto col-lg-6">
+            <div class="featureimg">
+                <img src="{% static 'assets/Group 1671.png'%}" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- feature section ends -->
+<!-- how it works section -->
+<section id="howit">
+    <div class="howitheader">
+        <h1>How it Works?</h1>
+        <img src="{% static 'assets/arrow.png'%}" alt="" class="howimg3 howimg1">
+        <img src="{% static 'assets/arrow_copy.png'%}" alt="" class="howimg4 howimg2">
+        <div class="row">
+            <div class="col-sm-12 col-md-auto col-lg-4">
+                <div class="div1">
+                    <img src="{% static 'assets/ICON.png'%}" alt="">
+                    <h2>Get Funded</h2>
+                    <p>
+                        Our platform helps Startups raise to ₹1 Cr (please enter
                                         real-time amount). Our team is committed to providing well-defined strategic inputs and guidance to youngsters. All you need to do is get started by introducing yourself to an investor and discuss your plan and send them your detailed proposal.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-md-auto col-lg-4">
-                                <div class="div2">
-                                    <img src="{% static 'assets/Group 7.png'%}" alt="">
-                                    <h2>Invest with Us</h2>
-                                    <p>
-                                        Our top investors include Giant Businesses, Corporates, Private Equity Firms, VC Firms, and Banks, etc.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-md-auto col-lg-4">
-                                <div class="div3">
-                                    <img src="{% static 'assets/Group 8.png'%}" alt="">
-                                    <h2>Grow with Us</h2>
-                                    <p>
-                                        "We have a motto in Firmingle if you have a Big Dream, we have a bigger platform to achieve it".
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- how it works section ends -->
-                <!-- investors section -->
-                <section id="investor">
-                    <div class="invest">
-                        <h1>
-                            <strong>Are you an Investor?</strong>
-                        </h1>
-                        <p>
-                            If you want to invest in some business, you simply to registeras an investor and shortlist the best suitable businesses and connect with them.
-                            <br>
-                            <span>
-                                <a href="">Join Us</a>
-                            </span>
-                        </p>
-                    </div>
-                    <div class="entre">
-                        <h1>
-                            <strong>Are you an Entrepreneur?</strong>
-                        </h1>
-                        <p>
-                            If you are an Entrepreneur/ Business Owner/Founder, all you need to do is to register your business on Firmingle to get connected with the world- class investors.
-                            <br>
-                            <span>
-                                <a href="">Join Us</a>
-                            </span>
-                        </p>
-                    </div>
-                </section>
-                <!-- investors section ends -->
-                <!-- Plans Section -->
-                <!-- <section id="plan">
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-auto col-lg-4">
+                <div class="div2">
+                    <img src="{% static 'assets/Group 7.png'%}" alt="">
+                    <h2>Invest with Us</h2>
+                    <p>
+                        Our top investors include Giant Businesses, Corporates, Private Equity Firms, VC Firms, and Banks, etc.
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-auto col-lg-4">
+                <div class="div3">
+                    <img src="{% static 'assets/Group 8.png'%}" alt="">
+                    <h2>Grow with Us</h2>
+                    <p>
+                        "We have a motto in Firmingle if you have a Big Dream, we have a bigger platform to achieve it".
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- how it works section ends -->
+<!-- investors section -->
+<section id="investor">
+    <div class="invest">
+        <h1>
+            <strong>Are you an Investor?</strong>
+        </h1>
+        <p>
+            If you want to invest in some business, you simply to registeras an investor and shortlist the best suitable businesses and connect with them.
+            <br>
+            <span>
+                <a href="">Join Us</a>
+            </span>
+        </p>
+    </div>
+    <div class="entre">
+        <h1>
+            <strong>Are you an Entrepreneur?</strong>
+        </h1>
+        <p>
+            If you are an Entrepreneur/ Business Owner/Founder, all you need to do is to register your business on Firmingle to get connected with the world- class investors.
+            <br>
+            <span>
+                <a href="">Join Us</a>
+            </span>
+        </p>
+    </div>
+</section>
+<!-- investors section ends -->
+<!-- Plans Section -->
+<!-- <section id="plan">
                     <div class="plans">
                         <h1>Plans</h1>
                         <p>
@@ -308,12 +301,5 @@
                         </div>
                     </div>
                 </section> -->
-                <!-- Plan Section ends -->
-            </div>
-            <!-- footer -->
-            {% include 'components/footer.html' %}
-            <!-- ends -->
-        </div>
-    </div>
-</div>
+<!-- Plan Section ends -->
 {% endblock %}

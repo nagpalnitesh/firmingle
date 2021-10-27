@@ -1,0 +1,76 @@
+{% extends  'base.html' %}
+{% load static %}
+{% block content %}
+<!-- Confidential Information -->
+<div class="confinfo">
+    <h1>Business Information</h1>
+    <p>
+        Information entered here is displayed publicly to match you with the right set of investors and buyers. Do not mention business name/information which can identify the business.
+    </p>
+    <div class="confinf">
+        <form action="/profile" method="post" class="confform">
+            <h1>Detailed Information</h1>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="confhow">How many permanent employees does the business have?</label>
+                    <input
+                        type="number"
+                        class="form-control"
+                        id="confhow"
+                        placeholder="enter your profession"
+                    >
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="conflegal">Select business legal entity type</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="conflegal"
+                        placeholder="Enter your business entity type"
+                    >
+                </div>
+                <div class="form-group col-md-12">
+                    <label for="confdes">Describe your business in a single line</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="confdes"
+                        placeholder="About your business"
+                    >
+                </div>
+                <div class="form-group col-md-12">
+                    <label for="confhigh">Mention highlights of the business including number of clients, growth rate, promoter experience, business relationships, awards, etc.</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="confhigh"
+                        placeholder="Your Business highlights"
+                    >
+                </div>
+                <div class="form-group col-md-12">
+                    <label for="conflist">List all products and services of the business</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="conflist"
+                        placeholder="All products and services list"
+                    >
+                </div>
+                <div class="form-group col-md-12">
+                    <label for="confdes1">Describe your facility such as built-up area, number of floors, rental/ lease details</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="confdes1"
+                        placeholder="Your facilities"
+                    >
+                </div>
+            </div>
+        </form>
+        <a href="/business-extrainfo">
+            <button type="button" class="btn confbtn">Next</button>
+        </a>
+    </div>
+</div>
+<!-- ends -->
+{% endblock %}

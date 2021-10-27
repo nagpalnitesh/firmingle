@@ -1,0 +1,67 @@
+{% extends  'base.html' %}
+{% load static %}
+{% block content %}
+<!-- Confidential Information -->
+<div class="confinfo">
+    <h1>Business Information</h1>
+    <p>
+        Information entered here is displayed publicly to match you with the right set of investors and buyers. Do not mention business name/information which can identify the business.
+    </p>
+    <div class="confinf">
+        <form action="/profile" method="post" class="confform">
+            <h1>Basic Information</h1>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="confprof">You are a(n)</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="confprof"
+                        placeholder="enter your profession"
+                    >
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="confinterest">You are interested in</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="confinterest"
+                        placeholder="Enter your interest"
+                    >
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="confdate">When was the business established?</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="confdate"
+                        placeholder="YYYY"
+                    >
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="confloc">Select business' industry</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="confloc"
+                        placeholder="enter your business location"
+                    >
+                </div>
+                <div class="form-group col-md-12">
+                    <label for="confloc">Where is the business located/ headquartered?</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="confloc"
+                        placeholder="enter your business location"
+                    >
+                </div>
+            </div>
+        </form>
+        <a href="/business-detail">
+            <button type="button" class="btn confbtn">Next</button>
+        </a>
+    </div>
+</div>
+<!-- ends -->
+{% endblock %}
