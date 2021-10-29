@@ -1,0 +1,122 @@
+.detail {
+  /* background-color: aquamarine; */
+  padding: 2em;
+}
+
+.detail h1 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.detail h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.detail p {
+  font-size: 18px;
+}
+
+.detail .detailedbtn {
+  background-color: #3aafa9;
+  border-radius: 0.5em;
+  padding: 0.5em 2em;
+  color: white;
+  font-weight: bold;
+}
+
+.detail .detailcard1,
+.detail .detailcard2,
+.detail .detailcard3 {
+  background-color: white;
+  border-radius: 1em;
+  box-shadow: 0em 0em 0.5em rgba(0, 0, 0, 0.5);
+  padding: 2em 2em;
+  margin: 2em 0;
+}
+
+.detail .detailcard1 .cardinside {
+  font-size: 20px;
+  margin: 0.5em 1em;
+  float: right;
+}
+
+.detail .detailcard1 .cardinside i {
+  color: green;
+}
+
+.detail .detailimg {
+  width: 80%;
+  height: 600px;
+  margin: auto;
+  border-radius: 1em;
+}
+
+.detail .detailimg img {
+  width: 100%;
+  height: 600px;
+  border-radius: 1em;
+}
+
+.detail .detailtext {
+  border-right: 0.1em solid black;
+}
+
+.detail .detailtxt {
+  padding: 0 2em;
+}
+
+.detail .detailtxt .fa-star {
+  color: gold;
+}
+
+.detail .detailtxt .fa-envelope {
+  color: blue;
+}
+
+.detail .detailtxt .fa-google {
+  color: red;
+}
+
+.detail .detailtxt .fa-phone-alt,
+.detail .detailtxt .fa-linkedin-in,
+.detail .detailtxt .fa-facebook-square,
+.detail .detailtxt ul li:nth-child(3),
+.detail .detailtxt ul li:nth-child(4),
+.detail .detailtxt ul li:nth-child(5) {
+  color: grey;
+  opacity: 0.5;
+}
+
+.detail .detailtxt .linkspan {
+  color: #3aafa9;
+  padding: 0 1.5em;
+}
+
+.detail .detailtxt ul li {
+  display: inline-block;
+  margin: 0 1%;
+}
+
+.detail .detailcard1 .hrtag {
+  width: 90%;
+  margin: 1em auto;
+  background-color: black;
+}
+
+.detail .detailbusiness .col-lg-3 {
+  padding: 0 3em;
+}
+
+/* Deatil Card 2 */
+.detailcard2 .pdfdoc i {
+  font-size: 50px;
+  float: left;
+  margin-right: 0.5em;
+}
+
+/* ends */
+
+.detailcard3 .overtxt {
+  margin-bottom: 3em;
+}

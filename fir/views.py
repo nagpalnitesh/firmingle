@@ -52,9 +52,14 @@ def faq(request):
 def dashboard(request):
     return render(request, 'dashboard.html')
 
+
+# Dashboard Page function
+@login_required
+def dashboard_status(request):
+    return render(request, 'dashboardstatus.html')
+
+
 # logout function
-
-
 def handlelogout(request):
     logout(request)
     return redirect('/')
@@ -221,7 +226,7 @@ def change_password(request, token):
     return render(request, 'registration/change_password.html', context)
 
 
-# Profile Function
+# Business Profile Function
 def profile(request):
     return render(request, 'profile/confidential.html')
 
@@ -241,6 +246,125 @@ def business2(request):
     return render(request, 'profile/business2.html')
 
 
-# Profile Function
+# Plan Function
 def plan(request):
     return render(request, 'profile/plan.html')
+
+
+# Detailed Post Page
+def detailPost(request):
+    return render(request, 'browse/detail.html')
+
+
+# Browse Business
+def browseBusiness(request):
+    return render(request, 'browse/browse_business.html')
+
+
+# Browse Investors
+def browseInvestor(request):
+    return render(request, 'browse/browse_investor.html')
+
+
+# Investor Profile Function
+def iprofile(request):
+    return render(request, 'iprofile/iconfidential.html')
+
+
+# Investor Function
+def investor(request):
+    return render(request, 'iprofile/investor.html')
+
+
+# Investor Function
+def investor1(request):
+    return render(request, 'iprofile/investor1.html')
+
+
+# Investor Function
+def investor2(request):
+    return render(request, 'iprofile/investor2.html')
+
+
+# Investor Plan Function
+def iplan(request):
+    return render(request, 'iprofile/iplan.html')
+
+
+# form submit
+def businessAdd(request):
+    if request.method == "POST":
+        # Get the post parameters
+        confname = request.POST.get('confname')
+        confcomapny = request.POST.get('confcomapny')
+        confemail = request.POST.get('confemail')
+        confphone = request.POST.get('confphone')
+        confprof = request.POST.get('confprof')
+        confdate = request.POST.get('confdate')
+        confinterest = request.POST.get('confinterest')
+        confloc = request.POST.get('confloc')
+        confind = request.POST.get('confind')
+        confhow = request.POST.get('confhow')
+        conflegal = request.POST.get('conflegal')
+        confdes = request.POST.get('confdes')
+        conflist = request.POST.get('conflist')
+        confhigh = request.POST.get('confhigh')
+        confdesc1 = request.POST.get('confdes1')
+        confsale = request.POST.get('confsale')
+        confyear = request.POST.get('confyear')
+        confprofit = request.POST.get('confprofit')
+        confphy = request.POST.get('confphy')
+        confassets = request.POST.get('confassets')
+        chooseimage = request.POST.get('chooseimage')
+        choosedocs = request.POST.get('choosedocs')
+        choosefast = request.POST.get('choosefast')
+
+        # Check errorness of the form
+        # if User.objects.filter(username=username).first():
+        #     messages.success(request, 'Username already exists')
+        # if len(str(username)) < 6:
+        #     messages.error(
+        #         request, 'Username must be atleast 6 characters')
+        # if not username.isalnum():
+        #     messages.error(
+        #         request, 'Username should contain only letters and numbers')
+        # if User.objects.filter(email=email).first():
+        #     messages.success(request, 'Email already exists')
+        # if password != confpassword:
+        #     messages.error(request, 'Password does not match')
+
+        # Create the user
+        biz_obj = BusinessProfile()
+        biz_obj.email = confemail
+        biz_obj.profession = confprof
+        biz_obj.mobile_number = confphone
+        biz_obj.business_established = confdate
+        biz_obj.business_location = confloc
+        biz_obj.industry = confind
+        biz_obj.interested_in = confinterest
+        biz_obj.name = confname
+        biz_obj.company = confcomapny
+        biz_obj.no_employees = confhow
+        biz_obj.legal = conflegal
+        biz_obj.describe = confdes
+        biz_obj.describe_new = confdesc1
+        biz_obj.product_list = conflist
+        biz_obj.highlights = confhigh
+        biz_obj.monthly_sales = confsale
+        biz_obj.yearly_sales = confyear
+        biz_obj.ebitda = confprofit
+        biz_obj.physical_assets = confphy
+        biz_obj.assets = confassets
+        biz_obj.photos = chooseimage
+        biz_obj.docs = choosedocs
+        biz_obj.proof = choosefast
+        biz_obj.save()
+        messages.success(
+            request, " Your Business Profile succefully submitted")
+        messages.success(
+            request, " Profile is under verification")
+
+    else:
+        return HttpResponse("404 - Page Not Found")
+
+    return redirect('/dashboard-status')

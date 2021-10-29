@@ -1,0 +1,170 @@
+.browse {
+  background-color: aqua;
+}
+
+.browse h1 {
+  font-size: 30px;
+  margin-top: 2%;
+}
+
+.browse p {
+  font-size: 16px;
+}
+.browsebiz ul li {
+  display: inline-block;
+  margin: 3% 5% 0 5%;
+  font-size: 24px;
+}
+
+.browsebiz ul {
+  margin: auto;
+}
+.browsebiz .browsesort {
+  float: right;
+  margin: 2% 0;
+  width: 30%;
+  border-radius: 0.5em solid white;
+  color: black;
+  box-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.37);
+}
+
+.browse .browserange {
+  background-color: aliceblue;
+  margin: 2% 0;
+}
+
+/* Min and Max Range Slider */
+.min-max-slider {
+  position: relative;
+  width: 200px;
+  text-align: justify;
+  margin-bottom: 50px;
+  background-color: aquamarine;
+}
+.min-max-slider > label {
+  display: none;
+}
+span.value {
+  display: inline-block;
+}
+span.value.lower::before {
+  content: "INR\00a0";
+  display: inline-block;
+}
+span.value.lower::after {
+  content: "\00a0";
+  display: inline-block;
+}
+span.value.upper::before {
+  content: "-\00a0";
+  display: inline-block;
+}
+span.value.upper::after {
+  content: "\00a0Lakh";
+  display: inline-block;
+}
+.min-max-slider > .legend {
+  display: flex;
+  justify-content: space-between;
+}
+.min-max-slider > .legend > * {
+  font-size: small;
+  opacity: 0.25;
+}
+.min-max-slider > input {
+  cursor: pointer;
+  position: absolute;
+}
+
+/* webkit specific styling */
+.min-max-slider > input {
+  -webkit-appearance: none;
+  outline: none !important;
+  background: transparent;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 30%,
+    silver 30%,
+    silver 60%,
+    transparent 60%,
+    transparent 100%
+  );
+}
+.min-max-slider > input::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 10px; /* Set a specific slider handle width */
+  height: 20px; /* Slider handle height */
+  background: #eee; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border: 1px solid gray;
+  border-radius: 0.5em;
+}
+.min-max-slider > input::-webkit-slider-runnable-track {
+  cursor: pointer;
+}
+
+/* ends */
+
+/* Extras */
+.topic {
+  padding: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border-bottom: solid 1px #ebebeb;
+}
+.open {
+  cursor: pointer;
+  display: block;
+  padding: 0px;
+}
+.open:hover {
+  opacity: 0.7;
+}
+.expanded {
+  background-color: #f5f5f5;
+  transition: all 0.3s ease-in-out;
+}
+.question {
+  padding-top: 30px;
+  padding-right: 40px;
+  padding-bottom: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #526ee4;
+}
+.answer {
+  font-size: 16px;
+  line-height: 26px;
+  display: none;
+  margin-bottom: 30px;
+  text-align: justify;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.faq-t {
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  float: right;
+  position: relative;
+  top: -55px;
+  right: 10px;
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  border-left: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  transition: all 0.3s ease-in-out;
+}
+.faq-o {
+  top: -50px;
+  -moz-transform: rotate(-224deg);
+  -ms-transform: rotate(-224deg);
+  -webkit-transform: rotate(-224deg);
+  transform: rotate(-224deg);
+}
+
+/* ends */

@@ -35,10 +35,23 @@ urlpatterns = [
     path('contactus', views.contact, name='contactus'),  # contactusPage
     path('dashboard', views.dashboard,
          name='dashboard'),  # dashboardPage
+    path('dashboard-status', views.dashboard_status,
+         name='dashboard'),  # dashboardPage
     path('profile', views.profile, name='profile'),  # profilePage
     path('business', views.business, name='business'),  # businessPage
     path('business-detail', views.business1, name='business'),  # businessPage1
     path('business-extrainfo', views.business2,
          name='business'),  # businessPage2
-    path('select-plan', views.plan, name='plans'),  # businessPage
+    path('business/select-plan', views.plan, name='plans'),  # businessPage
+    path('investor-profile', views.iprofile, name='profile'),  # profilePage
+    path('investor', views.investor, name='investor'),  # businessPage
+    path('investor-detail', views.investor1, name='investor'),  # businessPage1
+    path('investor-extrainfo', views.investor2,
+         name='investor'),  # businessPage2
+    path('investor/select-plan', views.iplan, name='plans'),  # businessPage
+    path('investors-and-buyers', views.browseInvestor,
+         name="Investors"),  # Browse Investors
+    path('business-for-sale-and-investment-opportunities',
+         views.browseBusiness, name="Business"),  # Browse Business
+    path('detail-profile', views.detailPost, name="detail"),  # detailPost
 ]

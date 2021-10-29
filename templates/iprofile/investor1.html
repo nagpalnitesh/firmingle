@@ -1,0 +1,97 @@
+{% extends  'base.html' %}
+{% load static %}
+{% block content %}
+<!-- Confidential Information -->
+<div class="confinfo">
+    <h1>Investor Information</h1>
+    <p>
+        Information entered here is displayed publicly to match you with the right set of investors and buyers. Do not mention business name/information which can identify the business.
+    </p>
+    <div class="confinf">
+        <form action="/profile" method="post" class="confform">
+            <h1>Detailed Information</h1>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="confhow">Provide your Investment Range</label>
+                    <input
+                        type="number"
+                        class="form-control"
+                        id="confhow"
+                        placeholder="enter your investment range"
+                    >
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="conflegal">Your Current Location</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="conflegal"
+                        placeholder="Enter your business entity type"
+                    >
+                </div>
+                <div class="form-group col-md-12">
+                    <label for="confdes">Your Company</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="confdes"
+                        placeholder="About your business"
+                    >
+                </div>
+                <div class="form-group col-md-12">
+                    <label for="confhigh">Your Designation</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="confhigh"
+                        placeholder="Your Business highlights"
+                    >
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="conflist">Comapny Website or linkedin profile</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="conflist"
+                        placeholder="All products and services list"
+                    >
+                </div>
+                <div class="form-group col-md-4">
+                    <div class="upload">
+                        <label for="chooseimage">Company Logo</label>
+                        <input
+                            type="file"
+                            class="form-control-file"
+                            id="chooseimage"
+                            accept="image/*"
+                            name="chooseimage"
+                        >
+                    </div>
+                </div>
+                <div class="form-group col-md-12">
+                    <label for="confhigh">Comapny Website or linkedin profile</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="confhigh"
+                        placeholder="Your Business highlights"
+                    >
+                </div>
+                <div class="form-group col-md-12">
+                    <label for="confhigh">Your company's sector</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="confhigh"
+                        placeholder="Your Business highlights"
+                    >
+                </div>
+            </div>
+        </form>
+        <a href="/investor-extrainfo">
+            <button type="button" class="btn confbtn">Next</button>
+        </a>
+    </div>
+</div>
+<!-- ends -->
+{% endblock %}

@@ -18,22 +18,16 @@
 
 .confinf .form-control {
   border-color: transparent;
-  border-bottom: 0.1em solid black;
   border-radius: 0;
-  width: 90%;
+  width: 100%;
   margin: 1% 0;
-}
-
-.confinf input {
   border-bottom: 0.1em solid black;
-  font-size: 16px;
 }
 
 .confinf .form-control:focus {
   border-color: transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
-  border-bottom: 0.1em solid black;
 }
 
 .confbtn {

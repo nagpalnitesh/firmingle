@@ -103,6 +103,10 @@
 
 /* featuredIn section */
 
+#featuredIn {
+  background-color: #def2f1;
+}
+
 /* Active Users and User Ratings */
 .userdata .activeuser,
 .userdata .userratings {
@@ -111,7 +115,7 @@
 
 .userdata .activeuser h1,
 .userdata .userratings h1 {
-  font-size: 28px;
+  font-size: 50px;
   font-weight: bold;
 }
 
@@ -121,25 +125,25 @@
   font-weight: bold;
 }
 
-.userdata .activeuser i {
+/* .userdata .activeuser i {
   color: red;
 }
 
 .userdata .userratings i {
   color: gold;
-}
+} */
 
 /* Trusted Users */
-.trustedusers {
-  padding: 5% 0;
-}
+/* .trustedusers {
+  padding: 0% 0;
+} */
 .trustedusers h1 {
   font-size: 30px;
-  text-align: center;
+  text-align: left;
 }
 
 .trustedusers p {
-  text-align: center;
+  text-align: left;
   font-size: 20px;
   font-weight: bold;
 }
@@ -150,7 +154,7 @@
 }
 
 .trustedusers img {
-  width: 20%;
+  width: 15%;
 }
 
 /* ends */
@@ -249,7 +253,23 @@
   font-weight: bold;
 }
 
-.howitheader .howimg1,
+.howitrow {
+  margin: 5% 0;
+}
+
+.howitrow .col-lg-4 {
+  position: relative;
+}
+
+.howitrow .col-lg-4 .howimg1,
+.howitrow .col-lg-4 .howimg2 {
+  position: absolute;
+  top: 50%;
+  left: 95%;
+  transform: translate(-50%, -50%);
+}
+
+/* .howitheader .howimg1,
 .howitheader .howimg2 {
   position: absolute;
   width: 30vh;
@@ -265,24 +285,24 @@
   top: 50%;
   left: 55%;
   transform: translate(-50%, -50%);
-}
+} */
 
 .div1 {
   text-align: left;
   width: 60%;
-  margin: 0 0 0 40%;
+  margin: 0 0 0 20%;
 }
 
 .div2 {
   text-align: left;
   width: 60%;
-  margin: 10vh 0 0 20%;
+  margin: 0 0 0 20%;
 }
 
 .div3 {
   text-align: left;
   width: 60%;
-  margin: 20vh 0% 0 0%;
+  margin: 0 0% 0 20%;
 }
 
 .div1 img,
