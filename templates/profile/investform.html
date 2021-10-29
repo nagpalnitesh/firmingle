@@ -8,74 +8,43 @@
         Please enter your own details here. Information entered here is not publicly displayed.
     </p>
     <div class="confinf">
-        <form action="{% url 'businessAdd'%}" id="msform" method="post">
+        <form action="{% url 'investform_save'%}" id="msform" method="post">
             {% csrf_token %}
             <fieldset>
                 <h2 class="fs-title">Personal Details</h2>
                 <h3 class="fs-subtitle">Tell us something more about you</h3>
                 <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="confname">Name</label>
+                    <div class="form-group col-md-12">
+                        <label for="iname">Name</label>
                         <input
                             type="text"
                             class="form-control"
-                            id="confname"
-                            name="confname"
+                            id="iname"
+                            name="iname"
                             value="{{user.first_name}} {{user.last_name}}"
                             placeholder="enter your name"
                         >
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="confcompany">Company</label>
+                        <label for="iphone">Your Mobile Number</label>
                         <input
                             type="text"
                             class="form-control"
-                            id="confcompany"
-                            name="confcompany"
-                            placeholder="Company Name"
-                        >
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="confphone">Your Mobile Number</label>
-                        <input
-                            type="text"
-                            class="form-control"
-                            id="confphone"
-                            name="confphone"
+                            id="iphone"
+                            name="iphone"
                             placeholder="Enter your Mobile Number"
                         >
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="confemail">Email</label>
+                        <label for="iemail">Email</label>
                         <input
                             type="email"
                             class="form-control"
-                            id="confemail"
-                            name="confemail"
+                            id="iemail"
+                            name="iemail"
                             value="{{user.email}}"
                             placeholder="enter official email for quick verification"
                         >
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-check">
-                        <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="gridCheck1"
-                            name="gridCheck1"
-                        >
-                        <label class="form-check-label" for="gridCheck1">
-                            Display contact details to introduced members so that they can contact me directly.
-                        </label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="gridCheck2">
-                        <label class="form-check-label" for="gridCheck2">
-                            Display company details to introduced members so that they can know about my company.
-                        </label>
                     </div>
                 </div>
                 <input
@@ -90,47 +59,38 @@
                 <h3 class="fs-subtitle">Your presence on the social network</h3>
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="confprof">You are a(n)</label>
+                        <label for="iprof">You are a(n)</label>
                         <input
                             type="text"
                             class="form-control"
-                            name="confprof"
+                            name="iprof"
                             placeholder="enter your profession"
                         >
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="confinterest">You are interested in</label>
+                        <label for="iinterest">You are interested in</label>
                         <input
                             type="text"
                             class="form-control"
-                            name="confinterest"
+                            name="iinterest"
                             placeholder="Enter your interest"
                         >
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="confdate">When was the business established?</label>
+                        <label for="ifind">Select business' industry</label>
                         <input
                             type="text"
                             class="form-control"
-                            name="confdate"
-                            placeholder="YYYY"
-                        >
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="confind">Select business' industry</label>
-                        <input
-                            type="text"
-                            class="form-control"
-                            name="confind"
+                            name="ifind"
                             placeholder="enter your business' industry"
                         >
                     </div>
-                    <div class="form-group col-md-12">
-                        <label for="confloc">Where is the business located/ headquartered?</label>
+                    <div class="form-group col-md-6">
+                        <label for="iloc">Select locations you are interested in</label>
                         <input
                             type="text"
                             class="form-control"
-                            name="confloc"
+                            name="iloc"
                             placeholder="enter your business location"
                         >
                     </div>
@@ -153,56 +113,78 @@
                 <h3 class="fs-subtitle">Your presence on the social network</h3>
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="confhow">How many permanent employees does the business have?</label>
+                        <label for="iprice">Provide your Investment Range</label>
                         <input
                             type="number"
                             class="form-control"
-                            name="confhow"
+                            name="iprice"
                             placeholder="enter your profession"
                         >
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="conflegal">Select business legal entity type</label>
+                        <label for="icloc">Your Current Location</label>
                         <input
                             type="text"
                             class="form-control"
-                            name="conflegal"
+                            name="icloc"
                             placeholder="Enter your business entity type"
                         >
                     </div>
                     <div class="form-group col-md-12">
-                        <label for="confdes">Describe your business in a single line</label>
+                        <label for="icomp">Your Company</label>
                         <input
                             type="text"
                             class="form-control"
-                            name="confdes"
+                            name="icomp"
                             placeholder="About your business"
                         >
                     </div>
                     <div class="form-group col-md-12">
-                        <label for="confhigh">Mention highlights of the business including number of clients, growth rate, promoter experience, business relationships, awards, etc.</label>
+                        <label for="idesg">Your Designation</label>
                         <input
                             type="text"
                             class="form-control"
-                            name="confhigh"
+                            name="idesg"
                             placeholder="Your Business highlights"
                         >
                     </div>
-                    <div class="form-group col-md-12">
-                        <label for="conflist">List all products and services of the business</label>
+                    <div class="form-group col-md-6">
+                        <label for="ilink">Company Website or Linkedin Profile</label>
                         <input
                             type="text"
                             class="form-control"
-                            name="conflist"
+                            name="ilink"
+                            placeholder="All products and services list"
+                        >
+                    </div>
+                    <div class="form-group col-md-6">
+                        <div class="upload">
+                            <label for="chooseiimage">Company Logo</label>
+                            <input
+                                type="file"
+                                class="form-control-file"
+                                name="chooseiimage"
+                                accept="image/*"
+                                multiple
+                                name="chooseiimage"
+                            >
+                        </div>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="ilink2">Company Website or Linkedin Profile</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            name="ilink2"
                             placeholder="All products and services list"
                         >
                     </div>
                     <div class="form-group col-md-12">
-                        <label for="confdes1">Describe your facility such as built-up area, number of floors, rental/ lease details</label>
+                        <label for="isec">Your company's sector</label>
                         <input
                             type="text"
                             class="form-control"
-                            name="confdes1"
+                            name="isec"
                             placeholder="Your facilities"
                         >
                     </div>
@@ -224,96 +206,58 @@
                 <h2 class="fs-title">Create your account</h2>
                 <h3 class="fs-subtitle">Fill in your credentials</h3>
                 <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="confsale">At present, what is your average monthly sales?</label>
-                        <input
-                            type="number"
-                            class="form-control"
-                            name="confsale"
-                            placeholder="enter your average monthly sale"
-                        >
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="confyear">What was your latest reported yearly sales?</label>
-                        <input
-                            type="number"
-                            class="form-control"
-                            name="confyear"
-                            placeholder="your last year sales"
-                        >
-                    </div>
                     <div class="form-group col-md-12">
-                        <label for="confprofit">What is EBITDA/ Operating Profit Margin Percentage?</label>
+                        <label for="ifactors">factors you look for in a business</label>
                         <input
                             type="text"
                             class="form-control"
-                            name="confprofit"
+                            name="ifactors"
                             placeholder="your profit margin percentage"
                         >
                     </div>
                     <div class="form-group col-md-12">
-                        <label for="confassets">List all assets the business owns</label>
+                        <label for="iassets">About your Company</label>
                         <input
                             type="text"
                             class="form-control"
-                            name="confassets"
+                            name="iassets"
                             placeholder="enter your business assets"
                         >
                     </div>
-                    <div class="form-group col-md-12">
-                        <label for="confphy">What is the value of physical assets owned by the business?</label>
-                        <input
-                            type="number"
-                            class="form-control"
-                            name="confphy"
-                            placeholder="enter your physical business assets value"
-                        >
-                    </div>
                     <div class="form-group col-md-4">
                         <div class="upload">
-                            <label for="chooseimage">Add business and Products photos</label>
+                            <label for="chooseprofile">Profile Picture</label>
                             <input
                                 type="file"
                                 class="form-control-file"
-                                name="chooseimage"
+                                name="chooseprofile"
                                 accept="image/*"
                                 multiple
-                                name="chooseimage"
                             >
                         </div>
                     </div>
                     <div class="form-group col-md-4">
                         <div class="upload">
-                            <label for="choosedocs">Add business documents</label>
+                            <label for="chooseterms">Attach Corporate Profile and Terms of Engagement if any</label>
                             <input
                                 type="file"
                                 class="form-control-file"
-                                name="choosedocs"
+                                name="chooseterms"
                                 accept="application/pdf, image/*"
                                 multiple
-                                name="choosedocs"
                             >
                         </div>
                     </div>
                     <div class="form-group col-md-4">
                         <div class="upload">
-                            <label for="choosefast">Attach proof of business for faster verification</label>
+                            <label for="chooseproof">Attach proof of business for faster verification</label>
                             <input
                                 type="file"
-                                name="choosefast"
+                                name="chooseproof"
                                 accept="image/*, application/pdf"
                                 multiple
-                                name="choosefast"
                             >
                         </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="gridCheck3">
-                        <label class="form-check-label" for="gridCheck3">
-                            I'm interested in receiving quotations from Advisors/ Boutique Investment Banks who can manage this transactions.
-                        </label>
                     </div>
                 </div>
                 <input

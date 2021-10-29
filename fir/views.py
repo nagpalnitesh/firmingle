@@ -268,31 +268,6 @@ def browseInvestor(request):
     return render(request, 'browse/browse_investor.html')
 
 
-# Investor Profile Function
-def iprofile(request):
-    return render(request, 'iprofile/iconfidential.html')
-
-
-# Investor Function
-def investor(request):
-    return render(request, 'iprofile/investor.html')
-
-
-# Investor Function
-def investor1(request):
-    return render(request, 'iprofile/investor1.html')
-
-
-# Investor Function
-def investor2(request):
-    return render(request, 'iprofile/investor2.html')
-
-
-# Investor Plan Function
-def iplan(request):
-    return render(request, 'iprofile/iplan.html')
-
-
 # form submit
 @csrf_exempt
 def businessAdd(request):
@@ -323,7 +298,11 @@ def businessAdd(request):
         choosefast = request.POST.get('choosefast')
         print(confname)
         biz_obj = BusinessProfile.objects.create(
-            name=confname, email=confemail, profession=confprof, business_established=confdate, business_location=confloc, industry=confind, interested_in=confinterest, company=confcompany, no_employees=confhow, legal=conflegal, describe=confdes, describe_new=confdesc1, product_list=conflist, highlights=confhigh, monthly_sales=confsale, yearly_sales=confyear, ebitda=confprofit, physical_assets=confphy, assets=confassets, photos=chooseimage, docs=choosedocs, proof=choosefast)
+            name=confname,
+            email=confemail,
+            phone=confphone,
+            profession=confprof,
+            business_established=confdate, business_location=confloc, industry=confind, interested_in=confinterest, company=confcompany, no_employees=confhow, legal=conflegal, describe=confdes, describe_new=confdesc1, product_list=conflist, highlights=confhigh, monthly_sales=confsale, yearly_sales=confyear, ebitda=confprofit, physical_assets=confphy, assets=confassets, photos=chooseimage, docs=choosedocs, proof=choosefast)
         biz_obj.save()
         messages.success(
             request, " Your Business Profile succefully submitted")
@@ -341,32 +320,32 @@ def bizform(request):
     return render(request, 'profile/businessform.html')
 
 
-def bizform_save(request):
-    if request.method != "POST":
-        return HttpResponseRedirect(reverse("multistepformexample"))
-    else:
-        fname = request.POST.get("fname")
-        lname = request.POST.get("lname")
-        phone = request.POST.get("phone")
-        twitter = request.POST.get("twitter")
-        facebook = request.POST.get("facebook")
-        gplus = request.POST.get("gplus")
-        email = request.POST.get("email")
-        password = request.POST.get("pass")
-        cpass = request.POST.get("cpass")
-        if password != cpass:
-            messages.error(request, "Confirm Password Doesn't Match")
-            return HttpResponseRedirect(reverse('bizform'))
+# def bizform_save(request):
+#     if request.method != "POST":
+#         return HttpResponseRedirect(reverse("multistepformexample"))
+#     else:
+#         fname = request.POST.get("fname")
+#         lname = request.POST.get("lname")
+#         phone = request.POST.get("phone")
+#         twitter = request.POST.get("twitter")
+#         facebook = request.POST.get("facebook")
+#         gplus = request.POST.get("gplus")
+#         email = request.POST.get("email")
+#         password = request.POST.get("pass")
+#         cpass = request.POST.get("cpass")
+#         if password != cpass:
+#             messages.error(request, "Confirm Password Doesn't Match")
+#             return HttpResponseRedirect(reverse('business-profile'))
 
-        try:
-            multistepform = BizformModel(
-                fname=fname, lname=lname, phone=phone, twitter=twitter, facebook=facebook, gplus=gplus, email=email, password=password)
-            multistepform.save()
-            messages.success(request, "Data Save Successfully")
-            return redirect('/dashboard-status')
-        except:
-            messages.error(request, "Error in Saving Data")
-            return HttpResponseRedirect(reverse('bizform'))
+#         try:
+#             multistepform = BizformModel(
+#                 fname=fname, lname=lname, phone=phone, twitter=twitter, facebook=facebook, gplus=gplus, email=email, password=password)
+#             multistepform.save()
+#             messages.success(request, "Data Save Successfully")
+#             return redirect('/dashboard-status')
+#         except:
+#             messages.error(request, "Error in Saving Data")
+#             return HttpResponseRedirect(reverse('business-profile'))
 # Multi step Form ends here
 
 
@@ -376,29 +355,37 @@ def investform(request):
 
 
 def investform_save(request):
-    if request.method != "POST":
-        return HttpResponseRedirect(reverse("investform"))
-    else:
-        fname = request.POST.get("fname")
-        lname = request.POST.get("lname")
-        phone = request.POST.get("phone")
-        twitter = request.POST.get("twitter")
-        facebook = request.POST.get("facebook")
-        gplus = request.POST.get("gplus")
-        email = request.POST.get("email")
-        password = request.POST.get("pass")
-        cpass = request.POST.get("cpass")
-        if password != cpass:
-            messages.error(request, "Confirm Password Doesn't Match")
-            return HttpResponseRedirect(reverse('investform'))
+    if request.method == "POST":
+        # Get the post parameters
+        iname = request.POST.get('iname')
+        iemail = request.POST.get('iemail')
+        iphone = request.POST.get('iphone')
+        iprof = request.POST.get('iprof')
+        iinterest = request.POST.get('iinterest')
+        ifind = request.POST.get('ifind')
+        iloc = request.POST.get('iloc')
+        iprice = request.POST.get('iprice')
+        icloc = request.POST.get('icloc')
+        icomp = request.POST.get('icomp')
+        idesg = request.POST.get('idesg')
+        ilink = request.POST.get('ilink')
+        ilink2 = request.POST.get('ilink2')
+        ifactors = request.POST.get('ifactors')
+        iassets = request.POST.get('iassets')
+        isec = request.POST.get('isec')
+        chooseiimage = request.POST.get('chooseiimage')
+        chooseprofile = request.POST.get('chooseprofile')
+        chooseterms = request.POST.get('chooseterms')
+        chooseproof = request.POST.get('chooseproof')
+        invest_obj = InvestmentProfile.objects.create(
+            investor_name=iname, investor_mobile_number=iphone, investor_email=iemail, investor_profession=iprof, investor_interested_in=iinterest, investor_industry=ifind, investor_select_location=iloc, investor_investment_range=iprice, investor_current_location=icloc, investor_company=icomp, investor_designation=idesg, investor_companylink_1=ilink, investor_companylink_2=ilink2, investor_company_sector=isec, investor_factors=ifactors, investor_about_company=iassets, investor_logo=chooseiimage, investor_photos=chooseprofile, investor_docs=chooseterms, investor_proof=chooseproof,)
+        invest_obj.save()
+        messages.success(
+            request, " Your Business Profile succefully submitted")
+        messages.success(
+            request, " Profile is under verification")
 
-        try:
-            multistepform = BizformModel(
-                fname=fname, lname=lname, phone=phone, twitter=twitter, facebook=facebook, gplus=gplus, email=email, password=password)
-            multistepform.save()
-            messages.success(request, "Data Save Successfully")
-            return redirect('/dashboard-status')
-        except:
-            messages.error(request, "Error in Saving Data")
-            return HttpResponseRedirect(reverse('investform'))
-# Multi step Form ends here
+    else:
+        return HttpResponse("404 - Page Not Found")
+
+    return redirect('/dashboard-status')
