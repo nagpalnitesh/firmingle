@@ -9,6 +9,4 @@ from .models import *
 # admin.site.register(Test)
 
 
-admin.site.register(Profile)
-
 admin.site.register(BusinessProfile)

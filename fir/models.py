@@ -20,57 +20,36 @@ from django.core.validators import RegexValidator
 #         return self.Name
 
 
-# Login/ SignUp Token
-class Profile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    # authenication token
-    auth_token = models.CharField(max_length=100)
-    # check account is verified or not
-    isVerified = models.BooleanField(default=False)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-    # forget password token
-    forget_password_token = models.CharField(max_length=100)
-
-    def __str__(self):
-        return self.user.first_name
-
-
-class UserProfile(DetailView):
-    model = Profile
-    models.SlugField(("username"))
-    template_name = 'fir/dashboard.html'
-
-
 class BusinessProfile(models.Model):
-    name = models.CharField(max_length=50)
-    company = models.CharField(max_length=100)
+    name = models.CharField(max_length=50, blank=True, default='')
+    company = models.CharField(max_length=100, blank=True, default='')
     phone_regex = RegexValidator(
         regex=r'^\+?1?\d{9,15}$', message="Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed.")
     mobile_number = models.CharField(
-        validators=[phone_regex], max_length=15, blank=False)
-    email = models.CharField(max_length=100)
-    display_contact = models.CharField(max_length=100)
-    display_company = models.CharField(max_length=100)
-    plan_selected = models.CharField(max_length=50)
+        validators=[phone_regex], max_length=15, blank=True, default='')
+    email = models.CharField(max_length=100, blank=True, default='')
+    display_contact = models.CharField(max_length=100, blank=True, default='')
+    display_company = models.CharField(max_length=100, blank=True, default='')
+    plan_selected = models.CharField(max_length=50, blank=True, default='')
     is_accepted = models.BooleanField(default=False)
-    profession = models.CharField(max_length=100)
-    business_established = models.CharField(max_length=4)
-    business_location = models.CharField(max_length=50)
-    interested_in = models.CharField(max_length=50)
-    industry = models.CharField(max_length=100)
-    no_employees = models.PositiveBigIntegerField()
-    legal = models.CharField(max_length=100)
-    describe = models.TextField()
-    describe_new = models.TextField()
-    highlights = models.TextField()
-    product_list = models.TextField()
-    facility = models.TextField()
-    monthly_sales = models.PositiveBigIntegerField()
-    yearly_sales = models.PositiveBigIntegerField()
-    ebitda = models.CharField(max_length=5)
-    assets = models.TextField()
-    physical_assets = models.TextField()
+    profession = models.CharField(max_length=100, blank=True, default='')
+    business_established = models.CharField(
+        max_length=4, blank=True, default='')
+    business_location = models.CharField(max_length=50, blank=True, default='')
+    interested_in = models.CharField(max_length=50, blank=True, default='')
+    industry = models.CharField(max_length=100, blank=True, default='')
+    no_employees = models.PositiveBigIntegerField(default=0, blank=True)
+    legal = models.CharField(max_length=100, blank=True, default='')
+    describe = models.TextField(default='')
+    describe_new = models.TextField(default='')
+    highlights = models.TextField(default='')
+    product_list = models.TextField(default='')
+    facility = models.TextField(default='')
+    monthly_sales = models.PositiveBigIntegerField(default=0, blank=True)
+    yearly_sales = models.PositiveBigIntegerField(default=0, blank=True)
+    ebitda = models.CharField(max_length=5, blank=True, default='')
+    assets = models.TextField(default='')
+    physical_assets = models.TextField(default='')
     photos = models.FileField(upload_to='photoimg', blank=False)
     docs = models.FileField(upload_to='doc', blank=False)
     proof = models.FileField(upload_to='proof_docs', blank=False)

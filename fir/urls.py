@@ -44,14 +44,16 @@ urlpatterns = [
          name='business'),  # businessPage2
     path('business/select-plan', views.plan, name='plans'),  # businessPage
     path('investor-profile', views.iprofile, name='profile'),  # profilePage
-    path('investor', views.investor, name='investor'),  # businessPage
-    path('investor-detail', views.investor1, name='investor'),  # businessPage1
+    path('investor', views.investor, name='investor'),  # Investors Page
+    path('investor-detail', views.investor1,
+         name='investor'),  # Investors Page1
     path('investor-extrainfo', views.investor2,
          name='investor'),  # businessPage2
-    path('investor/select-plan', views.iplan, name='plans'),  # businessPage
+    path('investor/select-plan', views.iplan, name='plans'),  # Investors Page
     path('investors-and-buyers', views.browseInvestor,
          name="Investors"),  # Browse Investors
     path('business-for-sale-and-investment-opportunities',
          views.browseBusiness, name="Business"),  # Browse Business
     path('detail-profile', views.detailPost, name="detail"),  # detailPost
+    path('/businessadd', views.businessAdd, name="businessadd"),  # businessadd
 ]
