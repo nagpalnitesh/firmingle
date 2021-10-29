@@ -8,7 +8,8 @@
         Information entered here is displayed publicly to match you with the right set of investors and buyers. Do not mention business name/information which can identify the business.
     </p>
     <div class="confinf">
-        <form action="/businessAdd" method="post" class="confform">
+        <form action="/businessadd" method="post" class="confform">
+            {% csrf_token %}
             <h1>Detailed Information</h1>
             <div class="form-row">
                 <div class="form-group col-md-6">
@@ -66,10 +67,10 @@
                     >
                 </div>
             </div>
+            <a href="/business-extrainfo">
+                <button type="submit" class="btn confbtn">Next</button>
+            </a>
         </form>
-        <a href="/business-extrainfo">
-            <button type="button" class="btn confbtn">Next</button>
-        </a>
     </div>
 </div>
 <!-- ends -->

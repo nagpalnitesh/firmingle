@@ -55,5 +55,5 @@ urlpatterns = [
     path('business-for-sale-and-investment-opportunities',
          views.browseBusiness, name="Business"),  # Browse Business
     path('detail-profile', views.detailPost, name="detail"),  # detailPost
-    path('/businessadd', views.businessAdd, name="businessadd"),  # businessadd
+    path('businessadd', views.businessAdd, name="businessadd"),  # businessadd
 ]

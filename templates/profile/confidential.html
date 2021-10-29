@@ -9,6 +9,7 @@
     </p>
     <div class="confinf">
         <form action="/businessadd" method="post" class="confform">
+            {% csrf_token %}
             <span style="float: right;">
                 <i class="fas fa-question"></i>
             </span>
@@ -24,11 +25,11 @@
                     >
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="confcomapny">Company</label>
+                    <label for="confcompany">Company</label>
                     <input
                         type="text"
                         class="form-control"
-                        id="confcomapny"
+                        id="confcompany"
                         placeholder="Company Name"
                     >
                 </div>
@@ -46,7 +47,7 @@
                     <input
                         type="email"
                         class="form-control"
-                        id="email"
+                        id="confemail"
                         value="{{user.email}}"
                         placeholder="enter official email for quick verification"
                     >
@@ -68,10 +69,10 @@
                     </label>
                 </div>
             </div>
+            <a href="/business">
+                <button type="submit" class="btn confbtn">Submit</button>
+            </a>
         </form>
-        <a href="/business">
-            <button type="button" class="btn confbtn">Submit</button>
-        </a>
     </div>
 </div>
 <!-- ends -->

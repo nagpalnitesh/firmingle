@@ -9,6 +9,7 @@
     </p>
     <div class="confinf">
         <form action="/businessadd" method="post" class="confform">
+            {% csrf_token %}
             <h1>Basic Information</h1>
             <div class="form-row">
                 <div class="form-group col-md-6">
@@ -57,10 +58,10 @@
                     >
                 </div>
             </div>
+            <a href="/business-detail">
+                <button type="submit" class="btn confbtn">Next</button>
+            </a>
         </form>
-        <a href="/business-detail">
-            <button type="button" class="btn confbtn">Next</button>
-        </a>
     </div>
 </div>
 <!-- ends -->

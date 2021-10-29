@@ -292,13 +292,14 @@ def iplan(request):
 
 
 # form submit
+@csrf_exempt
 def businessAdd(request):
     if request.method == "POST":
         # Get the post parameters
         confname = request.POST.get('confname')
-        confcomapny = request.POST.get('confcomapny')
-        confemail = request.POST.get('confemail')
+        confcompany = request.POST.get('confcompany')
         confphone = request.POST.get('confphone')
+        confemail = request.POST.get('confemail')
         confprof = request.POST.get('confprof')
         confdate = request.POST.get('confdate')
         confinterest = request.POST.get('confinterest')
@@ -319,45 +320,8 @@ def businessAdd(request):
         choosedocs = request.POST.get('choosedocs')
         choosefast = request.POST.get('choosefast')
 
-        # Check errorness of the form
-        # if User.objects.filter(username=username).first():
-        #     messages.success(request, 'Username already exists')
-        # if len(str(username)) < 6:
-        #     messages.error(
-        #         request, 'Username must be atleast 6 characters')
-        # if not username.isalnum():
-        #     messages.error(
-        #         request, 'Username should contain only letters and numbers')
-        # if User.objects.filter(email=email).first():
-        #     messages.success(request, 'Email already exists')
-        # if password != confpassword:
-        #     messages.error(request, 'Password does not match')
-
-        # Create the user
-        biz_obj = BusinessProfile()
-        biz_obj.email = confemail
-        biz_obj.profession = confprof
-        biz_obj.mobile_number = confphone
-        biz_obj.business_established = confdate
-        biz_obj.business_location = confloc
-        biz_obj.industry = confind
-        biz_obj.interested_in = confinterest
-        biz_obj.name = confname
-        biz_obj.company = confcomapny
-        biz_obj.no_employees = confhow
-        biz_obj.legal = conflegal
-        biz_obj.describe = confdes
-        biz_obj.describe_new = confdesc1
-        biz_obj.product_list = conflist
-        biz_obj.highlights = confhigh
-        biz_obj.monthly_sales = confsale
-        biz_obj.yearly_sales = confyear
-        biz_obj.ebitda = confprofit
-        biz_obj.physical_assets = confphy
-        biz_obj.assets = confassets
-        biz_obj.photos = chooseimage
-        biz_obj.docs = choosedocs
-        biz_obj.proof = choosefast
+        biz_obj = BusinessProfile.objects.create(
+            name=confname, email=confemail, profession=confprof, mobile_number=confphone, business_established=confdate, business_location=confloc, industry=confind, interested_in=confinterest, company=confcompany, no_employees=confhow, legal=conflegal, describe=confdes, describe_new=confdesc1, product_list=conflist, highlights=confhigh, monthly_sales=confsale, yearly_sales=confyear, ebitda=confprofit, physical_assets=confphy, assets=confassets, photos=chooseimage, docs=choosedocs, proof=choosefast)
         biz_obj.save()
         messages.success(
             request, " Your Business Profile succefully submitted")
