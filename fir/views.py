@@ -2,6 +2,8 @@ from django.shortcuts import render, HttpResponse, redirect
 from django.contrib.auth.models import User
 from django.contrib import messages
 import uuid
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 from .models import *
 from django.conf import settings
 from django.core.mail import send_mail
@@ -319,9 +321,9 @@ def businessAdd(request):
         chooseimage = request.POST.get('chooseimage')
         choosedocs = request.POST.get('choosedocs')
         choosefast = request.POST.get('choosefast')
-
+        print(confname)
         biz_obj = BusinessProfile.objects.create(
-            name=confname, email=confemail, profession=confprof, mobile_number=confphone, business_established=confdate, business_location=confloc, industry=confind, interested_in=confinterest, company=confcompany, no_employees=confhow, legal=conflegal, describe=confdes, describe_new=confdesc1, product_list=conflist, highlights=confhigh, monthly_sales=confsale, yearly_sales=confyear, ebitda=confprofit, physical_assets=confphy, assets=confassets, photos=chooseimage, docs=choosedocs, proof=choosefast)
+            name=confname, email=confemail, profession=confprof, business_established=confdate, business_location=confloc, industry=confind, interested_in=confinterest, company=confcompany, no_employees=confhow, legal=conflegal, describe=confdes, describe_new=confdesc1, product_list=conflist, highlights=confhigh, monthly_sales=confsale, yearly_sales=confyear, ebitda=confprofit, physical_assets=confphy, assets=confassets, photos=chooseimage, docs=choosedocs, proof=choosefast)
         biz_obj.save()
         messages.success(
             request, " Your Business Profile succefully submitted")
@@ -332,3 +334,71 @@ def businessAdd(request):
         return HttpResponse("404 - Page Not Found")
 
     return redirect('/dashboard-status')
+
+
+# Multi Step Form Submit Views Business
+def bizform(request):
+    return render(request, 'profile/businessform.html')
+
+
+def bizform_save(request):
+    if request.method != "POST":
+        return HttpResponseRedirect(reverse("multistepformexample"))
+    else:
+        fname = request.POST.get("fname")
+        lname = request.POST.get("lname")
+        phone = request.POST.get("phone")
+        twitter = request.POST.get("twitter")
+        facebook = request.POST.get("facebook")
+        gplus = request.POST.get("gplus")
+        email = request.POST.get("email")
+        password = request.POST.get("pass")
+        cpass = request.POST.get("cpass")
+        if password != cpass:
+            messages.error(request, "Confirm Password Doesn't Match")
+            return HttpResponseRedirect(reverse('bizform'))
+
+        try:
+            multistepform = BizformModel(
+                fname=fname, lname=lname, phone=phone, twitter=twitter, facebook=facebook, gplus=gplus, email=email, password=password)
+            multistepform.save()
+            messages.success(request, "Data Save Successfully")
+            return redirect('/dashboard-status')
+        except:
+            messages.error(request, "Error in Saving Data")
+            return HttpResponseRedirect(reverse('bizform'))
+# Multi step Form ends here
+
+
+# Multi Step Form Submit Views Business
+def investform(request):
+    return render(request, 'profile/investform.html')
+
+
+def investform_save(request):
+    if request.method != "POST":
+        return HttpResponseRedirect(reverse("investform"))
+    else:
+        fname = request.POST.get("fname")
+        lname = request.POST.get("lname")
+        phone = request.POST.get("phone")
+        twitter = request.POST.get("twitter")
+        facebook = request.POST.get("facebook")
+        gplus = request.POST.get("gplus")
+        email = request.POST.get("email")
+        password = request.POST.get("pass")
+        cpass = request.POST.get("cpass")
+        if password != cpass:
+            messages.error(request, "Confirm Password Doesn't Match")
+            return HttpResponseRedirect(reverse('investform'))
+
+        try:
+            multistepform = BizformModel(
+                fname=fname, lname=lname, phone=phone, twitter=twitter, facebook=facebook, gplus=gplus, email=email, password=password)
+            multistepform.save()
+            messages.success(request, "Data Save Successfully")
+            return redirect('/dashboard-status')
+        except:
+            messages.error(request, "Error in Saving Data")
+            return HttpResponseRedirect(reverse('investform'))
+# Multi step Form ends here

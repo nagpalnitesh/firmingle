@@ -10,3 +10,5 @@ from .models import *
 
 
 admin.site.register(BusinessProfile)
+
+admin.site.register(BizformModel)
