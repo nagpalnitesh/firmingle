@@ -18,7 +18,6 @@ from django.db.models.fields import BLANK_CHOICE_DASH
 #     def __str__(self):
 #         return self.Name
 
-
 class BusinessProfile(models.Model):
     name = models.CharField(max_length=50, null=True, blank=True, default='')
     company = models.CharField(
@@ -62,6 +61,13 @@ class BusinessProfile(models.Model):
     photos = models.FileField(upload_to='photoimg', blank=True, null=True)
     docs = models.FileField(upload_to='doc', blank=True, null=True)
     proof = models.FileField(upload_to='proof_docs', blank=True, null=True)
+    Status = [
+        ('Accepted', 'Accepted'),
+        ('Rejected', 'Rejected'),
+        ('Pending', 'Pending'),
+    ]
+    profile_status = models.CharField(
+        max_length=10, choices=Status, default='Pending')
 
     def __str__(self):
         return self.name
@@ -107,6 +113,13 @@ class InvestmentProfile(models.Model):
     investor_docs = models.FileField(upload_to='doc', blank=True, null=True)
     investor_proof = models.FileField(
         upload_to='proof_docs', blank=True, null=True)
+    Status = [
+        ('Accepted', 'Accepted'),
+        ('Rejected', 'Rejected'),
+        ('Pending', 'Pending'),
+    ]
+    profile_status = models.CharField(
+        max_length=10, choices=Status, default='Pending')
 
     def __str__(self):
         return self.investor_name

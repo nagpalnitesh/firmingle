@@ -1,7 +1,3 @@
-.browse {
-  background-color: aqua;
-}
-
 .browse h1 {
   font-size: 30px;
   margin-top: 2%;
@@ -29,7 +25,6 @@
 }
 
 .browse .browserange {
-  background-color: aliceblue;
   margin: 2% 0;
 }
 
@@ -39,7 +34,6 @@
   width: 200px;
   text-align: justify;
   margin-bottom: 50px;
-  background-color: aquamarine;
 }
 .min-max-slider > label {
   display: none;
@@ -132,7 +126,6 @@ span.value.upper::after {
   padding-bottom: 20px;
   font-size: 18px;
   font-weight: 500;
-  color: #526ee4;
 }
 .answer {
   font-size: 16px;
@@ -167,4 +160,53 @@ span.value.upper::after {
   transform: rotate(-224deg);
 }
 
+/* ends */
+
+/* content here  */
+.browsebox {
+  background-color: white;
+  width: 90%;
+  margin: 3% auto;
+  padding: 3%;
+  border-radius: 1em;
+  box-shadow: inset 0 0 0.5em rgb(105, 105, 105);
+}
+
+.browsebox ul li {
+  margin: 0.5em 0 0 0;
+  display: inline-block;
+  margin: 0 0.5em 0 0;
+}
+
+.browsebox table {
+  width: 100%;
+}
+
+.browsebox table tr td {
+  padding: 0.5em 0;
+}
+
+.browsebox .fa-envelope {
+  color: blue;
+}
+
+.browsebox .fa-google {
+  color: red;
+}
+
+.browsebox .fa-phone-alt,
+.browsebox .fa-linkedin-in,
+.browsebox .fa-facebook-square,
+.browsebox ul li:nth-child(3),
+.browsebox ul li:nth-child(4),
+.browsebox ul li:nth-child(5) {
+  color: grey;
+  opacity: 0.5;
+}
+
+.browsebox .prof img {
+  width: 10%;
+  float: left;
+  margin-right: 0.5em;
+}
 /* ends */

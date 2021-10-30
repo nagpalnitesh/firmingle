@@ -1,0 +1,336 @@
+{% extends  'base.html' %}
+{% load static %}
+{% block content %}
+<!-- Detailed Post -->
+<div class="browse">
+    <h1>
+        Business for Sale and Investment Opportunities
+    </h1>
+    <p>
+        Results 1 - 15 of 17036 - Business for Sale and Investment Opportunities. Buy or Invest in a Business.
+    </p>
+    <!-- filter and sorting -->
+    <div class="browsebiz">
+        <div class="row">
+            <div class="col-sm-12 col-md-auto col-lg-6">
+                <ul>
+                    <li>
+                        <strong>
+                            <a href="/business-for-sale-and-investment-opportunities">Business</a>
+                        </strong>
+                    </li>
+                    <li>
+                        <strong style="border-bottom: 0.2em solid #3aafa9;">
+                            <a href="/investors-and-buyers">Investors & Buyers</a>
+                        </strong>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-12 col-md-auto col-lg-6">
+                <select class="custom-select browsesort" aria-label="Default select example">
+                    <option selected>Sort By</option>
+                    <option value="1">Popularity</option>
+                    <option value="2">Relevance</option>
+                    <option value="3">Low to High</option>
+                    <option value="4">High to Low</option>
+                </select>
+            </div>
+            <div class="col-sm-12 col-md-auto col-lg-4">
+                <p>
+                    <i class="fas fa-briefcase"></i>
+                    Transaction Types
+                </p>
+                <select class="custom-select browsetrans" aria-label="Default select example">
+                    <option selected>Sort By</option>
+                    <option value="1">Popularity</option>
+                    <option value="2">Relevance</option>
+                    <option value="3">Low to High</option>
+                    <option value="4">High to Low</option>
+                </select>
+            </div>
+            <div class="col-sm-12 col-md-auto col-lg-4">
+                <p>
+                    <i class="fas fa-map-marker-alt"></i>
+                    Locations
+                </p>
+                <select class="custom-select browsetrans" aria-label="Default select example">
+                    <option selected>Sort By</option>
+                    <option value="1">Popularity</option>
+                    <option value="2">Relevance</option>
+                    <option value="3">Low to High</option>
+                    <option value="4">High to Low</option>
+                </select>
+            </div>
+            <div class="col-sm-12 col-md-auto col-lg-4">
+                <p>
+                    <i class="fas fa-industry"></i>
+                    Industries
+                </p>
+                <select class="custom-select browsetrans" aria-label="Default select example">
+                    <option selected>Sort By</option>
+                    <option value="1">Popularity</option>
+                    <option value="2">Relevance</option>
+                    <option value="3">Low to High</option>
+                    <option value="4">High to Low</option>
+                </select>
+            </div>
+        </div>
+        <div class="browserange">
+            <p>
+                Investment Size
+            </p>
+            <div class="min-max-slider" data-legendnum="2">
+                <input
+                    id="min"
+                    class="min"
+                    name="min"
+                    type="range"
+                    step="1"
+                    min="14"
+                    max="90"
+                >
+                <input
+                    id="max"
+                    class="max"
+                    name="max"
+                    type="range"
+                    step="1"
+                    min="14"
+                    max="90"
+                >
+            </div>
+            <div class="topic" style="float: right;">
+                <div class="open">
+                    <h2 class="question">
+                        Extras
+                    </h2>
+                    <span class="faq-t"></span>
+                </div>
+                <p class="answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class="row extras answer">
+                    <div class="col-sm-12 col-md-auto col-lg-6">
+                        <h1>Hello</h1>
+                    </div>
+                    <div class="col-sm-12 col-md-auto col-lg-12">
+                        <h2>World</h2>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ends -->
+    <hr>
+    <div class="browsedisplay">
+        <div class="row">
+            {% for profile in allProfiles%}
+            <div class="col-md-4 browsecol">
+                <div class="browsebox">
+                    {% if profile.profile_status == 'Pending'%}
+                    <i class="fas fa-circle" style="color: gold; float: right; font-size: 20px; margin-left: 1em;"></i>
+                    {% elif profile.profile_status == 'Accepted'%}
+                    <i class="fas fa-circle" style="color: green; float: right; font-size: 20px; margin-left: 1em;"></i>
+                    {% endif %}
+                    <div class="prof">
+                        <div class="profileimg">
+                            <img src="{% static 'assets/person.jpg' %}" alt="">
+                        </div>
+                        <div class="profiletxt">
+                            <p>
+                                <strong>Business Associate</strong>
+                                <br>
+                                Individual Buyer in India
+                            </p>
+                        </div>
+                    </div>
+                    <p>
+                        <strong>Profile Summary</strong>
+                        <br>
+                        IT Company with our corporate office based out of San Ramon
+                    </p>
+                    <table class="browsetable">
+                        <tr>
+                            <td>
+                                <i class="fas fa-map-marker-alt" style="color:green;"></i>
+                                <span>Locations</span>
+                            </td>
+                            <td>
+                                <span style="float: right;">Mumbai, Chennai, Goa, Assam</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fas fa-industry" style="color: brown;"></i>
+                                <span>Industries</span>
+                            </td>
+                            <td>
+                                <span style="float: right;">Software, Hospitality, Service</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <span>Rating</span>
+                            </td>
+                            <td>
+                                <span style="float: right;">8.9/10</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button type="button" class="btn btn-success">
+                                    Send Proposal
+                                </button>
+                            </td>
+                            <td>
+                                <p style="text-align: center;">
+                                    <span>Investment Size</span>
+                                    <br>
+                                    INR
+                                    <strong style="color: #3aafa9;">1 Cr - 5 Cr</strong>
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+</div>
+<script>
+    $(".open").click(function () {
+  var container = $(this).parents(".topic");
+  var answer = container.find(".answer");
+  var trigger = container.find(".faq-t");
+
+  answer.slideToggle(200);
+
+  if (trigger.hasClass("faq-o")) {
+    trigger.removeClass("faq-o");
+  } else {
+    trigger.addClass("faq-o");
+  }
+
+  if (container.hasClass("expanded")) {
+    container.removeClass("expanded");
+  } else {
+    container.addClass("expanded");
+  }
+});
+
+var thumbsize = 14;
+
+function draw(slider,splitvalue) {
+
+    /* set function vars */
+    var min = slider.querySelector('.min');
+    var max = slider.querySelector('.max');
+    var lower = slider.querySelector('.lower');
+    var upper = slider.querySelector('.upper');
+    var legend = slider.querySelector('.legend');
+    var thumbsize = parseInt(slider.getAttribute('data-thumbsize'));
+    var rangewidth = parseInt(slider.getAttribute('data-rangewidth'));
+    var rangemin = parseInt(slider.getAttribute('data-rangemin'));
+    var rangemax = parseInt(slider.getAttribute('data-rangemax'));
+
+    /* set min and max attributes */
+    min.setAttribute('max',splitvalue);
+    max.setAttribute('min',splitvalue);
+
+    /* set css */
+    min.style.width = parseInt(thumbsize + ((splitvalue - rangemin)/(rangemax - rangemin))*(rangewidth - (2*thumbsize)))+'px';
+    max.style.width = parseInt(thumbsize + ((rangemax - splitvalue)/(rangemax - rangemin))*(rangewidth - (2*thumbsize)))+'px';
+    min.style.left = '0px';
+    max.style.left = parseInt(min.style.width)+'px';
+    min.style.top = lower.offsetHeight+'px';
+    max.style.top = lower.offsetHeight+'px';
+    legend.style.marginTop = min.offsetHeight+'px';
+    slider.style.height = (lower.offsetHeight + min.offsetHeight + legend.offsetHeight)+'px';
+    
+    /* correct for 1 off at the end */
+    if(max.value>(rangemax - 1)) max.setAttribute('data-value',rangemax);
+
+    /* write value and labels */
+    max.value = max.getAttribute('data-value'); 
+    min.value = min.getAttribute('data-value');
+    //lower.innerHTML = min.getAttribute('data-value');
+    //upper.innerHTML = max.getAttribute('data-value');
+
+}
+
+function init(slider) {
+    /* set function vars */
+    var min = slider.querySelector('.min');
+    var max = slider.querySelector('.max');
+    var rangemin = parseInt(min.getAttribute('min'));
+    var rangemax = parseInt(max.getAttribute('max'));
+    var avgvalue = (rangemin + rangemax)/2;
+    var legendnum = slider.getAttribute('data-legendnum');
+
+    /* set data-values */
+    min.setAttribute('data-value',rangemin);
+    max.setAttribute('data-value',rangemax);
+    
+    /* set data vars */
+    slider.setAttribute('data-rangemin',rangemin); 
+    slider.setAttribute('data-rangemax',rangemax); 
+    slider.setAttribute('data-thumbsize',thumbsize); 
+    slider.setAttribute('data-rangewidth',slider.offsetWidth);
+
+    /* write labels */
+    var lower = document.createElement('span');
+    var upper = document.createElement('span');
+    lower.classList.add('lower','value');
+    upper.classList.add('upper','value');
+    lower.appendChild(document.createTextNode(rangemin));
+    upper.appendChild(document.createTextNode(rangemax));
+    slider.insertBefore(lower,min.previousElementSibling);
+    slider.insertBefore(upper,min.previousElementSibling);
+    
+    /* write legend */
+    var legend = document.createElement('div');
+    legend.classList.add('legend');
+    var legendvalues = [];
+    for (var i = 0; i < legendnum; i++) {
+        legendvalues[i] = document.createElement('div');
+        var val = Math.round(rangemin+(i/(legendnum-1))*(rangemax - rangemin));
+        legendvalues[i].appendChild(document.createTextNode(val));
+        legend.appendChild(legendvalues[i]);
+
+    } 
+    slider.appendChild(legend);
+
+    /* draw */
+    draw(slider,avgvalue);
+
+    /* events */
+    min.addEventListener("input", function() {update(min);});
+    max.addEventListener("input", function() {update(max);});
+}
+
+function update(el){
+    /* set function vars */
+    var slider = el.parentElement;
+    var min = slider.querySelector('#min');
+    var max = slider.querySelector('#max');
+    var minvalue = Math.floor(min.value);
+    var maxvalue = Math.floor(max.value);
+    
+    /* set inactive values before draw */
+    min.setAttribute('data-value',minvalue);
+    max.setAttribute('data-value',maxvalue);
+
+    var avgvalue = (minvalue + maxvalue)/2;
+
+    /* draw */
+    draw(slider,avgvalue);
+}
+
+var sliders = document.querySelectorAll('.min-max-slider');
+sliders.forEach( function(slider) {
+    init(slider);
+});
+</script>
+<!-- ends -->
+{% endblock %}

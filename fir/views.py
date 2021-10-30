@@ -1,3 +1,4 @@
+from typing import ContextManager
 from django.shortcuts import render, HttpResponse, redirect
 from django.contrib.auth.models import User
 from django.contrib import messages
@@ -58,7 +59,9 @@ def dashboard(request):
 # Dashboard Page function
 @login_required
 def dashboard_status(request):
-    return render(request, 'dashboardstatus.html')
+    allObjects = BusinessProfile.objects.all()
+    context = {'stats': allObjects}
+    return render(request, 'dashboardstatus.html', context)
 
 
 # logout function
@@ -260,12 +263,16 @@ def detailPost(request):
 
 # Browse Business
 def browseBusiness(request):
-    return render(request, 'browse/browse_business.html')
+    allObjects = BusinessProfile.objects.all()
+    context = {'allProfiles': allObjects}
+    return render(request, 'browse/browse_business.html', context)
 
 
 # Browse Investors
 def browseInvestor(request):
-    return render(request, 'browse/browse_investor.html')
+    allObjects = InvestmentProfile.objects.all()
+    context = {'allProfiles': allObjects}
+    return render(request, 'browse/browse_investor.html', context)
 
 
 # form submit
