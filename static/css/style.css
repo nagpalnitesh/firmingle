@@ -37,7 +37,7 @@
 
 /* Image Section */
 .aboutimg img {
-  width: 100%;
+  width: 80%;
 }
 
 /* .aboutimg {
@@ -394,6 +394,31 @@
   margin-left: 0.5em;
 }
 
+.ibox .browsetable .btn {
+  background-color: #3aafa9 !important;
+  width: 100%;
+}
+
+.investbox .ibox {
+  background-color: #def2f1;
+  width: 90%;
+  margin: 3% auto;
+  padding: 3%;
+}
+
+.ibox ul li {
+  margin: 0.5em 0 0 0;
+  display: inline-block;
+  margin: 0 0.5em 0 0;
+}
+
+.ibox table {
+  width: 100%;
+}
+
+.ibox table tr td {
+  padding: 0.5em 0;
+}
 /* ends */
 
 /* Plans Section */
