@@ -404,6 +404,7 @@
   width: 90%;
   margin: 3% auto;
   padding: 3%;
+  border-radius: 0.5em;
 }
 
 .ibox ul li {
