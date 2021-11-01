@@ -1,0 +1,534 @@
+/* Media Queries */
+/* Devices (992 to 1199.98px)*/
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+  /* navbar */
+  .logo {
+    width: 20%;
+  }
+
+  .menu ul {
+    width: 100%;
+    margin-left: 0%;
+  }
+
+  .menu ul li {
+    font-size: 18px;
+    margin: auto;
+    padding: 0 1em;
+  }
+  /* ends */
+
+  /* Login SignUp Modal */
+
+  .loginpop h4,
+  .signuppop h4 {
+    font-weight: bold;
+  }
+
+  .modallogo {
+    width: 100%;
+    margin: 0 0 0.5em 0%;
+  }
+
+  .modal-content {
+    border-radius: 1em;
+  }
+
+  .close {
+    transform: scale(1.5);
+  }
+
+  .loginpop .sign-up span,
+  .signuppop .sign-up span {
+    margin-top: 1em;
+    cursor: pointer;
+  }
+
+  .loginpop .sign-up span:hover,
+  .signuppop .sign-up span:hover {
+    color: rgb(5, 36, 94);
+    font-weight: 600;
+  }
+
+  /* Login SignUp Modal ends */
+
+  /* footer */
+  footer {
+    margin: 1% 0%;
+  }
+
+  footer .inputsubs input {
+    height: 5vh;
+  }
+
+  footer h2 {
+    font-size: 28px;
+  }
+
+  footer p {
+    font-size: 16px;
+  }
+
+  footer .inputsubs span button {
+    background-color: #3aafa9;
+    height: 5vh;
+    text-align: center;
+    border: 0.1em solid #3aafa9;
+    margin: 0 0.5em 0 0.5em;
+    padding: 0 1em;
+    color: white;
+    font-size: 18px;
+  }
+
+  footer .inputsubs span button:hover {
+    color: rgb(5, 36, 94);
+    font-weight: 600;
+  }
+
+  footer a:hover {
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  /* footer ends */
+
+  /* about Img */
+  .aboutimg {
+    margin: auto;
+  }
+  /* ends */
+
+  /* featuredIn section */
+  #featuredIn {
+    background-color: #def2f1;
+  }
+
+  /* Active Users and User Ratings */
+  .userdata .activeuser,
+  .userdata .userratings {
+    text-align: center;
+  }
+
+  .userdata .activeuser h1,
+  .userdata .userratings h1 {
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  .userdata .activeuser p,
+  .userdata .userratings p {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  /* .userdata .activeuser i {
+  color: red;
+}
+
+.userdata .userratings i {
+  color: gold;
+} */
+
+  /* Trusted Users */
+  .trustedusers {
+    padding: 3% 0;
+  }
+
+  .trustedusers img {
+    width: 20%;
+  }
+  /* ends */
+
+  /* Features Section */
+
+  .featureimg img {
+    margin: 2% auto;
+  }
+  /* ends */
+
+  /* how it works section */
+  .howitrow .col-lg-4 .howimg2 {
+    position: absolute;
+    top: 50%;
+    left: 105%;
+    transform: translate(-50%, -50%);
+  }
+
+  .div1 {
+    text-align: left;
+    width: 70%;
+    margin: 0 0 0 10%;
+  }
+
+  .div2 {
+    text-align: left;
+    width: 70%;
+    margin: 0 0 0 20%;
+  }
+
+  .div3 {
+    text-align: left;
+    width: 70%;
+    margin: 0 0 0 30%;
+  }
+  /* ends */
+  /* Our Investors */
+  .investbox .col-lg-4 img {
+    width: 100%;
+  }
+  /* ends */
+}
+
+/* Large Devices (1200px to 1439.98) */
+@media screen and (min-width: 1200px) and (max-width: 1439.98px) {
+  /* navbar */
+  .logo {
+    width: 20%;
+  }
+
+  .menu ul {
+    width: 100%;
+    margin-left: 0%;
+  }
+
+  .menu ul li {
+    font-size: 18px;
+    margin: auto;
+    padding: 0 1em;
+  }
+  /* ends */
+
+  /* Login SignUp Modal */
+
+  .loginpop h4,
+  .signuppop h4 {
+    font-weight: bold;
+  }
+
+  .modallogo {
+    width: 100%;
+    margin: 0 0 0.5em 0%;
+  }
+
+  .modal-content {
+    border-radius: 1em;
+  }
+
+  .close {
+    transform: scale(1.5);
+  }
+
+  .loginpop .sign-up span,
+  .signuppop .sign-up span {
+    margin-top: 1em;
+    cursor: pointer;
+  }
+
+  .loginpop .sign-up span:hover,
+  .signuppop .sign-up span:hover {
+    color: rgb(5, 36, 94);
+    font-weight: 600;
+  }
+
+  /* Login SignUp Modal ends */
+
+  /* footer */
+  footer {
+    margin: 1% 0%;
+  }
+
+  footer .inputsubs input {
+    height: 5vh;
+  }
+
+  footer h2 {
+    font-size: 28px;
+  }
+
+  footer p {
+    font-size: 16px;
+  }
+
+  footer .inputsubs span button {
+    background-color: #3aafa9;
+    height: 5vh;
+    text-align: center;
+    border: 0.1em solid #3aafa9;
+    margin: 0 0.5em 0 0.5em;
+    padding: 0 1em;
+    color: white;
+    font-size: 18px;
+  }
+
+  footer .inputsubs span button:hover {
+    color: rgb(5, 36, 94);
+    font-weight: 600;
+  }
+
+  footer a:hover {
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  /* footer ends */
+
+  /* about Img */
+  .aboutimg {
+    margin: auto;
+  }
+  /* ends */
+
+  /* featuredIn section */
+  #featuredIn {
+    background-color: #def2f1;
+  }
+
+  /* Active Users and User Ratings */
+  .userdata .activeuser,
+  .userdata .userratings {
+    text-align: center;
+  }
+
+  .userdata .activeuser h1,
+  .userdata .userratings h1 {
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  .userdata .activeuser p,
+  .userdata .userratings p {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  /* .userdata .activeuser i {
+  color: red;
+}
+
+.userdata .userratings i {
+  color: gold;
+} */
+
+  /* Trusted Users */
+  .trustedusers {
+    padding: 3% 0;
+  }
+
+  .trustedusers img {
+    width: 20%;
+  }
+  /* ends */
+
+  /* Features Section */
+
+  .featureimg img {
+    margin: 2% auto;
+  }
+  /* ends */
+
+  /* how it works section */
+  .howitrow .col-lg-4 .howimg2 {
+    position: absolute;
+    top: 50%;
+    left: 105%;
+    transform: translate(-50%, -50%);
+  }
+
+  .div1 {
+    text-align: left;
+    width: 70%;
+    margin: 0 0 0 10%;
+  }
+
+  .div2 {
+    text-align: left;
+    width: 70%;
+    margin: 0 0 0 20%;
+  }
+
+  .div3 {
+    text-align: left;
+    width: 70%;
+    margin: 0 0 0 30%;
+  }
+  /* ends */
+  /* Our Investors */
+  .investbox .col-lg-4 img {
+    width: 100%;
+  }
+  /* ends */
+}
+
+/* Extra Large Devices (1440px and above) */
+@media screen and (min-width: 1440px) {
+  /* navbar */
+  .logo {
+    width: 20%;
+  }
+
+  .menu ul {
+    width: 100%;
+    margin-left: 20%;
+  }
+  /* ends */
+
+  /* Login SignUp Modal */
+
+  .loginpop h4,
+  .signuppop h4 {
+    font-weight: bold;
+  }
+
+  .modallogo {
+    width: 100%;
+    margin: 0 0 0.5em 0%;
+  }
+
+  .modal-content {
+    border-radius: 1em;
+  }
+
+  .close {
+    transform: scale(1.5);
+  }
+
+  .loginpop .sign-up span,
+  .signuppop .sign-up span {
+    margin-top: 1em;
+    cursor: pointer;
+  }
+
+  .loginpop .sign-up span:hover,
+  .signuppop .sign-up span:hover {
+    color: rgb(5, 36, 94);
+    font-weight: 600;
+  }
+
+  /* Login SignUp Modal ends */
+
+  /* footer */
+  footer {
+    margin: 1% 0%;
+  }
+
+  footer .inputsubs input {
+    height: 5vh;
+  }
+
+  footer h2 {
+    font-size: 28px;
+  }
+
+  footer p {
+    font-size: 16px;
+  }
+
+  footer .inputsubs span button {
+    background-color: #3aafa9;
+    height: 5vh;
+    text-align: center;
+    border: 0.1em solid #3aafa9;
+    margin: 0 0.5em 0 0.5em;
+    padding: 0 1em;
+    color: white;
+    font-size: 18px;
+  }
+
+  footer .inputsubs span button:hover {
+    color: rgb(5, 36, 94);
+    font-weight: 600;
+  }
+
+  footer a:hover {
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  /* footer ends */
+
+  /* about Img */
+  .aboutimg {
+    margin: auto;
+  }
+  /* ends */
+
+  /* featuredIn section */
+  #featuredIn {
+    background-color: #def2f1;
+  }
+
+  /* Active Users and User Ratings */
+  .userdata .activeuser,
+  .userdata .userratings {
+    text-align: center;
+  }
+
+  .userdata .activeuser h1,
+  .userdata .userratings h1 {
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  .userdata .activeuser p,
+  .userdata .userratings p {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  /* .userdata .activeuser i {
+  color: red;
+}
+
+.userdata .userratings i {
+  color: gold;
+} */
+
+  /* Trusted Users */
+  .trustedusers {
+    padding: 3% 0;
+  }
+
+  .trustedusers img {
+    width: 20%;
+  }
+  /* ends */
+
+  /* Features Section */
+
+  .featureimg img {
+    margin: 2% 20%;
+  }
+  /* ends */
+
+  /* how it works section */
+  .howitrow .col-lg-4 .howimg2 {
+    position: absolute;
+    top: 50%;
+    left: 105%;
+    transform: translate(-50%, -50%);
+  }
+
+  .div1 {
+    text-align: left;
+    width: 70%;
+    margin: 0 0 0 10%;
+  }
+
+  .div2 {
+    text-align: left;
+    width: 70%;
+    margin: 0 0 0 20%;
+  }
+
+  .div3 {
+    text-align: left;
+    width: 70%;
+    margin: 0 0 0 30%;
+  }
+  /* ends */
+  /* Our Investors */
+  .investbox .col-lg-4 img {
+    width: 100%;
+  }
+  /* ends */
+}
