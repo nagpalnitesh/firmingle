@@ -420,9 +420,15 @@
 .ibox table tr td {
   padding: 0.5em 0;
 }
-.investbox .col-lg-4 img {
+
+.investbox .iproimg img {
   width: 100%;
   margin: auto;
+}
+
+.investbox .tweetboximg img {
+  width: 70%;
+  margin: 0 15%;
 }
 /* ends */
 

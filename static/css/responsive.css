@@ -177,11 +177,23 @@
   }
   /* ends */
   /* Our Investors */
-  .investbox .col-lg-4 img {
-    width: 70%;
-    margin: 0 15%;
+  .investbox .ibox {
+    background-color: #def2f1;
+    width: 100%;
+    margin: 3% auto;
+    padding: 3%;
+    border-radius: 0.5em;
+  }
+  .investbox .iproimg img {
+    width: 100%;
+    margin: auto;
+  }
+  .investbox .tweetboximg img {
+    width: 100%;
+    margin: 0 0%;
   }
   /* ends */
+
   /* Dashboard */
   .dash {
     margin: 2% 0;
@@ -383,18 +395,6 @@
     margin: 0 0.5em;
   }
 
-  .investbox .ibox {
-    background-color: #def2f1;
-    width: 100%;
-    margin: 3% auto;
-    padding: 3%;
-    border-radius: 0.5em;
-  }
-  .investbox .col-lg-4 img {
-    width: 100%;
-    margin: 50% auto;
-  }
-
   /* ends */
 }
 
@@ -591,9 +591,14 @@
     padding: 3%;
     border-radius: 0.5em;
   }
-  .investbox .col-lg-4 img {
+
+  .investbox .iproimg img {
     width: 100%;
     margin: auto;
+  }
+  .investbox .tweetboximg img {
+    width: 100%;
+    margin: 0 0%;
   }
   /* ends */
 }
@@ -791,9 +796,13 @@
     padding: 3%;
     border-radius: 0.5em;
   }
-  .investbox .col-lg-4 img {
+  .investbox .iproimg img {
     width: 100%;
     margin: auto;
+  }
+  .investbox .tweetboximg img {
+    width: 90%;
+    margin: 0 5%;
   }
   /* ends */
 }
