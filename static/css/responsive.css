@@ -386,17 +386,21 @@
     padding: 8% 0%;
   }
 
-  .profileimg .protxt span {
+  .protxtdiv {
+    font-size: 16px;
+  }
+
+  .profileimg .protxtdiv span {
     color: rgb(59, 59, 59);
     margin: 0 -4em;
   }
 
   .profileimg .proedit {
-    padding: 2% 7%;
+    padding: 0% 7%;
   }
 
   .profileimg .proedit i {
-    font-size: 24px;
+    font-size: 18px;
     float: right;
   }
 
@@ -924,6 +928,10 @@
     padding: 0% 0%;
   }
 
+  .protxtdiv {
+    font-size: 16px;
+  }
+
   .profileimg .protxt span {
     color: rgb(59, 59, 59);
     margin: 0 -1em;
@@ -1441,6 +1449,9 @@
   }
   /* ends */
 
+  .protxtdiv {
+    font-size: 16px;
+  }
   .profilebx .btnpro {
     margin: 5% 0% 0% 0%;
     text-align: center;

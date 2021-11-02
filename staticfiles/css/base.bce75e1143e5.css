@@ -1,0 +1,194 @@
+/* fonts added */
+@font-face {
+  font-family: proxima;
+  src: url("../assets/fonts/ProximaNova-Regular.410504d49238.otf");
+}
+/* ends */
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 0.5em;
+  height: 0.2em;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(117, 117, 117);
+  border-radius: 1em;
+}
+/* ends */
+
+/* wrapper content and footer */
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  height: fit-content;
+}
+
+.content {
+  flex-grow: 1;
+}
+/* ends */
+
+/* main content */
+* {
+  margin: 0%;
+  padding: 0%;
+  list-style: none;
+  font-family: proxima;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body,
+html {
+  margin: 0%;
+  padding: 0%;
+}
+
+a,
+a:link,
+a:visited {
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #3aafa9;
+  font-weight: bold;
+}
+
+/* ends */
+
+/* navbar */
+.logo {
+  width: 15%;
+}
+.logo img {
+  width: 100%;
+}
+
+.menu ul {
+  width: 45%;
+  margin-left: 55%;
+}
+
+.menu ul li {
+  font-size: 18px;
+  margin: auto;
+}
+
+.menu ul li:nth-child(1),
+.menu ul li:nth-child(2),
+.menu ul li:nth-child(3),
+.menu ul li:nth-child(4) {
+  padding: 0 0.5em;
+}
+
+.menu ul .login,
+.menu ul .signup {
+  margin: auto 2%;
+  padding: 0 2em;
+}
+
+.login {
+  background-color: #def2f1;
+  border-radius: 0.5em;
+}
+
+.signup {
+  background-color: #3aafa9;
+  border-radius: 0.5em;
+}
+
+.signup a {
+  color: white;
+}
+
+.signup:hover a {
+  color: black;
+}
+
+.row {
+  width: 100%;
+  margin: 0%;
+}
+/* ends */
+
+/* Login SignUp Modal */
+
+.loginpop h4,
+.signuppop h4 {
+  font-weight: bold;
+}
+
+.modallogo {
+  width: 50%;
+  margin: 0 0% 0.5em 0%;
+}
+
+.modal-content {
+  border-radius: 1em;
+}
+
+.close {
+  transform: scale(1.5);
+}
+
+.loginpop .sign-up span,
+.signuppop .sign-up span {
+  margin-top: 1em;
+  cursor: pointer;
+}
+
+.loginpop .sign-up span:hover,
+.signuppop .sign-up span:hover {
+  color: rgb(5, 36, 94);
+  font-weight: 600;
+}
+
+/* Login SignUp Modal ends */
+
+/* footer */
+footer {
+  margin: 0% 0%;
+  padding: 5em 5%;
+  /* background-color: #def2f1; */
+}
+
+footer .inputsubs input {
+  height: 5vh;
+}
+
+footer h2 {
+  font-size: 28px;
+  margin-top: 1em;
+}
+
+footer p {
+  font-size: 16px;
+}
+
+footer .inputsubs span button {
+  background-color: #3aafa9;
+  height: 5vh;
+  text-align: center;
+  border: 0.1em solid #3aafa9;
+  margin: 0 0.5em 0 0.5em;
+  padding: 0 1em;
+  color: white;
+  font-size: 18px;
+}
+
+footer .inputsubs span button:hover {
+  color: rgb(5, 36, 94);
+  font-weight: 600;
+}
+
+footer a:hover {
+  text-decoration: none;
+  letter-spacing: 0.1em;
+}
+/* footer ends */
