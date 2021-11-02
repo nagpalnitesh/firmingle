@@ -401,7 +401,7 @@
 
 .investbox .ibox {
   background-color: #def2f1;
-  width: 90%;
+  width: 70%;
   margin: 3% auto;
   padding: 3%;
   border-radius: 0.5em;
@@ -419,6 +419,10 @@
 
 .ibox table tr td {
   padding: 0.5em 0;
+}
+.investbox .col-lg-4 img {
+  width: 100%;
+  margin: auto;
 }
 /* ends */
 

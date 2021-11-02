@@ -75,13 +75,25 @@ a:hover {
 }
 
 .menu ul {
-  width: 60%;
-  margin-left: 40%;
+  width: 45%;
+  margin-left: 55%;
 }
 
 .menu ul li {
   font-size: 18px;
   margin: auto;
+}
+
+.menu ul li:nth-child(1),
+.menu ul li:nth-child(2),
+.menu ul li:nth-child(3),
+.menu ul li:nth-child(4) {
+  padding: 0 0.5em;
+}
+
+.menu ul li:nth-child(5),
+.menu ul li:nth-child(6) {
+  margin: auto 2%;
   padding: 0 2em;
 }
 
@@ -93,7 +105,6 @@ a:hover {
 .signup {
   background-color: #3aafa9;
   border-radius: 0.5em;
-  width: fit-content;
 }
 
 .signup a {
