@@ -1,73 +1,85 @@
 {% extends  'base.html' %}
 {% load static %}
 {% block content %}
-<section id="FAQ">
-    <div class="faqbx">
-        <div class="faq-header">Frequently Asked Questions</div>
-        <div class="faq-content">
-            <div class="faq-question">
-                <input id="q1" type="checkbox" class="panel">
-                <div class="plus">+</div>
-                <label for="q1" class="panel-title"> When was Firmingle Founded? Where is it registered?</label>
-                <div class="panel-content">Firmingle was founded in March 20XX, and is now registered as Firmingle Technologies Pvt Ltd in India since March 20XX. Firmingle is India’s most trusted platform that connects startups with potential Investors</div>
-            </div>
-            <div class="faq-question">
-                <input id="q2" type="checkbox" class="panel">
-                <div class="plus">+</div>
-                <label for="q2" class="panel-title">How do I contact Firmingle if I would like to have a telephonic conversation? What are the office address and contact number?</label>
-                <div class="panel-content">Please visit our contact us page to see the office address, directions and also the phone number to contact us.</div>
-            </div>
-            <div class="faq-question">
-                <input id="q3" type="checkbox" class="panel">
-                <div class="plus">+</div>
-                <label for="q3" class="panel-title">How can I select/choose investors?</label>
-                <div class="panel-content">
-                    Please visit
-                    <a href="www. firmingle.com/investors">www.firmingle.com/investors</a>
-                    to view and select investor profiles. With the use of filters, you can select specific investor profiles according to your preferences and the start-up stage you are in. Or if you want to connect to a particular investor, you can simply enter the name of that Investor in the search bar on the top of the page.
+<div class="content">
+    <div class="container-fluid">
+        <!-- navbar -->
+        {% include 'components/navbar.html' %}
+        <!-- ends -->
+        <!-- FAQ -->
+        <section id="FAQ">
+            <div class="faqbx">
+                <div class="faq-header">Frequently Asked Questions</div>
+                <div class="faq-content">
+                    <div class="faq-question">
+                        <input id="q1" type="checkbox" class="panel">
+                        <div class="plus">+</div>
+                        <label for="q1" class="panel-title"> When was Firmingle Founded? Where is it registered?</label>
+                        <div class="panel-content">Firmingle was founded in March 20XX, and is now registered as Firmingle Technologies Pvt Ltd in India since March 20XX. Firmingle is India’s most trusted platform that connects startups with potential Investors</div>
+                    </div>
+                    <div class="faq-question">
+                        <input id="q2" type="checkbox" class="panel">
+                        <div class="plus">+</div>
+                        <label for="q2" class="panel-title">How do I contact Firmingle if I would like to have a telephonic conversation? What are the office address and contact number?</label>
+                        <div class="panel-content">Please visit our contact us page to see the office address, directions and also the phone number to contact us.</div>
+                    </div>
+                    <div class="faq-question">
+                        <input id="q3" type="checkbox" class="panel">
+                        <div class="plus">+</div>
+                        <label for="q3" class="panel-title">How can I select/choose investors?</label>
+                        <div class="panel-content">
+                            Please visit
+                            <a href="www. firmingle.com/investors">www.firmingle.com/investors</a>
+                            to view and select investor profiles. With the use of filters, you can select specific investor profiles according to your preferences and the start-up stage you are in. Or if you want to connect to a particular investor, you can simply enter the name of that Investor in the search bar on the top of the page.
+                        </div>
+                    </div>
+                    <div class="faq-question">
+                        <input id="q4" type="checkbox" class="panel">
+                        <div class="plus">+</div>
+                        <label for="q4" class="panel-title">I have a start-up company registered recently. What all do I need to do to connect to you and Investors?</label>
+                        <div class="panel-content">You need to first Sign-up with all the basic information on our website: Firmingle.com. Also, during the process, you need to fill in the details of your business like Name, Website and upload the required documents and you are all set.</div>
+                    </div>
+                    <div class="faq-question">
+                        <input id="q5" type="checkbox" class="panel">
+                        <div class="plus">+</div>
+                        <label for="q5" class="panel-title">Are the documents uploaded on my business profile publicly visible?</label>
+                        <div class="panel-content">No, not at all. Privacy is as important to Firmingle as it is to you. Documents are accessible only to registered members depending on the option you choose on your profile.</div>
+                    </div>
                 </div>
             </div>
-            <div class="faq-question">
-                <input id="q4" type="checkbox" class="panel">
-                <div class="plus">+</div>
-                <label for="q4" class="panel-title">I have a start-up company registered recently. What all do I need to do to connect to you and Investors?</label>
-                <div class="panel-content">You need to first Sign-up with all the basic information on our website: Firmingle.com. Also, during the process, you need to fill in the details of your business like Name, Website and upload the required documents and you are all set.</div>
+            <div class="faqques">
+                <h1>Still have a questions?</h1>
+                <p class="faqp">
+                    If you cannot find answer to your question in our FAQ, you can contact us. We will answer to you shortly!
+                </p>
+                <div class="row">
+                    <div class="col-sm-12 col-md-auto col-lg-6">
+                        <div class="contactbox1 boxleft">
+                            <img src="{% static 'assets/FAQ1.jpg' %}" alt="">
+                            <p>
+                                <a href="tel:+91-9876543210">+919876543210</a>
+                                <br>
+                                We are always happy to help.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-auto col-lg-6">
+                        <div class="contactbox1 boxright">
+                            <img src="{% static 'assets/FAQ2.jpg' %}" alt="">
+                            <p>
+                                <a href="mailto:support@helpcenter.com">support@helpcenter.com</a>
+                                <br>
+                                We are always happy to help.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="faq-question">
-                <input id="q5" type="checkbox" class="panel">
-                <div class="plus">+</div>
-                <label for="q5" class="panel-title">Are the documents uploaded on my business profile publicly visible?</label>
-                <div class="panel-content">No, not at all. Privacy is as important to Firmingle as it is to you. Documents are accessible only to registered members depending on the option you choose on your profile.</div>
-            </div>
-        </div>
+        </section>
+        <!-- ends -->
     </div>
-    <div class="faqques">
-        <h1>Still have a questions?</h1>
-        <p class="faqp">
-            If you cannot find answer to your question in our FAQ, you can contact us. We will answer to you shortly!
-        </p>
-        <div class="row">
-            <div class="col-sm-12 col-md-auto col-lg-6">
-                <div class="contactbox1 boxleft">
-                    <img src="{% static 'assets/call.png' %}" alt="">
-                    <p>
-                        <a href="tel:+91-9876543210">+919876543210</a>
-                        <br>
-                        We are always happy to help.
-                    </p>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-auto col-lg-6">
-                <div class="contactbox1 boxright">
-                    <img src="{% static 'assets/call.png' %}" alt="">
-                    <p>
-                        <a href="mailto:support@helpcenter.com">support@helpcenter.com</a>
-                        <br>
-                        We are always happy to help.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+</div>
+<!-- footer -->
+{% include 'components/footer.html' %}
+<!-- ends -->
 {% endblock %}

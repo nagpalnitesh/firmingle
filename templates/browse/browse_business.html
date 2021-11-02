@@ -1,206 +1,218 @@
 {% extends  'base.html' %}
 {% load static %}
 {% block content %}
-<!-- Detailed Post -->
-<div class="browse">
-    <h1>
-        Business for Sale and Investment Opportunities
-    </h1>
-    <p>
-        Results 1 - 15 of 17036 - Business for Sale and Investment Opportunities. Buy or Invest in a Business.
-    </p>
-    <!-- filter and sorting -->
-    <div class="browsebiz">
-        <div class="row">
-            <div class="col-sm-12 col-md-auto col-lg-6">
-                <ul>
-                    <li>
-                        <strong style="border-bottom: 0.2em solid #3aafa9;">
-                            <a href="/business-for-sale-and-investment-opportunities">Business</a>
-                        </strong>
-                    </li>
-                    <li>
-                        <a href="/investors-and-buyers">Investors & Buyers</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-sm-12 col-md-auto col-lg-6">
-                <select class="custom-select browsesort" aria-label="Default select example">
-                    <option selected>Sort By</option>
-                    <option value="1">Popularity</option>
-                    <option value="2">Relevance</option>
-                    <option value="3">Low to High</option>
-                    <option value="4">High to Low</option>
-                </select>
-            </div>
-            <div class="col-sm-12 col-md-auto col-lg-4">
-                <p>
-                    <i class="fas fa-briefcase"></i>
-                    Transaction Types
-                </p>
-                <select class="custom-select browsetrans" aria-label="Default select example">
-                    <option selected>Sort By</option>
-                    <option value="1">Popularity</option>
-                    <option value="2">Relevance</option>
-                    <option value="3">Low to High</option>
-                    <option value="4">High to Low</option>
-                </select>
-            </div>
-            <div class="col-sm-12 col-md-auto col-lg-4">
-                <p>
-                    <i class="fas fa-map-marker-alt"></i>
-                    Locations
-                </p>
-                <select class="custom-select browsetrans" aria-label="Default select example">
-                    <option selected>Sort By</option>
-                    <option value="1">Popularity</option>
-                    <option value="2">Relevance</option>
-                    <option value="3">Low to High</option>
-                    <option value="4">High to Low</option>
-                </select>
-            </div>
-            <div class="col-sm-12 col-md-auto col-lg-4">
-                <p>
-                    <i class="fas fa-industry"></i>
-                    Industries
-                </p>
-                <select class="custom-select browsetrans" aria-label="Default select example">
-                    <option selected>Sort By</option>
-                    <option value="1">Popularity</option>
-                    <option value="2">Relevance</option>
-                    <option value="3">Low to High</option>
-                    <option value="4">High to Low</option>
-                </select>
-            </div>
-        </div>
-        <div class="browserange">
+<div class="content">
+    <div class="container-fluid">
+        <!-- navbar -->
+        {% include 'components/navbar.html' %}
+        <!-- ends -->
+        <!-- Detailed Post -->
+        <div class="browse">
+            <h1>
+                Business for Sale and Investment Opportunities
+            </h1>
             <p>
-                Investment Size
+                Results 1 - 15 of 17036 - Business for Sale and Investment Opportunities. Buy or Invest in a Business.
             </p>
-            <div class="min-max-slider" data-legendnum="2">
-                <input
-                    id="min"
-                    class="min"
-                    name="min"
-                    type="range"
-                    step="1"
-                    min="14"
-                    max="90"
-                >
-                <input
-                    id="max"
-                    class="max"
-                    name="max"
-                    type="range"
-                    step="1"
-                    min="14"
-                    max="90"
-                >
-            </div>
-            <div class="topic" style="float: right;">
-                <div class="open">
-                    <h2 class="question">
-                        Extras
-                    </h2>
-                    <span class="faq-t"></span>
-                </div>
-                <p class="answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <div class="row extras answer">
+            <!-- filter and sorting -->
+            <div class="browsebiz">
+                <div class="row">
                     <div class="col-sm-12 col-md-auto col-lg-6">
-                        <h1>Hello</h1>
+                        <ul>
+                            <li>
+                                <strong style="border-bottom: 0.2em solid #3aafa9;">
+                                    <a href="/business-for-sale-and-investment-opportunities">Business</a>
+                                </strong>
+                            </li>
+                            <li>
+                                <a href="/investors-and-buyers">Investors & Buyers</a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="col-sm-12 col-md-auto col-lg-12">
-                        <h2>World</h2>
+                    <div class="col-sm-12 col-md-auto col-lg-6">
+                        <select class="custom-select browsesort" aria-label="Default select example">
+                            <option selected>Sort By</option>
+                            <option value="1">Popularity</option>
+                            <option value="2">Relevance</option>
+                            <option value="3">Low to High</option>
+                            <option value="4">High to Low</option>
+                        </select>
                     </div>
-                    <hr>
+                    <div class="col-sm-12 col-md-auto col-lg-4">
+                        <p>
+                            <i class="fas fa-briefcase"></i>
+                            Transaction Types
+                        </p>
+                        <select class="custom-select browsetrans" aria-label="Default select example">
+                            <option selected>Sort By</option>
+                            <option value="1">Popularity</option>
+                            <option value="2">Relevance</option>
+                            <option value="3">Low to High</option>
+                            <option value="4">High to Low</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-12 col-md-auto col-lg-4">
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i>
+                            Locations
+                        </p>
+                        <select class="custom-select browsetrans" aria-label="Default select example">
+                            <option selected>Sort By</option>
+                            <option value="1">Popularity</option>
+                            <option value="2">Relevance</option>
+                            <option value="3">Low to High</option>
+                            <option value="4">High to Low</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-12 col-md-auto col-lg-4">
+                        <p>
+                            <i class="fas fa-industry"></i>
+                            Industries
+                        </p>
+                        <select class="custom-select browsetrans" aria-label="Default select example">
+                            <option selected>Sort By</option>
+                            <option value="1">Popularity</option>
+                            <option value="2">Relevance</option>
+                            <option value="3">Low to High</option>
+                            <option value="4">High to Low</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="browserange">
+                    <p>
+                        Investment Size
+                    </p>
+                    <div class="min-max-slider" data-legendnum="2">
+                        <input
+                            id="min"
+                            class="min"
+                            name="min"
+                            type="range"
+                            step="1"
+                            min="14"
+                            max="90"
+                        >
+                        <input
+                            id="max"
+                            class="max"
+                            name="max"
+                            type="range"
+                            step="1"
+                            min="14"
+                            max="90"
+                        >
+                    </div>
+                    <div class="topic" style="float: right;">
+                        <div class="open">
+                            <h2 class="question">
+                                Extras
+                            </h2>
+                            <span class="faq-t"></span>
+                        </div>
+                        <p class="answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <div class="row extras answer">
+                            <div class="col-sm-12 col-md-auto col-lg-6">
+                                <h1>Hello</h1>
+                            </div>
+                            <div class="col-sm-12 col-md-auto col-lg-12">
+                                <h2>World</h2>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ends -->
+            <hr>
+            <div class="browsedisplay">
+                <div class="row">
+                    {% for profile in allProfiles%}
+                    <div class="col-md-4 browsecol">
+                        <div class="browsebox">
+                            {% if profile.profile_status == 'Pending'%}
+                            <i class="fas fa-circle" style="color: gold; float: right; font-size: 20px; margin-left: 1em;"></i>
+                            {% elif profile.profile_status == 'Accepted'%}
+                            <i class="fas fa-circle" style="color: green; float: right; font-size: 20px; margin-left: 1em;"></i>
+                            {% endif %}
+                            <p>
+                                <strong>Buisness Associate, Seeking Business Loan: Company offering a broad spectrum of services to its clients. IT service</strong>
+                                <br>
+                                <span>Electrical Services Company Seeking Loan in Mumbai, India</span>
+                                <br>
+                                - Our Company offers Our Company offers Our Company offers Our Company offers Our Company offers Our Company offers Our Company offers Our Company offers Our Company offers Our Company offers Our Company offers Our Company offers
+                            </p>
+                            <table class="browsetable">
+                                <tr>
+                                    <td>
+                                        <strong>Run Rate Sales</strong>
+                                    </td>
+                                    <td>
+                                        <strong style="color: #3aafa9; float: right;">INR 60Lakh</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>EBITDA Margin</strong>
+                                    </td>
+                                    <td>
+                                        <strong style="color: #3aafa9; float: right;">10 - 20%</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Business Loan</strong>
+                                    </td>
+                                    <td>
+                                        <strong style="float: right;">INR 4 Lakh at 4%</strong>
+                                    </td>
+                                </tr>
+                            </table>
+                            <ul>
+                                <li>
+                                    <i class="far fa-envelope"></i>
+                                    Email
+                                </li>
+                                <li>
+                                    <i class="fab fa-google"></i>
+                                    Google
+                                </li>
+                                <li>
+                                    <i class="fas fa-phone-alt"></i>
+                                    Phone
+                                </li>
+                                <li>
+                                    <i class="fab fa-linkedin-in"></i>
+                                    Linkedin
+                                </li>
+                                <li>
+                                    <i class="fab fa-facebook-square"></i>
+                                    Facebook
+                                </li>
+                            </ul>
+                            <p>
+                                <i class="fas fa-map-marker-alt" style="color: red;"></i>
+                                <strong>Mumbai, India</strong>
+                                <i class="fas fa-star" style="color: gold; margin-left: 5em;"></i>
+                                <strong>6.5</strong>
+                            </p>
+                            <a href="detail-profile">
+                                <button type="button" class="btn btn-success">
+                                    Send Proposal
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                    {%endfor%}
                 </div>
             </div>
         </div>
-    </div>
-    <!-- ends -->
-    <hr>
-    <div class="browsedisplay">
-        <div class="row">
-            {% for profile in allProfiles%}
-            <div class="col-md-4 browsecol">
-                <div class="browsebox">
-                    {% if profile.profile_status == 'Pending'%}
-                    <i class="fas fa-circle" style="color: gold; float: right; font-size: 20px; margin-left: 1em;"></i>
-                    {% elif profile.profile_status == 'Accepted'%}
-                    <i class="fas fa-circle" style="color: green; float: right; font-size: 20px; margin-left: 1em;"></i>
-                    {% endif %}
-                    <p>
-                        <strong>Buisness Associate, Seeking Business Loan: Company offering a broad spectrum of services to its clients. IT service</strong>
-                        <br>
-                        <span>Electrical Services Company Seeking Loan in Mumbai, India</span>
-                        <br>
-                        - Our Company offers Our Company offers Our Company offers Our Company offers Our Company offers Our Company offers Our Company offers Our Company offers Our Company offers Our Company offers Our Company offers Our Company offers
-                    </p>
-                    <table class="browsetable">
-                        <tr>
-                            <td>
-                                <strong>Run Rate Sales</strong>
-                            </td>
-                            <td>
-                                <strong style="color: #3aafa9; float: right;">INR 60Lakh</strong>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <strong>EBITDA Margin</strong>
-                            </td>
-                            <td>
-                                <strong style="color: #3aafa9; float: right;">10 - 20%</strong>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <strong>Business Loan</strong>
-                            </td>
-                            <td>
-                                <strong style="float: right;">INR 4 Lakh at 4%</strong>
-                            </td>
-                        </tr>
-                    </table>
-                    <ul>
-                        <li>
-                            <i class="far fa-envelope"></i>
-                            Email
-                        </li>
-                        <li>
-                            <i class="fab fa-google"></i>
-                            Google
-                        </li>
-                        <li>
-                            <i class="fas fa-phone-alt"></i>
-                            Phone
-                        </li>
-                        <li>
-                            <i class="fab fa-linkedin-in"></i>
-                            Linkedin
-                        </li>
-                        <li>
-                            <i class="fab fa-facebook-square"></i>
-                            Facebook
-                        </li>
-                    </ul>
-                    <p>
-                        <i class="fas fa-map-marker-alt" style="color: red;"></i>
-                        <strong>Mumbai, India</strong>
-                        <i class="fas fa-star" style="color: gold; margin-left: 5em;"></i>
-                        <strong>6.5</strong>
-                    </p>
-                    <a href="detail-profile">
-                        <button type="button" class="btn btn-success">
-                            Send Proposal
-                        </button>
-                    </a>
-                </div>
-            </div>
-            {%endfor%}
-        </div>
+        <!-- ends -->
     </div>
 </div>
+<!-- footer -->
+{% include 'components/footer.html' %}
+<!-- ends -->
+<!-- script tag -->
 <script>
     $(".open").click(function () {
   var container = $(this).parents(".topic");

@@ -1,421 +1,433 @@
 {% extends  'base.html' %}
 {% load static %}
 {% block content %}
-<div class="dash">
-    <div class="row">
-        <div class="col-sm-12 col-md-auto col-lg-3 profile">
-            <div class="profilebx">
-                <div class="profileimg">
-                    <div class="row">
-                        <div class="col-sm-12 col-md-auto col-lg-4 proimg">
-                            <img src="{% static 'assets/ICON.png' %}" alt="profile">
+<div class="content">
+    <div class="container-fluid">
+        <!-- navbar -->
+        {% include 'components/navbar.html' %}
+        <!-- ends -->
+        <!-- Dashboard -->
+        <div class="dash">
+            <div class="row">
+                <div class="col-sm-12 col-md-auto col-lg-3 profile">
+                    <div class="profilebx">
+                        <div class="profileimg">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-auto col-lg-4 proimg">
+                                    <img src="{% static 'assets/ICON.png' %}" alt="profile">
+                                </div>
+                                <div class="col-sm-12 col-md-auto col-lg-8 protxt">
+                                    <div class="proedit">
+                                        <i class="fas fa-pen"></i>
+                                    </div>
+                                    <div class="protxtdiv">
+                                        <strong>
+                                            {{user.first_name}} {{user.last_name}}
+                                        </strong>
+                                        <br>
+                                        <span>{{user.email}}</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-sm-12 col-md-auto col-lg-8 protxt">
-                            <div class="proedit">
-                                <i class="fas fa-pen"></i>
-                            </div>
-                            <div class="protxtdiv">
-                                <strong>
-                                    {{user.first_name}} {{user.last_name}}
-                                </strong>
-                                <br>
-                                <p>{{user.email}}</p>
-                            </div>
+                        <hr>
+                        <div class="profileinfo">
+                            <ul>
+                                <li>
+                                    <h1>
+                                        Industries
+                                    </h1>
+                                    <p>
+                                        All Industries
+                                    </p>
+                                </li>
+                                <li>
+                                    <h1>
+                                        Locations
+                                    </h1>
+                                    <p>
+                                        India
+                                    </p>
+                                </li>
+                                <li>
+                                    <h1>
+                                        Deal Size
+                                    </h1>
+                                    <p>
+                                        ----
+                                    </p>
+                                </li>
+                                <li>
+                                    <h1>
+                                        Recent Payments
+                                    </h1>
+                                    <p>
+                                        Free Trail
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <hr>
+                        <div class="prodetail">
+                            <ul>
+                                <li style="opacity: 0.5;">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    India
+                                </li>
+                                <li style="opacity: 0.5;">
+                                    <i class="fab fa-facebook-f"></i>
+                                    Facebook
+                                </li>
+                                <li style="opacity: 0.5;">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    Joined Oct 23, 2021
+                                </li>
+                                <li style="opacity: 0.5;">
+                                    <i class="fab fa-linkedin-in"></i>
+                                    LinkedIn
+                                </li>
+                                <li></li>
+                                <li style="color:blue;">
+                                    <i class="fab fa-google"></i>
+                                    Google
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="btnpro">
+                            <span class="probtn">
+                                No active Profiles
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-auto col-lg-6 newsboard">
+                    <h1>Hi {{user.first_name}} {{user.last_name}},</h1>
+                    <div class="welcomebx">
+                        <p style="font-size: 20px;">
+                            Welcome to FIRMINGLE, We help you acquire businesses, raise captial for your company, find franchise partners, or realize value through a startegic sale. Our global network of investors and businesses help you successfully acheive your strategic objectivies.
+                        </p>
+                        <ul>
+                            <li>
+                                <a href="/business-profile">
+                                    <p>
+                                        <i class="fas fa-chart-line" style="color: #3aafa9;"></i>
+                                        Sell or Raise Funds for your Business
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/investor-profile">
+                                    <p>
+                                        <i class="fas fa-money-bill-alt"></i>
+                                        Acquire or Invest in a Business
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <h1>
+                        <strong>
+                            Latest Activity
+                        </strong>
+                    </h1>
+                    <div class="latestbx">
+                        <span style="float: right;">
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: rgba(128, 128, 128, 0.6);"></i>
+                            <i class="fas fa-star" style="color: rgba(128, 128, 128, 0.6);"></i>
+                            7/10
+                        </span>
+                        <br>
+                        <p>
+                            New activity in
+                            <strong>Mumbai</strong>
+                            and
+                            <strong>
+                                IT Infrastructure
+                            </strong>
+                            <span style="float: right;">
+                                <i class="far fa-clock"></i>
+                                32 minutes ago
+                            </span>
+                        </p>
+                        <hr>
+                        <h2>
+                            For Sale: Non-operational IT company located in Mumbai that dealt in elecronics and computer services
+                        </h2>
+                        <p>
+                            lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsum
+                        </p>
+                        <ul>
+                            <li>
+                                <p>
+                                    <strong>
+                                        Full Sale
+                                    </strong>
+                                    <br>
+                                    INR 15 thousand
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <strong>
+                                        Run Rate Revenue
+                                    </strong>
+                                    <br>
+                                    INR 0.0 @ 10% EBITDA
+                                    <i class="fas fa-info-circle"></i>
+                                </p>
+                            </li>
+                        </ul>
+                        <p>
+                            <strong>
+                                Viewed by:
+                            </strong>
+                            <span style="color: #3aafa9;">
+                                Sales Director, E-Commerce, Bangalore, Individual Investor/ Buyer
+                            </span>
+                        </p>
+                        <p class="contactbtn">
+                            <i class="fas fa-phone-alt"></i>
+                            Contact Business
+                        </p>
+                    </div>
+                    <div class="latestbx">
+                        <span style="float: right;">
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            7/10
+                        </span>
+                        <br>
+                        <p>
+                            New activity in
+                            <strong>Mumbai</strong>
+                            and
+                            <strong>
+                                IT Infrastructure
+                            </strong>
+                            <span style="float: right;">
+                                <i class="far fa-clock"></i>
+                                32 minutes ago
+                            </span>
+                        </p>
+                        <hr>
+                        <h2>
+                            For Sale: Non-operational IT company located in Mumbai that dealt in elecronics and computer services
+                        </h2>
+                        <p>
+                            lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsum
+                        </p>
+                        <ul>
+                            <li>
+                                <p>
+                                    <strong>
+                                        Full Sale
+                                    </strong>
+                                    <br>
+                                    INR 15 thousand
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <strong>
+                                        Run Rate Revenue
+                                    </strong>
+                                    <br>
+                                    INR 0.0 @ 10% EBITDA
+                                    <i class="fas fa-info-circle"></i>
+                                </p>
+                            </li>
+                        </ul>
+                        <p>
+                            <strong>
+                                Viewed by:
+                            </strong>
+                            <span style="color: #3aafa9;">
+                                Sales Director, E-Commerce, Bangalore, Individual Investor/ Buyer
+                            </span>
+                        </p>
+                        <p class="contactbtn">
+                            <i class="fas fa-phone-alt"></i>
+                            Contact Business
+                        </p>
+                    </div>
+                    <div class="latestbx">
+                        <span style="float: right;">
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            7/10
+                        </span>
+                        <br>
+                        <p>
+                            New activity in
+                            <strong>Mumbai</strong>
+                            and
+                            <strong>
+                                IT Infrastructure
+                            </strong>
+                            <span style="float: right;">
+                                <i class="far fa-clock"></i>
+                                32 minutes ago
+                            </span>
+                        </p>
+                        <hr>
+                        <h2>
+                            For Sale: Non-operational IT company located in Mumbai that dealt in elecronics and computer services
+                        </h2>
+                        <p>
+                            lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsum
+                        </p>
+                        <ul>
+                            <li>
+                                <p>
+                                    <strong>
+                                        Full Sale
+                                    </strong>
+                                    <br>
+                                    INR 15 thousand
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <strong>
+                                        Run Rate Revenue
+                                    </strong>
+                                    <br>
+                                    INR 0.0 @ 10% EBITDA
+                                    <i class="fas fa-info-circle"></i>
+                                </p>
+                            </li>
+                        </ul>
+                        <p>
+                            <strong>
+                                Viewed by:
+                            </strong>
+                            <span style="color: #3aafa9;">
+                                Sales Director, E-Commerce, Bangalore, Individual Investor/ Buyer
+                            </span>
+                        </p>
+                        <p class="contactbtn">
+                            <i class="fas fa-phone-alt"></i>
+                            Contact Business
+                        </p>
+                    </div>
+                    <div class="latestbx">
+                        <span style="float: right;">
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            7/10
+                        </span>
+                        <br>
+                        <p>
+                            New activity in
+                            <strong>Mumbai</strong>
+                            and
+                            <strong>
+                                IT Infrastructure
+                            </strong>
+                            <span style="float: right;">
+                                <i class="far fa-clock"></i>
+                                32 minutes ago
+                            </span>
+                        </p>
+                        <hr>
+                        <h2>
+                            For Sale: Non-operational IT company located in Mumbai that dealt in elecronics and computer services
+                        </h2>
+                        <p>
+                            lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsum
+                        </p>
+                        <ul>
+                            <li>
+                                <p>
+                                    <strong>
+                                        Full Sale
+                                    </strong>
+                                    <br>
+                                    INR 15 thousand
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <strong>
+                                        Run Rate Revenue
+                                    </strong>
+                                    <br>
+                                    INR 0.0 @ 10% EBITDA
+                                    <i class="fas fa-info-circle"></i>
+                                </p>
+                            </li>
+                        </ul>
+                        <p>
+                            <strong>
+                                Viewed by:
+                            </strong>
+                            <span style="color: #3aafa9;">
+                                Sales Director, E-Commerce, Bangalore, Individual Investor/ Buyer
+                            </span>
+                        </p>
+                        <p class="contactbtn">
+                            <i class="fas fa-phone-alt"></i>
+                            Contact Business
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-auto col-lg-3 recentboard">
+                    <h1>Recent Articles</h1>
+                    <div class="recentbx">
+                        <div class="recentbximg">
+                            <img src="{% static 'assets/work.jpg' %}" alt="">
+                        </div>
+                        <div class="recentbxtxt">
+                            <span>
+                                Common text for heading of blog
+                            </span>
+                            <br>
+                            23/2/2021
+                        </div>
+                    </div>
+                    <div class="recentbx">
+                        <div class="recentbximg">
+                            <img src="{% static 'assets/work.jpg' %}" alt="">
+                        </div>
+                        <div class="recentbxtxt">
+                            <span>
+                                Common text for heading of blog
+                            </span>
+                            <br>
+                            23/2/2021
+                        </div>
+                    </div>
+                    <div class="recentbx">
+                        <div class="recentbximg">
+                            <img src="{% static 'assets/work.jpg' %}" alt="">
+                        </div>
+                        <div class="recentbxtxt">
+                            <span>
+                                Common text for heading of blog
+                            </span>
+                            <br>
+                            23/2/2021
                         </div>
                     </div>
                 </div>
-                <hr>
-                <div class="profileinfo">
-                    <ul>
-                        <li>
-                            <h1>
-                                Industries
-                            </h1>
-                            <p>
-                                All Industries
-                            </p>
-                        </li>
-                        <li>
-                            <h1>
-                                Locations
-                            </h1>
-                            <p>
-                                India
-                            </p>
-                        </li>
-                        <li>
-                            <h1>
-                                Deal Size
-                            </h1>
-                            <p>
-                                ----
-                            </p>
-                        </li>
-                        <li>
-                            <h1>
-                                Recent Payments
-                            </h1>
-                            <p>
-                                Free Trail
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-                <hr>
-                <div class="prodetail">
-                    <ul>
-                        <li style="opacity: 0.5;">
-                            <i class="fas fa-map-marker-alt"></i>
-                            India
-                        </li>
-                        <li style="opacity: 0.5;">
-                            <i class="fab fa-facebook-f"></i>
-                            Facebook
-                        </li>
-                        <li style="opacity: 0.5;">
-                            <i class="fas fa-calendar-alt"></i>
-                            Joined Oct 23, 2021
-                        </li>
-                        <li style="opacity: 0.5;">
-                            <i class="fab fa-linkedin-in"></i>
-                            LinkedIn
-                        </li>
-                        <li></li>
-                        <li style="color:blue;">
-                            <i class="fab fa-google"></i>
-                            Google
-                        </li>
-                    </ul>
-                </div>
-                <p class="btnpro">
-                    <span class="probtn">
-                        No active Profiles
-                    </span>
-                </p>
             </div>
         </div>
-        <div class="col-sm-12 col-md-auto col-lg-6 newsboard">
-            <h1>Hi {{user.first_name}} {{user.last_name}},</h1>
-            <div class="welcomebx">
-                <p style="font-size: 20px;">
-                    Welcome to FIRMINGLE, We help you acquire businesses, raise captial for your company, find franchise partners, or realize value through a startegic sale. Our global network of investors and businesses help you successfully acheive your strategic objectivies.
-                </p>
-                <ul>
-                    <li>
-                        <a href="/business-profile">
-                            <p>
-                                <i class="fas fa-chart-line"></i>
-                                Sell or Raise Funds for your Business
-                            </p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/investor-profile">
-                            <p>
-                                <i class="fas fa-chart-line"></i>
-                                Acquire or Invest in a Business
-                            </p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <h2>
-                <strong>
-                    Latest Activity
-                </strong>
-            </h2>
-            <div class="latestbx">
-                <span style="float: right;">
-                    <i class="fas fa-star" style="color: gold;"></i>
-                    <i class="fas fa-star" style="color: gold;"></i>
-                    <i class="fas fa-star" style="color: gold;"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                    7/10
-                </span>
-                <br>
-                <p>
-                    New activity in
-                    <strong>Mumbai</strong>
-                    and
-                    <strong>
-                        IT Infrastructure
-                    </strong>
-                    <span style="float: right;">
-                        <i class="far fa-clock"></i>
-                        32 minutes ago
-                    </span>
-                </p>
-                <hr>
-                <h2>
-                    For Sale: Non-operational IT company located in Mumbai that dealt in elecronics and computer services
-                </h2>
-                <p>
-                    lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsum
-                </p>
-                <ul>
-                    <li>
-                        <p>
-                            <strong>
-                                Full Sale
-                            </strong>
-                            <br>
-                            INR 15 thousand
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <strong>
-                                Run Rate Revenue
-                            </strong>
-                            <br>
-                            INR 0.0 @ 10% EBITDA
-                            <i class="fas fa-info-circle"></i>
-                        </p>
-                    </li>
-                </ul>
-                <p>
-                    <strong>
-                        Viewed by:
-                    </strong>
-                    <span style="color: blue;">
-                        Sales Director, E-Commerce, Bangalore, Individual Investor/ Buyer
-                    </span>
-                </p>
-                <p class="contactbtn">
-                    <i class="fas fa-phone-alt"></i>
-                    Contact Business
-                </p>
-            </div>
-            <div class="latestbx">
-                <span style="float: right;">
-                    <i class="fas fa-star" style="color: gold;"></i>
-                    <i class="fas fa-star" style="color: gold;"></i>
-                    <i class="fas fa-star" style="color: gold;"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                    7/10
-                </span>
-                <br>
-                <p>
-                    New activity in
-                    <strong>Mumbai</strong>
-                    and
-                    <strong>
-                        IT Infrastructure
-                    </strong>
-                    <span style="float: right;">
-                        <i class="far fa-clock"></i>
-                        32 minutes ago
-                    </span>
-                </p>
-                <hr>
-                <h2>
-                    For Sale: Non-operational IT company located in Mumbai that dealt in elecronics and computer services
-                </h2>
-                <p>
-                    lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsum
-                </p>
-                <ul>
-                    <li>
-                        <p>
-                            <strong>
-                                Full Sale
-                            </strong>
-                            <br>
-                            INR 15 thousand
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <strong>
-                                Run Rate Revenue
-                            </strong>
-                            <br>
-                            INR 0.0 @ 10% EBITDA
-                            <i class="fas fa-info-circle"></i>
-                        </p>
-                    </li>
-                </ul>
-                <p>
-                    <strong>
-                        Viewed by:
-                    </strong>
-                    <span style="color: blue;">
-                        Sales Director, E-Commerce, Bangalore, Individual Investor/ Buyer
-                    </span>
-                </p>
-                <p class="contactbtn">
-                    <i class="fas fa-phone-alt"></i>
-                    Contact Business
-                </p>
-            </div>
-            <div class="latestbx">
-                <span style="float: right;">
-                    <i class="fas fa-star" style="color: gold;"></i>
-                    <i class="fas fa-star" style="color: gold;"></i>
-                    <i class="fas fa-star" style="color: gold;"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                    7/10
-                </span>
-                <br>
-                <p>
-                    New activity in
-                    <strong>Mumbai</strong>
-                    and
-                    <strong>
-                        IT Infrastructure
-                    </strong>
-                    <span style="float: right;">
-                        <i class="far fa-clock"></i>
-                        32 minutes ago
-                    </span>
-                </p>
-                <hr>
-                <h2>
-                    For Sale: Non-operational IT company located in Mumbai that dealt in elecronics and computer services
-                </h2>
-                <p>
-                    lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsum
-                </p>
-                <ul>
-                    <li>
-                        <p>
-                            <strong>
-                                Full Sale
-                            </strong>
-                            <br>
-                            INR 15 thousand
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <strong>
-                                Run Rate Revenue
-                            </strong>
-                            <br>
-                            INR 0.0 @ 10% EBITDA
-                            <i class="fas fa-info-circle"></i>
-                        </p>
-                    </li>
-                </ul>
-                <p>
-                    <strong>
-                        Viewed by:
-                    </strong>
-                    <span style="color: blue;">
-                        Sales Director, E-Commerce, Bangalore, Individual Investor/ Buyer
-                    </span>
-                </p>
-                <p class="contactbtn">
-                    <i class="fas fa-phone-alt"></i>
-                    Contact Business
-                </p>
-            </div>
-            <div class="latestbx">
-                <span style="float: right;">
-                    <i class="fas fa-star" style="color: gold;"></i>
-                    <i class="fas fa-star" style="color: gold;"></i>
-                    <i class="fas fa-star" style="color: gold;"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                    7/10
-                </span>
-                <br>
-                <p>
-                    New activity in
-                    <strong>Mumbai</strong>
-                    and
-                    <strong>
-                        IT Infrastructure
-                    </strong>
-                    <span style="float: right;">
-                        <i class="far fa-clock"></i>
-                        32 minutes ago
-                    </span>
-                </p>
-                <hr>
-                <h2>
-                    For Sale: Non-operational IT company located in Mumbai that dealt in elecronics and computer services
-                </h2>
-                <p>
-                    lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsum
-                </p>
-                <ul>
-                    <li>
-                        <p>
-                            <strong>
-                                Full Sale
-                            </strong>
-                            <br>
-                            INR 15 thousand
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <strong>
-                                Run Rate Revenue
-                            </strong>
-                            <br>
-                            INR 0.0 @ 10% EBITDA
-                            <i class="fas fa-info-circle"></i>
-                        </p>
-                    </li>
-                </ul>
-                <p>
-                    <strong>
-                        Viewed by:
-                    </strong>
-                    <span style="color: blue;">
-                        Sales Director, E-Commerce, Bangalore, Individual Investor/ Buyer
-                    </span>
-                </p>
-                <p class="contactbtn">
-                    <i class="fas fa-phone-alt"></i>
-                    Contact Business
-                </p>
-            </div>
-        </div>
-        <div class="col-sm-12 col-md-auto col-lg-3 recentboard">
-            <h1>Recent Articles</h1>
-            <div class="recentbx">
-                <div class="recentbximg">
-                    <img src="{% static 'assets/work.jpg' %}" alt="">
-                </div>
-                <div class="recentbxtxt">
-                    <span>
-                        Common text for heading of blog
-                    </span>
-                    <br>
-                    23/2/2021
-                </div>
-            </div>
-            <div class="recentbx">
-                <div class="recentbximg">
-                    <img src="{% static 'assets/work.jpg' %}" alt="">
-                </div>
-                <div class="recentbxtxt">
-                    <span>
-                        Common text for heading of blog
-                    </span>
-                    <br>
-                    23/2/2021
-                </div>
-            </div>
-            <div class="recentbx">
-                <div class="recentbximg">
-                    <img src="{% static 'assets/work.jpg' %}" alt="">
-                </div>
-                <div class="recentbxtxt">
-                    <span>
-                        Common text for heading of blog
-                    </span>
-                    <br>
-                    23/2/2021
-                </div>
-            </div>
-        </div>
+        <!-- ends -->
     </div>
 </div>
+<!-- footer -->
+{% include 'components/footer.html' %}
+<!-- ends -->
 {% endblock %}

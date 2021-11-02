@@ -1,0 +1,62 @@
+{% block content %}
+<!-- Footer -->
+<footer style="background-color: #def2f1;">
+    <div class="row">
+        <div class="col-sm-12 col-md-auto col-lg-3">
+            <h2>Community</h2>
+            <p>
+                <a href="#">For Talents</a>
+            </p>
+            <p>
+                <a href="#">For Companies</a>
+            </p>
+            <p>
+                <a href="#">Facebook Groups</a>
+            </p>
+            <p>
+                <a href="{% url 'faq'%}">FAQ</a>
+            </p>
+        </div>
+        <div class="col-sm-12 col-md-auto col-lg-3">
+            <h2>About Us</h2>
+            <p>
+                <a href="#">Meet the Team</a>
+            </p>
+            <p>
+                <a href="#">Our Story</a>
+            </p>
+            <p>
+                <a href="#">Career</a>
+            </p>
+        </div>
+        <div class="col-sm-12 col-md-auto col-lg-3">
+            <h2>Policies</h2>
+            <p>
+                <a href="{% url 'privacy'%}">Privacy</a>
+            </p>
+            <p>
+                <a href="{% url 'terms'%}">Terms and Conditions</a>
+            </p>
+            <p>
+                <a href="#">Career Blog</a>
+            </p>
+        </div>
+        <div class="col-sm-12 col-md-auto col-lg-3">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>
+                Time is the most precious thing you have when bootstrapping. You
+                can't take time.
+            </p>
+            <div class="input-group inputsubs">
+                <input type="text" class="form-control" placeholder="Enter your email">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">
+                        Subscribe
+                    </button>
+                </span>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- ends -->
+{% endblock %}

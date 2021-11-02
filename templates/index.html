@@ -1,397 +1,402 @@
 {% extends  'base.html' %}
 {% load static %}
 {% block content %}
-<!-- home section -->
-<section id="home">
-    <div class="homePage">
-        <div class="row">
-            <div class="col-sm-12 col-md-auto col-lg-6">
-                <div class="aboutcompany">
-                    <h1>
-                        About
-                        <br>
-                        Company
-                    </h1>
-                    <p>
-                        We are India's one of the leading online platforms for Investment opportunities of Small to Medium Businesses & Startups through technology platforms and advisoryservices. Firmingle helps promising start-ups connect with high quality investors to fulfil their capital needs with the best possible outcomes. It is an A.I. based platform that connects start-ups with multiple investors and enterprises. Founded in 20xx by X and Z, this online platform is all about helping young companies to raise funds that gives wings to their entrepreneurial ideas.
-                    </p>
-                    <p class="getstarted">
-                        <a href="#">
-                            <span> Get Started for Free</span>
-                        </a>
-                    </p>
-                    <p>
-                        Still confused?
-                        <a href="#">Check our 1 min video</a>
-                    </p>
+<div class="content">
+    <div class="container-fluid">
+        <!-- navbar -->
+        {% include 'components/navbar.html' %}
+        <!-- ends -->
+        <!-- home section -->
+        <section id="home">
+            <div class="homePage">
+                <div class="row">
+                    <div class="col-sm-12 col-md-auto col-lg-6">
+                        <div class="aboutcompany">
+                            <h1>
+                                About
+                                <br>
+                                Company
+                            </h1>
+                            <p>
+                                We are India's one of the leading online platforms for Investment opportunities of Small to Medium Businesses & Startups through technology platforms and advisoryservices. Firmingle helps promising start-ups connect with high quality investors to fulfil their capital needs with the best possible outcomes. It is an A.I. based platform that connects start-ups with multiple investors and enterprises. Founded in 20xx by X and Z, this online platform is all about helping young companies to raise funds that gives wings to their entrepreneurial ideas.
+                            </p>
+                            <p class="getstarted">
+                                <a href="#">
+                                    <span> Get Started for Free</span>
+                                </a>
+                            </p>
+                            <p>
+                                Still confused?
+                                <a href="#">Check our 1 min video</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-auto col-lg-6 aboutimg">
+                        <img src="{% static 'assets/Why_Choose.png'%}" alt="Why Choose Us">
+                    </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-auto col-lg-6 aboutimg">
-                <img src="{% static 'assets/Why_Choose.png'%}" alt="Why Choose Us">
-            </div>
-        </div>
-    </div>
-</section>
-<!-- home section ends -->
-<!-- featuredin section -->
-<section id="featuredIn">
-    <div class="row">
-        <div class="col-sm-12 col-md-auto col-md-4">
-            <div class="userdata">
-                <div class="activeuser">
-                    <h1>2000 +</h1>
-                    <p>Active Users</p>
-                    <p style="color: blue;">
-                        <span>On Websites</span>
-                    </p>
+        </section>
+        <!-- home section ends -->
+        <!-- featuredin section -->
+        <section id="featuredIn">
+            <div class="row">
+                <div class="col-sm-12 col-md-auto col-md-4">
+                    <div class="userdata">
+                        <div class="activeuser">
+                            <h1>2000 +</h1>
+                            <p>Active Users</p>
+                            <p style="color: blue;">
+                                <span>On Websites</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-auto col-lg-8">
+                    <div class="trustedusers">
+                        <h1>
+                            Trusted by thousands  happy Entrepreneurs around the world since 2021
+                        </h1>
+                        <p>Also featured in</p>
+                        <ul>
+                            <li>
+                                <img src="{% static 'assets/slack.png'%}" alt="">
+                            </li>
+                            <li>
+                                <img src="{% static 'assets/Microsoft.png'%}" alt="">
+                            </li>
+                            <li>
+                                <img src="{% static 'assets/facebook.png'%}" alt="">
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-12 col-md-auto col-lg-8">
-            <div class="trustedusers">
-                <h1>
-                    Trusted by thousands  happy Entrepreneurs around the world since 2021
-                </h1>
-                <p>Also featured in</p>
-                <ul>
-                    <li>
-                        <img src="{% static 'assets/slack.png'%}" alt="">
-                    </li>
-                    <li>
-                        <img src="{% static 'assets/Microsoft.png'%}" alt="">
-                    </li>
-                    <li>
-                        <img src="{% static 'assets/facebook.png'%}" alt="">
-                    </li>
-                </ul>
+        </section>
+        <!-- featuredin section ends -->
+        <!-- features section -->
+        <section id="features">
+            <div class="row">
+                <div class="col-sm-12 col-md-auto col-lg-6">
+                    <div class="featuretxt">
+                        <h1>Features</h1>
+                        <p>
+                            <span>
+                                Access India's latest and most active investor community. Track commitments in real-time and close deals super quickly. Whether you’re an individual or a company, you can easily raise funds and enjoy the benefits of high-class investors simply with the click of a button.
+                            </span>
+                        </p>
+                        <ul>
+                            <li>
+                                <img src="{% static 'assets/connect.png'%}" alt="">
+                                Connect Startups with potential Investors
+                            </li>
+                            <li>
+                                <img src="{% static 'assets/chart-growth.png'%}" alt="">
+                                Assured Confidentiality
+                            </li>
+                            <li>
+                                <img src="{% static 'assets/ic_storage_48px.png'%}" alt="">
+                                Advisory services
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-auto col-lg-6">
+                    <div class="featureimg">
+                        <img src="{% static 'assets/Group 1671.png'%}" alt="">
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
-<!-- featuredin section ends -->
-<!-- features section -->
-<section id="features">
-    <div class="row">
-        <div class="col-sm-12 col-md-auto col-lg-6">
-            <div class="featuretxt">
-                <h1>Features</h1>
-                <p>
-                    <span>
-                        Access India's latest and most active investor community. Track commitments in real-time and close deals super quickly. Whether you’re an individual or a company, you can easily raise funds and enjoy the benefits of high-class investors simply with the click of a button.
-                    </span>
-                </p>
-                <ul>
-                    <li>
-                        <img src="{% static 'assets/connect.png'%}" alt="">
-                        Connect Startups with potential Investors
-                    </li>
-                    <li>
-                        <img src="{% static 'assets/chart-growth.png'%}" alt="">
-                        Assured Confidentiality
-                    </li>
-                    <li>
-                        <img src="{% static 'assets/ic_storage_48px.png'%}" alt="">
-                        Advisory services
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-sm-12 col-md-auto col-lg-6">
-            <div class="featureimg">
-                <img src="{% static 'assets/Group 1671.png'%}" alt="">
-            </div>
-        </div>
-    </div>
-</section>
-<!-- feature section ends -->
-<!-- how it works section -->
-<section id="howit">
-    <div class="howitheader">
-        <h1>How it Works?</h1>
-        <div class="row howitrow">
-            <div class="col-sm-12 col-md-auto col-lg-4">
-                <div class="div1">
-                    <img src="{% static 'assets/scroll2.jpg'%}" alt="">
-                    <h2>Get Funded</h2>
-                    <p>
-                        Our platform helps Startups raise to ₹1 Cr (please enter
+        </section>
+        <!-- feature section ends -->
+        <!-- how it works section -->
+        <section id="howit">
+            <div class="howitheader">
+                <h1>How it Works?</h1>
+                <div class="row howitrow">
+                    <div class="col-sm-12 col-md-auto col-lg-4">
+                        <div class="div1">
+                            <img src="{% static 'assets/scroll2.jpg'%}" alt="">
+                            <h2>Get Funded</h2>
+                            <p>
+                                Our platform helps Startups raise to ₹1 Cr (please enter
                                         real-time amount). Our team is committed to providing well-defined strategic inputs and guidance to youngsters. All you need to do is get started by introducing yourself to an investor and discuss your plan and send them your detailed proposal.
-                    </p>
+                            </p>
+                        </div>
+                        <img src="{% static 'assets/arrow1.jpg'%}" alt="" class="howimg1">
+                    </div>
+                    <div class="col-sm-12 col-md-auto col-lg-4">
+                        <div class="div2">
+                            <img src="{% static 'assets/scroll3.jpg'%}" alt="">
+                            <h2>Invest with Us</h2>
+                            <p>
+                                Our top investors include Giant Businesses, Corporates, Private Equity Firms, VC Firms, and Banks, etc.
+                            </p>
+                        </div>
+                        <img src="{% static 'assets/arrow1.jpg'%}" alt="" class="howimg2">
+                    </div>
+                    <div class="col-sm-12 col-md-auto col-lg-4">
+                        <div class="div3">
+                            <img src="{% static 'assets/scroll1.jpg'%}" alt="">
+                            <h2>Grow with Us</h2>
+                            <p>
+                                "We have a motto in Firmingle if you have a Big Dream, we have a bigger platform to achieve it".
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <img src="{% static 'assets/arrow1.jpg'%}" alt="" class="howimg1">
             </div>
-            <div class="col-sm-12 col-md-auto col-lg-4">
-                <div class="div2">
-                    <img src="{% static 'assets/scroll3.jpg'%}" alt="">
-                    <h2>Invest with Us</h2>
-                    <p>
-                        Our top investors include Giant Businesses, Corporates, Private Equity Firms, VC Firms, and Banks, etc.
+        </section>
+        <!-- how it works section ends -->
+        <!-- investors section -->
+        <section id="investor">
+            <div class="invest">
+                <div class="investbox">
+                    <h1 style="text-align: center;">Our Investors</h1>
+                    <p style="text-align: center;">
+                        Only those who risk going too far can possibly find out how far one ca go.
                     </p>
-                </div>
-                <img src="{% static 'assets/arrow1.jpg'%}" alt="" class="howimg2">
-            </div>
-            <div class="col-sm-12 col-md-auto col-lg-4">
-                <div class="div3">
-                    <img src="{% static 'assets/scroll1.jpg'%}" alt="">
-                    <h2>Grow with Us</h2>
-                    <p>
-                        "We have a motto in Firmingle if you have a Big Dream, we have a bigger platform to achieve it".
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- how it works section ends -->
-<!-- investors section -->
-<section id="investor">
-    <div class="invest">
-        <div class="investbox">
-            <h1 style="text-align: center;">Our Investors</h1>
-            <p style="text-align: center;">
-                Only those who risk going too far can possibly find out how far one ca go.
-            </p>
-            <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <div class="ibox">
-                        <div class="prof">
-                            <div class="iproimg">
-                                <img src="{% static 'assets/person.jpg' %}" alt="">
-                            </div>
-                            <div class="iprotxt">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-4">
+                            <div class="ibox">
+                                <div class="prof">
+                                    <div class="iproimg">
+                                        <img src="{% static 'assets/person.jpg' %}" alt="">
+                                    </div>
+                                    <div class="iprotxt">
+                                        <p>
+                                            <strong>Business Associate</strong>
+                                            <br>
+                                            Individual Buyer in India
+                                        </p>
+                                    </div>
+                                </div>
                                 <p>
-                                    <strong>Business Associate</strong>
+                                    <strong>Profile Summary</strong>
                                     <br>
-                                    Individual Buyer in India
+                                    IT Company with our corporate office based out of San Ramon
                                 </p>
+                                <table class="browsetable">
+                                    <tr>
+                                        <td>
+                                            <i class="fas fa-map-marker-alt" style="color:green;"></i>
+                                            <span>Locations</span>
+                                        </td>
+                                        <td>
+                                            <span style="float: right;">Mumbai, Chennai, Goa, Assam</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <i class="fas fa-industry" style="color: brown;"></i>
+                                            <span>Industries</span>
+                                        </td>
+                                        <td>
+                                            <span style="float: right;">Software, Hospitality, Service</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <i class="fas fa-star" style="color: gold;"></i>
+                                            <span>Rating</span>
+                                        </td>
+                                        <td>
+                                            <span style="float: right;">8.9/10</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <button type="button" class="btn btn-success">
+                                                View Profile
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <p style="text-align: center;">
+                                                <span>Investment Size</span>
+                                                <br>
+                                                INR
+                                                <strong style="color: #3aafa9;">1 Cr - 5 Cr</strong>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
                             </div>
                         </div>
-                        <p>
-                            <strong>Profile Summary</strong>
-                            <br>
-                            IT Company with our corporate office based out of San Ramon
-                        </p>
-                        <table class="browsetable">
-                            <tr>
-                                <td>
-                                    <i class="fas fa-map-marker-alt" style="color:green;"></i>
-                                    <span>Locations</span>
-                                </td>
-                                <td>
-                                    <span style="float: right;">Mumbai, Chennai, Goa, Assam</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <i class="fas fa-industry" style="color: brown;"></i>
-                                    <span>Industries</span>
-                                </td>
-                                <td>
-                                    <span style="float: right;">Software, Hospitality, Service</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <span>Rating</span>
-                                </td>
-                                <td>
-                                    <span style="float: right;">8.9/10</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <button type="button" class="btn btn-success">
-                                        View Profile
-                                    </button>
-                                </td>
-                                <td>
-                                    <p style="text-align: center;">
-                                        <span>Investment Size</span>
-                                        <br>
-                                        INR
-                                        <strong style="color: #3aafa9;">1 Cr - 5 Cr</strong>
-                                    </p>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <div class="ibox">
-                        <div class="prof">
-                            <div class="iproimg">
-                                <img src="{% static 'assets/person.jpg' %}" alt="">
-                            </div>
-                            <div class="iprotxt">
+                        <div class="col-sm-12 col-md-6 col-lg-4">
+                            <div class="ibox">
+                                <div class="prof">
+                                    <div class="iproimg">
+                                        <img src="{% static 'assets/person.jpg' %}" alt="">
+                                    </div>
+                                    <div class="iprotxt">
+                                        <p>
+                                            <strong>Business Associate</strong>
+                                            <br>
+                                            Individual Buyer in India
+                                        </p>
+                                    </div>
+                                </div>
                                 <p>
-                                    <strong>Business Associate</strong>
+                                    <strong>Profile Summary</strong>
                                     <br>
-                                    Individual Buyer in India
+                                    IT Company with our corporate office based out of San Ramon
                                 </p>
+                                <table class="browsetable">
+                                    <tr>
+                                        <td>
+                                            <i class="fas fa-map-marker-alt" style="color:green;"></i>
+                                            <span>Locations</span>
+                                        </td>
+                                        <td>
+                                            <span style="float: right;">Mumbai, Chennai, Goa, Assam</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <i class="fas fa-industry" style="color: brown;"></i>
+                                            <span>Industries</span>
+                                        </td>
+                                        <td>
+                                            <span style="float: right;">Software, Hospitality, Service</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <i class="fas fa-star" style="color: gold;"></i>
+                                            <span>Rating</span>
+                                        </td>
+                                        <td>
+                                            <span style="float: right;">8.9/10</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <button type="button" class="btn btn-success">
+                                                View Profile
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <p style="text-align: center;">
+                                                <span>Investment Size</span>
+                                                <br>
+                                                INR
+                                                <strong style="color: #3aafa9;">1 Cr - 5 Cr</strong>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
                             </div>
                         </div>
-                        <p>
-                            <strong>Profile Summary</strong>
-                            <br>
-                            IT Company with our corporate office based out of San Ramon
-                        </p>
-                        <table class="browsetable">
-                            <tr>
-                                <td>
-                                    <i class="fas fa-map-marker-alt" style="color:green;"></i>
-                                    <span>Locations</span>
-                                </td>
-                                <td>
-                                    <span style="float: right;">Mumbai, Chennai, Goa, Assam</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <i class="fas fa-industry" style="color: brown;"></i>
-                                    <span>Industries</span>
-                                </td>
-                                <td>
-                                    <span style="float: right;">Software, Hospitality, Service</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <span>Rating</span>
-                                </td>
-                                <td>
-                                    <span style="float: right;">8.9/10</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <button type="button" class="btn btn-success">
-                                        View Profile
-                                    </button>
-                                </td>
-                                <td>
-                                    <p style="text-align: center;">
-                                        <span>Investment Size</span>
-                                        <br>
-                                        INR
-                                        <strong style="color: #3aafa9;">1 Cr - 5 Cr</strong>
-                                    </p>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <div class="ibox">
-                        <div class="prof">
-                            <div class="iproimg">
-                                <img src="{% static 'assets/person.jpg' %}" alt="">
-                            </div>
-                            <div class="iprotxt">
+                        <div class="col-sm-12 col-md-6 col-lg-4">
+                            <div class="ibox">
+                                <div class="prof">
+                                    <div class="iproimg">
+                                        <img src="{% static 'assets/person.jpg' %}" alt="">
+                                    </div>
+                                    <div class="iprotxt">
+                                        <p>
+                                            <strong>Business Associate</strong>
+                                            <br>
+                                            Individual Buyer in India
+                                        </p>
+                                    </div>
+                                </div>
                                 <p>
-                                    <strong>Business Associate</strong>
+                                    <strong>Profile Summary</strong>
                                     <br>
-                                    Individual Buyer in India
+                                    IT Company with our corporate office based out of San Ramon
                                 </p>
+                                <table class="browsetable">
+                                    <tr>
+                                        <td>
+                                            <i class="fas fa-map-marker-alt" style="color:green;"></i>
+                                            <span>Locations</span>
+                                        </td>
+                                        <td>
+                                            <span style="float: right;">Mumbai, Chennai, Goa, Assam</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <i class="fas fa-industry" style="color: brown;"></i>
+                                            <span>Industries</span>
+                                        </td>
+                                        <td>
+                                            <span style="float: right;">Software, Hospitality, Service</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <i class="fas fa-star" style="color: gold;"></i>
+                                            <span>Rating</span>
+                                        </td>
+                                        <td>
+                                            <span style="float: right;">8.9/10</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <button type="button" class="btn btn-success">
+                                                View Profile
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <p style="text-align: center;">
+                                                <span>Investment Size</span>
+                                                <br>
+                                                INR
+                                                <strong style="color: #3aafa9;">1 Cr - 5 Cr</strong>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
                             </div>
                         </div>
-                        <p>
-                            <strong>Profile Summary</strong>
-                            <br>
-                            IT Company with our corporate office based out of San Ramon
-                        </p>
-                        <table class="browsetable">
-                            <tr>
-                                <td>
-                                    <i class="fas fa-map-marker-alt" style="color:green;"></i>
-                                    <span>Locations</span>
-                                </td>
-                                <td>
-                                    <span style="float: right;">Mumbai, Chennai, Goa, Assam</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <i class="fas fa-industry" style="color: brown;"></i>
-                                    <span>Industries</span>
-                                </td>
-                                <td>
-                                    <span style="float: right;">Software, Hospitality, Service</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <span>Rating</span>
-                                </td>
-                                <td>
-                                    <span style="float: right;">8.9/10</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <button type="button" class="btn btn-success">
-                                        View Profile
-                                    </button>
-                                </td>
-                                <td>
-                                    <p style="text-align: center;">
-                                        <span>Investment Size</span>
-                                        <br>
-                                        INR
-                                        <strong style="color: #3aafa9;">1 Cr - 5 Cr</strong>
-                                    </p>
-                                </td>
-                            </tr>
-                        </table>
+                    </div>
+                </div>
+                <div class="investbox">
+                    <h1 style="text-align: center;">1000 + People Love Us</h1>
+                    <p style="text-align: center;">
+                        These companies release their own versions of the operating systems with minor changes and yet always.
+                    </p>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-4">
+                            <div class="tweetboximg">
+                                <img src="{% static '/assets/1.png'%}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-4 tweet">
+                            <div class="tweetboximg">
+                                <img src="{% static '/assets/1.png'%}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-4">
+                            <div class="tweetboximg">
+                                <img src="{% static '/assets/1.png'%}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-4">
+                            <div class="tweetboximg">
+                                <img src="{% static '/assets/1.png'%}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-4">
+                            <div class="tweetboximg">
+                                <img src="{% static '/assets/1.png'%}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-4">
+                            <div class="tweetboximg">
+                                <img src="{% static '/assets/1.png'%}" alt="">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="investbox">
-            <h1 style="text-align: center;">1000 + People Love Us</h1>
-            <p style="text-align: center;">
-                These companies release their own versions of the operating systems with minor changes and yet always.
-            </p>
-            <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <div class="tweetboximg">
-                        <img src="{% static '/assets/1.png'%}" alt="">
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4 tweet">
-                    <div class="tweetboximg">
-                        <img src="{% static '/assets/1.png'%}" alt="">
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <div class="tweetboximg">
-                        <img src="{% static '/assets/1.png'%}" alt="">
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <div class="tweetboximg">
-                        <img src="{% static '/assets/1.png'%}" alt="">
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <div class="tweetboximg">
-                        <img src="{% static '/assets/1.png'%}" alt="">
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <div class="tweetboximg">
-                        <img src="{% static '/assets/1.png'%}" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- investors section ends -->
-<!-- Plans Section -->
-<!-- <section id="plan">
+        </section>
+        <!-- investors section ends -->
+        <!-- Plans Section -->
+        <!-- <section id="plan">
                     <div class="plans">
                         <h1>Plans</h1>
                         <p>
@@ -499,5 +504,10 @@
                         </div>
                     </div>
                 </section> -->
-<!-- Plan Section ends -->
+        <!-- Plan Section ends -->
+    </div>
+</div>
+<!-- footer -->
+{% include 'components/footer1.html' %}
+<!-- ends -->
 {% endblock %}

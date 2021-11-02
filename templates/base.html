@@ -53,21 +53,12 @@
         <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script> -->
     </head>
     <body>
-        <div class="container-fluid">
-            <div class="main">
-                <div class="wrapper">
-                    <div class="content">
-                        <!-- navbar -->
-                        {% include 'components/navbar.html' %}
-                        <!-- ends -->
-                        {% block content %}  
-                        {% endblock %}
-                        <!-- End of content -->
-                    </div>
-                    <!-- footer -->
-                    {% include 'components/footer.html' %}
-                    <!-- ends -->
-                </div>
+        <div class="main">
+            <div class="wrapper">
+                <!-- Block Content -->
+                {% block content %}  
+                {% endblock %}
+                <!-- End of content -->
             </div>
         </div>
     </body>

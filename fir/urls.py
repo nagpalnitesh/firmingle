@@ -19,7 +19,7 @@ from . import views
 urlpatterns = [
     path('', views.index, name='index'),  # indexPage
     path('privacy', views.privacy, name='privacy'),  # privacyPage
-    path('terms-and-contion', views.terms, name='terms'),  # termsPage
+    path('terms-and-condition', views.terms, name='terms'),  # termsPage
     path('faq', views.faq, name='faq'),  # faqPage
     path('signup', views.signup, name='signup'),  # signupPage
     path('login', views.handlelogin, name='login'),  # loginPage

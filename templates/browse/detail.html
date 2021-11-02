@@ -1,304 +1,314 @@
 {% extends  'base.html' %}
 {% load static %}
 {% block content %}
-<!-- Detailed Post -->
-<div class="detail">
-    <button type="button" class="btn detailedbtn" style="float: right;">Permium Plan</button>
-    <h1>Facility Management Company of Sale in Mumbai, India</h1>
-    <p>
-        For sale: Hospitality & facility management company with a track record of 35+ years.
-    </p>
-    <div class="detailcard1">
-        <p class="cardinside">
-            <i class="fas fa-circle"></i>
-            Active
-        </p>
-        <div class="row">
-            <div class="col-sm-12 col-md-auto col-lg-6">
-                <div class="detailimg">
-                    <img src="{% static 'assets/godown.jpg' %}" alt="">
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-auto col-lg-6">
-                <div class="detailimg">
-                    <img src="{% static 'assets/Van.jpg' %}" alt="">
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 col-md-auto col-lg-6 detailtext">
-                <div class="detailtxt">
-                    <p>
-                        <strong>
-                            Overall rating
-                        </strong>
-                        <br>
-                        <i class="fas fa-star"></i>
-                        9.5/10
-                        <br>
-                        <span class="linkspan">
-                            Compare with Industry
-                        </span>
-                    </p>
-                    <p>
-                        <strong>
-                            Full Sale
-                        </strong>
-                        <br>
-                        <span style="font-size: 20px;">
-                            Asking Price:
-                        </span>
-                        INR
-                        <span style="color: #3aafa9;">
-                            <strong>35 Lakh</strong>
-                        </span>
-                        (Native Curenccy: INR 3,500,000)
-                        <br>
-                        Reason: We want to foucs on other businesses.
-                    </p>
-                    <div class="form-check">
-                        <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="gridCheck3"
-                            checked
-                        >
-                        <label class="form-check-label" for="gridCheck3">
-                            Inlcudes physical assets worth INR
-                            <strong style="color: #3aafa9;">32 Lakh</strong>
-                        </label>
+<div class="content">
+    <div class="container-fluid">
+        <!-- navbar -->
+        {% include 'components/navbar.html' %}
+        <!-- ends -->
+        <!-- Detailed Post -->
+        <div class="detail">
+            <button type="button" class="btn detailedbtn" style="float: right;">Permium Plan</button>
+            <h1>Facility Management Company of Sale in Mumbai, India</h1>
+            <p>
+                For sale: Hospitality & facility management company with a track record of 35+ years.
+            </p>
+            <div class="detailcard1">
+                <p class="cardinside">
+                    <i class="fas fa-circle"></i>
+                    Active
+                </p>
+                <div class="row">
+                    <div class="col-sm-12 col-md-auto col-lg-6">
+                        <div class="detailimg">
+                            <img src="{% static 'assets/godown.jpg' %}" alt="">
+                        </div>
                     </div>
-                    <div class="form-check">
-                        <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="gridCheck3"
-                            checked
-                        >
-                        <label class="form-check-label" for="gridCheck3">
-                            Interested to connect with advisors
-                        </label>
+                    <div class="col-sm-12 col-md-auto col-lg-6">
+                        <div class="detailimg">
+                            <img src="{% static 'assets/Van.jpg' %}" alt="">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-12 col-md-auto col-lg-6">
-                <div class="detailtxt">
-                    <p>
-                        <strong>
-                            Name, Email, Phone
-                        </strong>
-                        <br>
-                        <i class="fas fa-lock"></i>
-                        Available after connect
-                    </p>
-                    <br>
-                    <p>
-                        <strong>
-                            Business Name
-                        </strong>
-                        <br>
-                        <i class="fas fa-lock"></i>
-                        Available after connect
-                    </p>
-                    <br>
-                    <p>
-                        <strong>
-                            User Verification
-                        </strong>
-                    </p>
-                    <ul>
-                        <li>
-                            <i class="far fa-envelope"></i>
-                            Email
-                        </li>
-                        <li>
-                            <i class="fab fa-google"></i>
-                            Google
-                        </li>
-                        <li>
-                            <i class="fas fa-phone-alt"></i>
-                            Phone
-                        </li>
-                        <li>
-                            <i class="fab fa-linkedin-in"></i>
-                            Linkedin
-                        </li>
-                        <li>
-                            <i class="fab fa-facebook-square"></i>
-                            Facebook
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <hr class="hrtag">
-        <div class="row detailbusiness">
-            <div class="col-sm-12 col-md-auto col-lg-3">
-                <p>
-                    Established
-                    <br>
-                    1 - 5 yrs.
-                </p>
-                <p>
-                    Employees
-                    <br>
-                    50 - 100
-                </p>
-                <p>
-                    Local Time
-                    <br>
-                    9:53 AM Asia/ Kolkata
-                </p>
-            </div>
-            <div class="col-sm-12 col-md-auto col-lg-3">
-                <p>
-                    Local Entity
-                    <br>
-                    Private Limited Company
-                </p>
-                <p>
-                    Reported Sales
-                    <br>
-                    INR
-                    <strong>9 Crore</strong>
-                </p>
-                <p>
-                    Listed By
-                    <br>
-                    Business Owner/ Director
-                </p>
-            </div>
-            <div class="col-sm-12 col-md-auto col-lg-3">
-                <p>
-                    Industries
-                    <br>
-                    <span style="color: #3aafa9;">
-                        <strong>Grocery Shops</strong>
-                    </span>
-                </p>
-                <p>
-                    Reported Sales
-                    <br>
-                    INR
-                    <strong>16 Crore</strong>
-                </p>
-            </div>
-            <div class="col-sm-12 col-md-auto col-lg-3">
-                <p>
-                    Locations
-                    <br>
-                    <span style="color: #3aafa9;">
-                        <strong>Mumbai</strong>
-                    </span>
-                </p>
-                <p>
-                    EBITDA Margin
-                    <br>
-                    <strong>0 - 10 %</strong>
-                </p>
-            </div>
-        </div>
-    </div>
-    <h2>Documents</h2>
-    <div class="detailcard2">
-        <div class="row">
-            <div class="col-sm-12 col-md-auto col-lg-4">
-                <div class="pdfdoc">
-                    <div class="pdfimg">
-                        <i class="fas fa-file-pdf"></i>
-                    </div>
-                    <div class="pdftxt">
-                        <p>
-                            <span>
-                                <strong style="color: #3aafa9;">
-                                    GST Registraction Certificate
+                <div class="row">
+                    <div class="col-sm-12 col-md-auto col-lg-6 detailtext">
+                        <div class="detailtxt">
+                            <p>
+                                <strong>
+                                    Overall rating
                                 </strong>
                                 <br>
-                                114.7 KB
+                                <i class="fas fa-star"></i>
+                                9.5/10
+                                <br>
+                                <span class="linkspan">
+                                    Compare with Industry
+                                </span>
+                            </p>
+                            <p>
+                                <strong>
+                                    Full Sale
+                                </strong>
+                                <br>
+                                <span style="font-size: 20px;">
+                                    Asking Price:
+                                </span>
+                                INR
+                                <span style="color: #3aafa9;">
+                                    <strong>35 Lakh</strong>
+                                </span>
+                                (Native Curenccy: INR 3,500,000)
+                                <br>
+                                Reason: We want to foucs on other businesses.
+                            </p>
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    id="gridCheck3"
+                                    checked
+                                >
+                                <label class="form-check-label" for="gridCheck3">
+                                    Inlcudes physical assets worth INR
+                                    <strong style="color: #3aafa9;">32 Lakh</strong>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    id="gridCheck3"
+                                    checked
+                                >
+                                <label class="form-check-label" for="gridCheck3">
+                                    Interested to connect with advisors
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-auto col-lg-6">
+                        <div class="detailtxt">
+                            <p>
+                                <strong>
+                                    Name, Email, Phone
+                                </strong>
+                                <br>
+                                <i class="fas fa-lock"></i>
+                                Available after connect
+                            </p>
+                            <br>
+                            <p>
+                                <strong>
+                                    Business Name
+                                </strong>
+                                <br>
+                                <i class="fas fa-lock"></i>
+                                Available after connect
+                            </p>
+                            <br>
+                            <p>
+                                <strong>
+                                    User Verification
+                                </strong>
+                            </p>
+                            <ul>
+                                <li>
+                                    <i class="far fa-envelope"></i>
+                                    Email
+                                </li>
+                                <li>
+                                    <i class="fab fa-google"></i>
+                                    Google
+                                </li>
+                                <li>
+                                    <i class="fas fa-phone-alt"></i>
+                                    Phone
+                                </li>
+                                <li>
+                                    <i class="fab fa-linkedin-in"></i>
+                                    Linkedin
+                                </li>
+                                <li>
+                                    <i class="fab fa-facebook-square"></i>
+                                    Facebook
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr class="hrtag">
+                <div class="row detailbusiness">
+                    <div class="col-sm-12 col-md-auto col-lg-3">
+                        <p>
+                            Established
+                            <br>
+                            1 - 5 yrs.
+                        </p>
+                        <p>
+                            Employees
+                            <br>
+                            50 - 100
+                        </p>
+                        <p>
+                            Local Time
+                            <br>
+                            9:53 AM Asia/ Kolkata
+                        </p>
+                    </div>
+                    <div class="col-sm-12 col-md-auto col-lg-3">
+                        <p>
+                            Local Entity
+                            <br>
+                            Private Limited Company
+                        </p>
+                        <p>
+                            Reported Sales
+                            <br>
+                            INR
+                            <strong>9 Crore</strong>
+                        </p>
+                        <p>
+                            Listed By
+                            <br>
+                            Business Owner/ Director
+                        </p>
+                    </div>
+                    <div class="col-sm-12 col-md-auto col-lg-3">
+                        <p>
+                            Industries
+                            <br>
+                            <span style="color: #3aafa9;">
+                                <strong>Grocery Shops</strong>
                             </span>
+                        </p>
+                        <p>
+                            Reported Sales
+                            <br>
+                            INR
+                            <strong>16 Crore</strong>
+                        </p>
+                    </div>
+                    <div class="col-sm-12 col-md-auto col-lg-3">
+                        <p>
+                            Locations
+                            <br>
+                            <span style="color: #3aafa9;">
+                                <strong>Mumbai</strong>
+                            </span>
+                        </p>
+                        <p>
+                            EBITDA Margin
+                            <br>
+                            <strong>0 - 10 %</strong>
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-auto col-lg-4">
-                <div class="pdfdoc">
-                    <div class="pdfimg">
-                        <i class="fas fa-file-pdf"></i>
+            <h2>Documents</h2>
+            <div class="detailcard2">
+                <div class="row">
+                    <div class="col-sm-12 col-md-auto col-lg-4">
+                        <div class="pdfdoc">
+                            <div class="pdfimg">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="pdftxt">
+                                <p>
+                                    <span>
+                                        <strong style="color: #3aafa9;">
+                                            GST Registraction Certificate
+                                        </strong>
+                                        <br>
+                                        114.7 KB
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="pdftxt">
-                        <p>
-                            <span>
-                                <strong style="color: #3aafa9;">
-                                    Certificate of Incorporation
-                                </strong>
-                                <br>
-                                83.9 KB
-                            </span>
-                        </p>
+                    <div class="col-sm-12 col-md-auto col-lg-4">
+                        <div class="pdfdoc">
+                            <div class="pdfimg">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="pdftxt">
+                                <p>
+                                    <span>
+                                        <strong style="color: #3aafa9;">
+                                            Certificate of Incorporation
+                                        </strong>
+                                        <br>
+                                        83.9 KB
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-auto col-lg-4">
+                        <div class="pdfdoc">
+                            <div class="pdfimg">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="pdftxt">
+                                <p>
+                                    <span>
+                                        <strong style="color: #3aafa9;">
+                                            ROC - Verification
+                                        </strong>
+                                        <br>
+                                        77.9 KB
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-auto col-lg-4">
-                <div class="pdfdoc">
-                    <div class="pdfimg">
-                        <i class="fas fa-file-pdf"></i>
-                    </div>
-                    <div class="pdftxt">
-                        <p>
-                            <span>
-                                <strong style="color: #3aafa9;">
-                                    ROC - Verification
-                                </strong>
-                                <br>
-                                77.9 KB
-                            </span>
-                        </p>
-                    </div>
+            <h2>Overview</h2>
+            <div class="detailcard3">
+                <div class="overtxt">
+                    <h2>
+                        <strong style="color: #3aafa9;">Business Overview</strong>
+                    </h2>
+                    <p>
+                        lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsum
+                    </p>
+                    <p>
+                        lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsum
+                    </p>
+                    <p>
+                        lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsum
+                    </p>
                 </div>
+                <div class="overtxt">
+                    <h2>
+                        <strong style="color: #3aafa9;">Products & Services Overview</strong>
+                    </h2>
+                    <p>
+                        lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem
+                    </p>
+                </div>
+                <div class="overtxt">
+                    <h2>
+                        <strong style="color: #3aafa9;">Assets Overview</strong>
+                    </h2>
+                    <p>
+                        lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem
+                    </p>
+                </div>
+                <h2>
+                    <strong style="color: #3aafa9;">Facilites Overview</strong>
+                </h2>
+                <p>
+                    lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem
+                    <br>
+                    lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem
+                </p>
             </div>
         </div>
-    </div>
-    <h2>Overview</h2>
-    <div class="detailcard3">
-        <div class="overtxt">
-            <h2>
-                <strong style="color: #3aafa9;">Business Overview</strong>
-            </h2>
-            <p>
-                lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsum
-            </p>
-            <p>
-                lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsum
-            </p>
-            <p>
-                lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsum
-            </p>
-        </div>
-        <div class="overtxt">
-            <h2>
-                <strong style="color: #3aafa9;">Products & Services Overview</strong>
-            </h2>
-            <p>
-                lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem
-            </p>
-        </div>
-        <div class="overtxt">
-            <h2>
-                <strong style="color: #3aafa9;">Assets Overview</strong>
-            </h2>
-            <p>
-                lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem
-            </p>
-        </div>
-        <h2>
-            <strong style="color: #3aafa9;">Facilites Overview</strong>
-        </h2>
-        <p>
-            lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem
-            <br>
-            lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem
-        </p>
+        <!-- ends -->
     </div>
 </div>
+<!-- footer -->
+{% include 'components/footer.html' %}
 <!-- ends -->
 {% endblock %}
