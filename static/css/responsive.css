@@ -198,12 +198,10 @@
   .profileimg .proimg img {
     width: 100%;
     margin: 0% 0%;
-    background-color: #3aafa9;
   }
 
   .profileimg .protxt {
     padding: 0% 0%;
-    background-color: #3aafa9;
   }
 
   .profileimg .protxt p {
@@ -213,7 +211,6 @@
   }
 
   .protxt .protxtdiv {
-    background-color: aliceblue;
     padding: 1em;
   }
 
