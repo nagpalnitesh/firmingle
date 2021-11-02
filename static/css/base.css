@@ -39,6 +39,7 @@ footer {
   list-style: none;
   font-family: proxima;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body,

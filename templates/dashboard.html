@@ -7,18 +7,20 @@
             <div class="profilebx">
                 <div class="profileimg">
                     <div class="row">
-                        <div class="col-sm-12 col-md-auto col-lg-3 proimg">
+                        <div class="col-sm-12 col-md-auto col-lg-4 proimg">
                             <img src="{% static 'assets/ICON.png' %}" alt="profile">
                         </div>
-                        <div class="col-sm-12 col-md-auto col-lg-6 protxt">
-                            <strong>
-                                {{user.first_name}} {{user.last_name}}
-                            </strong>
-                            <br>
-                            <span>{{user.email}}</span>
-                        </div>
-                        <div class="col-sm-12 col-md-auto col-lg-3 proedit">
-                            <i class="fas fa-pen"></i>
+                        <div class="col-sm-12 col-md-auto col-lg-8 protxt">
+                            <div class="proedit">
+                                <i class="fas fa-pen"></i>
+                            </div>
+                            <div class="protxtdiv">
+                                <strong>
+                                    {{user.first_name}} {{user.last_name}}
+                                </strong>
+                                <br>
+                                <p>{{user.email}}</p>
+                            </div>
                         </div>
                     </div>
                 </div>

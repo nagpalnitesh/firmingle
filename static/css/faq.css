@@ -116,7 +116,7 @@
 
 .faqques .contactbox1 {
   width: 50%;
-  height: 20vh;
+  height: fit-content;
   padding: 1em 0;
   box-shadow: 0.2em 0.2em 0.7em rgb(59, 59, 59);
   border-radius: 0.5em;
