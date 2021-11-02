@@ -23,8 +23,8 @@
     padding: 0 0.5em;
   }
 
-  .menu ul li:nth-child(5),
-  .menu ul li:nth-child(6) {
+  .menu ul .login,
+  .menu ul .signup {
     margin: auto 2%;
     padding: 0 2em;
   }
@@ -65,9 +65,6 @@
   /* Login SignUp Modal ends */
 
   /* footer */
-  footer {
-    margin: 1% 0%;
-  }
 
   footer .inputsubs input {
     height: 5vh;
@@ -104,79 +101,236 @@
   }
   /* footer ends */
 
-  /* about Img */
-  .aboutimg {
-    margin: auto;
-  }
-  /* ends */
-
-  /* featuredIn section */
-  #featuredIn {
-    background-color: #def2f1;
+  /* homePage Section */
+  .homePage {
+    margin: 2em 0;
   }
 
-  /* Active Users and User Ratings */
-  .userdata .activeuser,
-  .userdata .userratings {
-    text-align: center;
+  /* About Section */
+  .aboutcompany {
+    margin: 5% 1em;
+    width: 90%;
+    padding: 0 5%;
   }
 
-  .userdata .activeuser h1,
-  .userdata .userratings h1 {
+  .aboutcompany h1 {
     font-size: 40px;
     font-weight: bold;
   }
 
-  .userdata .activeuser p,
-  .userdata .userratings p {
+  .aboutcompany p {
     font-size: 16px;
-    font-weight: bold;
   }
 
-  /* Trusted Users */
-  .trustedusers {
-    padding: 3% 0;
+  .aboutcompany a:hover {
+    text-decoration: none;
   }
 
-  .trustedusers img {
-    width: 20%;
+  .aboutcompany .getstarted {
+    background-color: #3aafa9;
+    padding: 1em 1em;
+    border: 0.1em solid #3aafa9;
+    width: fit-content;
+    border-radius: 0.5em;
+  }
+
+  .aboutcompany .getstarted a {
+    color: white;
+  }
+
+  /* Image Section */
+  .aboutimg img {
+    width: 100%;
+    margin: 20% 0;
   }
   /* ends */
 
-  /* Features Section */
+  /* featuredIn section */
+
+  #featuredIn {
+    background-color: #def2f1;
+    padding: 1em 0;
+  }
+
+  .featrow {
+    padding: 5em 0;
+  }
+
+  .featrow .userrate {
+    padding: 2em 5%;
+  }
+
+  .featrow .userrate h1 {
+    font-size: 70px;
+    font-weight: bold;
+  }
+
+  .trustedusers h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 0 3em 0;
+  }
+
+  .trustedusers ul li {
+    display: inline-block;
+    margin-right: 5%;
+    width: 25%;
+  }
+
+  .trustedusers ul li img {
+    width: 100%;
+  }
+
+  /* ends */
+
+  /* features section */
+  #features {
+    margin-top: 5em;
+    padding: 1em 0;
+  }
+  /* Features Text */
+  .featuretxt {
+    text-align: justify;
+    margin: 5% 1.5em;
+    padding: 0 5%;
+  }
+
+  .featuretxt h1 {
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .featuretxt p {
+    font-size: 16px;
+  }
+
+  .featuretxt ul li {
+    padding: 1em 0;
+  }
+
+  .featuretxt ul li img {
+    margin: 0 0;
+  }
+
+  /* Features Image */
+  .featureimg {
+    padding: 2em 0%;
+  }
 
   .featureimg img {
-    margin: 2% auto;
+    width: 100%;
   }
   /* ends */
 
   /* how it works section */
-  .howitrow .col-lg-4 .howimg2 {
+  .howitheader {
+    height: fit-content;
+    margin: 2em 0;
+    padding: 2em 0;
+  }
+
+  .howitheader h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 1em 0;
+  }
+
+  .howitrow {
+    padding: 2em;
+  }
+
+  .howitrow .col-lg-4 {
+    position: relative;
+  }
+
+  .howitrow .col-lg-4 .howimg1 {
     position: absolute;
-    top: 50%;
-    left: 105%;
+    top: 15%;
+    left: 90%;
     transform: translate(-50%, -50%);
+    width: 45%;
   }
 
   .div1 {
-    text-align: left;
-    width: 70%;
-    margin: 0 0 0 10%;
+    width: 80%;
+    margin: auto;
+    text-align: justify;
   }
 
-  .div2 {
-    text-align: left;
-    width: 70%;
-    margin: 0 0 0 20%;
+  .div1 .divtxt {
+    margin-top: 1em;
   }
 
-  .div3 {
-    text-align: left;
+  .div1 h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 1em 0;
+  }
+
+  .div1 p {
+    font-size: 16px;
+  }
+
+  .div1 .divimg {
+    width: 100%;
+    padding: 1em;
+  }
+  .div1 .divimg img {
     width: 70%;
-    margin: 0 0 0 30%;
   }
   /* ends */
-  /* Our Investors */
+
+  /* Investors Section */
+  .invest,
+  .entre {
+    margin: 5em 0;
+  }
+
+  .investbox {
+    margin: 0 0 5% 0;
+  }
+
+  .investbox h1 {
+    font-weight: bold;
+    font-size: 30px;
+  }
+
+  .investbox .col-lg-4 {
+    margin: 1% 0;
+  }
+  .invest h1,
+  .entre h1 {
+    font-size: 30px;
+  }
+
+  .invest p,
+  .entre p {
+    font-size: 16px;
+  }
+
+  .invest p span a,
+  .entre p span a {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .ibox .prof .iproimg {
+    width: 10%;
+    float: left;
+    margin-right: 0.5em;
+  }
+
+  .ibox .prof .iprotxt {
+    margin-left: 0.5em;
+  }
+
+  .ibox .browsetable .btn {
+    background-color: #3aafa9 !important;
+    width: 100%;
+  }
+
   .investbox .ibox {
     background-color: #def2f1;
     width: 100%;
@@ -184,13 +338,29 @@
     padding: 3%;
     border-radius: 0.5em;
   }
+
+  .ibox ul li {
+    margin: 0.5em 0 0 0;
+    display: inline-block;
+    margin: 0 0.5em 0 0;
+  }
+
+  .ibox table {
+    width: 100%;
+  }
+
+  .ibox table tr td {
+    padding: 0.5em 0;
+  }
+
   .investbox .iproimg img {
     width: 100%;
     margin: auto;
   }
+
   .investbox .tweetboximg img {
-    width: 100%;
-    margin: 0 0%;
+    width: 90%;
+    margin: 0 5%;
   }
   /* ends */
 
@@ -392,8 +562,8 @@
     padding: 0 0.5em;
   }
 
-  .menu ul li:nth-child(5),
-  .menu ul li:nth-child(6) {
+  .menu ul .login,
+  .menu ul .signup {
     margin: auto 2%;
     padding: 0 2em;
   }
@@ -434,10 +604,6 @@
   /* Login SignUp Modal ends */
 
   /* footer */
-  footer {
-    margin: 1% 0%;
-  }
-
   footer .inputsubs input {
     height: 5vh;
   }
@@ -473,87 +639,236 @@
   }
   /* footer ends */
 
-  /* about Img */
-  .aboutimg {
-    margin: auto;
-  }
-  /* ends */
-
-  /* featuredIn section */
-  #featuredIn {
-    background-color: #def2f1;
+  /* homePage Section */
+  .homePage {
+    margin: 2em 0;
   }
 
-  /* Active Users and User Ratings */
-  .userdata .activeuser,
-  .userdata .userratings {
-    text-align: center;
+  /* About Section */
+  .aboutcompany {
+    margin: 5% 1em;
+    width: 90%;
+    padding: 0 5%;
   }
 
-  .userdata .activeuser h1,
-  .userdata .userratings h1 {
+  .aboutcompany h1 {
     font-size: 40px;
     font-weight: bold;
   }
 
-  .userdata .activeuser p,
-  .userdata .userratings p {
+  .aboutcompany p {
     font-size: 16px;
-    font-weight: bold;
   }
 
-  /* .userdata .activeuser i {
-  color: red;
-}
-
-.userdata .userratings i {
-  color: gold;
-} */
-
-  /* Trusted Users */
-  .trustedusers {
-    padding: 3% 0;
+  .aboutcompany a:hover {
+    text-decoration: none;
   }
 
-  .trustedusers img {
-    width: 20%;
+  .aboutcompany .getstarted {
+    background-color: #3aafa9;
+    padding: 1em 1em;
+    border: 0.1em solid #3aafa9;
+    width: fit-content;
+    border-radius: 0.5em;
+  }
+
+  .aboutcompany .getstarted a {
+    color: white;
+  }
+
+  /* Image Section */
+  .aboutimg img {
+    width: 100%;
+    margin: 20% 0;
   }
   /* ends */
 
-  /* Features Section */
+  /* featuredIn section */
+
+  #featuredIn {
+    background-color: #def2f1;
+    padding: 1em 0;
+  }
+
+  .featrow {
+    padding: 5em 0;
+  }
+
+  .featrow .userrate {
+    padding: 2em 5%;
+  }
+
+  .featrow .userrate h1 {
+    font-size: 70px;
+    font-weight: bold;
+  }
+
+  .trustedusers h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 0 3em 0;
+  }
+
+  .trustedusers ul li {
+    display: inline-block;
+    margin-right: 5%;
+    width: 25%;
+  }
+
+  .trustedusers ul li img {
+    width: 100%;
+  }
+
+  /* ends */
+
+  /* features section */
+  #features {
+    margin-top: 5em;
+    padding: 1em 0;
+  }
+  /* Features Text */
+  .featuretxt {
+    text-align: justify;
+    margin: 5% 1.5em;
+    padding: 0 5%;
+  }
+
+  .featuretxt h1 {
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .featuretxt p {
+    font-size: 16px;
+  }
+
+  .featuretxt ul li {
+    padding: 1em 0;
+  }
+
+  .featuretxt ul li img {
+    margin: 0 0;
+  }
+
+  /* Features Image */
+  .featureimg {
+    padding: 2em 0%;
+  }
 
   .featureimg img {
-    margin: 2% auto;
+    width: 100%;
   }
   /* ends */
 
   /* how it works section */
-  .howitrow .col-lg-4 .howimg2 {
+  .howitheader {
+    height: fit-content;
+    margin: 2em 0;
+    padding: 2em 0;
+  }
+
+  .howitheader h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 1em 0;
+  }
+
+  .howitrow {
+    padding: 2em;
+  }
+
+  .howitrow .col-lg-4 {
+    position: relative;
+  }
+
+  .howitrow .col-lg-4 .howimg1 {
     position: absolute;
-    top: 50%;
-    left: 105%;
+    top: 20%;
+    left: 90%;
     transform: translate(-50%, -50%);
+    width: 45%;
   }
 
   .div1 {
-    text-align: left;
-    width: 70%;
-    margin: 0 0 0 10%;
+    width: 80%;
+    margin: auto;
+    text-align: justify;
   }
 
-  .div2 {
-    text-align: left;
-    width: 70%;
-    margin: 0 0 0 20%;
+  .div1 .divtxt {
+    margin-top: 1em;
   }
 
-  .div3 {
-    text-align: left;
+  .div1 h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 1em 0;
+  }
+
+  .div1 p {
+    font-size: 16px;
+  }
+
+  .div1 .divimg {
+    width: 100%;
+    padding: 1em;
+  }
+  .div1 .divimg img {
     width: 70%;
-    margin: 0 0 0 30%;
   }
   /* ends */
-  /* Our Investors */
+
+  /* Investors Section */
+  .invest,
+  .entre {
+    margin: 5em 0;
+  }
+
+  .investbox {
+    margin: 0 0 5% 0;
+  }
+
+  .investbox h1 {
+    font-weight: bold;
+    font-size: 30px;
+  }
+
+  .investbox .col-lg-4 {
+    margin: 1% 0;
+  }
+  .invest h1,
+  .entre h1 {
+    font-size: 30px;
+  }
+
+  .invest p,
+  .entre p {
+    font-size: 16px;
+  }
+
+  .invest p span a,
+  .entre p span a {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .ibox .prof .iproimg {
+    width: 10%;
+    float: left;
+    margin-right: 0.5em;
+  }
+
+  .ibox .prof .iprotxt {
+    margin-left: 0.5em;
+  }
+
+  .ibox .browsetable .btn {
+    background-color: #3aafa9 !important;
+    width: 100%;
+  }
+
   .investbox .ibox {
     background-color: #def2f1;
     width: 100%;
@@ -562,13 +877,28 @@
     border-radius: 0.5em;
   }
 
+  .ibox ul li {
+    margin: 0.5em 0 0 0;
+    display: inline-block;
+    margin: 0 0.5em 0 0;
+  }
+
+  .ibox table {
+    width: 100%;
+  }
+
+  .ibox table tr td {
+    padding: 0.5em 0;
+  }
+
   .investbox .iproimg img {
     width: 100%;
     margin: auto;
   }
+
   .investbox .tweetboximg img {
-    width: 100%;
-    margin: 0 0%;
+    width: 90%;
+    margin: 0 5%;
   }
   /* ends */
 
@@ -771,8 +1101,8 @@
     padding: 0 0.5em;
   }
 
-  .menu ul li:nth-child(5),
-  .menu ul li:nth-child(6) {
+  .menu ul .login,
+  .menu ul .signup {
     margin: auto 2%;
     padding: 0 2em;
   }
@@ -813,10 +1143,6 @@
   /* Login SignUp Modal ends */
 
   /* footer */
-  footer {
-    margin: 1% 0%;
-  }
-
   footer .inputsubs input {
     height: 5vh;
   }
@@ -852,87 +1178,236 @@
   }
   /* footer ends */
 
-  /* about Img */
-  .aboutimg {
-    margin: auto;
-  }
-  /* ends */
-
-  /* featuredIn section */
-  #featuredIn {
-    background-color: #def2f1;
+  /* homePage Section */
+  .homePage {
+    margin: 2em 0;
   }
 
-  /* Active Users and User Ratings */
-  .userdata .activeuser,
-  .userdata .userratings {
-    text-align: center;
+  /* About Section */
+  .aboutcompany {
+    margin: 5% 1em;
+    width: 90%;
+    padding: 0 5%;
   }
 
-  .userdata .activeuser h1,
-  .userdata .userratings h1 {
+  .aboutcompany h1 {
     font-size: 40px;
     font-weight: bold;
   }
 
-  .userdata .activeuser p,
-  .userdata .userratings p {
+  .aboutcompany p {
     font-size: 16px;
-    font-weight: bold;
   }
 
-  /* .userdata .activeuser i {
-  color: red;
-}
-
-.userdata .userratings i {
-  color: gold;
-} */
-
-  /* Trusted Users */
-  .trustedusers {
-    padding: 3% 0;
+  .aboutcompany a:hover {
+    text-decoration: none;
   }
 
-  .trustedusers img {
-    width: 20%;
+  .aboutcompany .getstarted {
+    background-color: #3aafa9;
+    padding: 1em 1em;
+    border: 0.1em solid #3aafa9;
+    width: fit-content;
+    border-radius: 0.5em;
+  }
+
+  .aboutcompany .getstarted a {
+    color: white;
+  }
+
+  /* Image Section */
+  .aboutimg img {
+    width: 100%;
+    margin: 5% 0;
   }
   /* ends */
 
-  /* Features Section */
+  /* featuredIn section */
+
+  #featuredIn {
+    background-color: #def2f1;
+    padding: 1em 0;
+  }
+
+  .featrow {
+    padding: 5em 0;
+  }
+
+  .featrow .userrate {
+    padding: 2em 5%;
+  }
+
+  .featrow .userrate h1 {
+    font-size: 70px;
+    font-weight: bold;
+  }
+
+  .trustedusers h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 0 3em 0;
+  }
+
+  .trustedusers ul li {
+    display: inline-block;
+    margin-right: 5%;
+    width: 25%;
+  }
+
+  .trustedusers ul li img {
+    width: 100%;
+  }
+
+  /* ends */
+
+  /* features section */
+  #features {
+    margin-top: 5em;
+    padding: 1em 0;
+  }
+  /* Features Text */
+  .featuretxt {
+    text-align: justify;
+    margin: 5% 1.5em;
+    padding: 0 5%;
+  }
+
+  .featuretxt h1 {
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .featuretxt p {
+    font-size: 16px;
+  }
+
+  .featuretxt ul li {
+    padding: 1em 0;
+  }
+
+  .featuretxt ul li img {
+    margin: 0 0;
+  }
+
+  /* Features Image */
+  .featureimg {
+    padding: 2em 10%;
+  }
 
   .featureimg img {
-    margin: 2% 20%;
+    width: 90%;
   }
   /* ends */
 
   /* how it works section */
-  .howitrow .col-lg-4 .howimg2 {
+  .howitheader {
+    height: fit-content;
+    margin: 2em 0;
+    padding: 2em 0;
+  }
+
+  .howitheader h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 1em 0;
+  }
+
+  .howitrow {
+    padding: 2em;
+  }
+
+  .howitrow .col-lg-4 {
+    position: relative;
+  }
+
+  .howitrow .col-lg-4 .howimg1 {
     position: absolute;
-    top: 50%;
-    left: 105%;
+    top: 25%;
+    left: 90%;
     transform: translate(-50%, -50%);
+    width: 35%;
   }
 
   .div1 {
-    text-align: left;
-    width: 70%;
-    margin: 0 0 0 10%;
+    width: 80%;
+    margin: auto;
+    text-align: justify;
   }
 
-  .div2 {
-    text-align: left;
-    width: 70%;
-    margin: 0 0 0 20%;
+  .div1 .divtxt {
+    margin-top: 1em;
   }
 
-  .div3 {
-    text-align: left;
+  .div1 h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 1em 0;
+  }
+
+  .div1 p {
+    font-size: 16px;
+  }
+
+  .div1 .divimg {
+    width: 100%;
+    padding: 1em;
+  }
+  .div1 .divimg img {
     width: 70%;
-    margin: 0 0 0 30%;
   }
   /* ends */
-  /* Our Investors */
+
+  /* Investors Section */
+  .invest,
+  .entre {
+    margin: 5em 0;
+  }
+
+  .investbox {
+    margin: 0 0 5% 0;
+  }
+
+  .investbox h1 {
+    font-weight: bold;
+    font-size: 30px;
+  }
+
+  .investbox .col-lg-4 {
+    margin: 1% 0;
+  }
+  .invest h1,
+  .entre h1 {
+    font-size: 30px;
+  }
+
+  .invest p,
+  .entre p {
+    font-size: 16px;
+  }
+
+  .invest p span a,
+  .entre p span a {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .ibox .prof .iproimg {
+    width: 10%;
+    float: left;
+    margin-right: 0.5em;
+  }
+
+  .ibox .prof .iprotxt {
+    margin-left: 0.5em;
+  }
+
+  .ibox .browsetable .btn {
+    background-color: #3aafa9 !important;
+    width: 100%;
+  }
+
   .investbox .ibox {
     background-color: #def2f1;
     width: 100%;
@@ -940,10 +1415,26 @@
     padding: 3%;
     border-radius: 0.5em;
   }
+
+  .ibox ul li {
+    margin: 0.5em 0 0 0;
+    display: inline-block;
+    margin: 0 0.5em 0 0;
+  }
+
+  .ibox table {
+    width: 100%;
+  }
+
+  .ibox table tr td {
+    padding: 0.5em 0;
+  }
+
   .investbox .iproimg img {
     width: 100%;
     margin: auto;
   }
+
   .investbox .tweetboximg img {
     width: 90%;
     margin: 0 5%;
