@@ -214,6 +214,10 @@ span.value.upper::after {
   width: 100%;
 }
 
+.browsebox table td {
+  padding: 0 3% 0 0;
+}
+
 .browsebox .fa-envelope {
   color: blue;
 }
