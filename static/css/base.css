@@ -48,6 +48,10 @@ html {
   padding: 0%;
 }
 
+.container-fluid {
+  margin-bottom: 5em;
+}
+
 a,
 a:link,
 a:visited {
