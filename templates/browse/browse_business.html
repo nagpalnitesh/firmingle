@@ -44,11 +44,9 @@
                             Transaction Types
                         </p>
                         <select class="custom-select browsetrans" aria-label="Default select example">
-                            <option selected>Sort By</option>
+                            <option selected>All transactions</option>
                             <option value="1">Popularity</option>
                             <option value="2">Relevance</option>
-                            <option value="3">Low to High</option>
-                            <option value="4">High to Low</option>
                         </select>
                     </div>
                     <div class="col-sm-12 col-md-auto col-lg-4">
@@ -57,11 +55,9 @@
                             Locations
                         </p>
                         <select class="custom-select browsetrans" aria-label="Default select example">
-                            <option selected>Sort By</option>
-                            <option value="1">Popularity</option>
-                            <option value="2">Relevance</option>
-                            <option value="3">Low to High</option>
-                            <option value="4">High to Low</option>
+                            <option selected></option>
+                            <option value="1">Mumbai</option>
+                            <option value="2">Delhi</option>
                         </select>
                     </div>
                     <div class="col-sm-12 col-md-auto col-lg-4">
@@ -70,54 +66,80 @@
                             Industries
                         </p>
                         <select class="custom-select browsetrans" aria-label="Default select example">
-                            <option selected>Sort By</option>
+                            <option selected></option>
                             <option value="1">Popularity</option>
                             <option value="2">Relevance</option>
                             <option value="3">Low to High</option>
                             <option value="4">High to Low</option>
                         </select>
                     </div>
-                </div>
-                <div class="browserange">
-                    <p>
-                        Investment Size
-                    </p>
-                    <div class="min-max-slider" data-legendnum="2">
-                        <input
-                            id="min"
-                            class="min"
-                            name="min"
-                            type="range"
-                            step="1"
-                            min="14"
-                            max="90"
-                        >
-                        <input
-                            id="max"
-                            class="max"
-                            name="max"
-                            type="range"
-                            step="1"
-                            min="14"
-                            max="90"
-                        >
-                    </div>
-                    <div class="topic" style="float: right;">
-                        <div class="open">
-                            <h2 class="question">
-                                Extras
-                            </h2>
-                            <span class="faq-t"></span>
+                    <div class="col-sm-12 col-md-auto col-lg-4">
+                        <p>
+                            Investment Size
+                        </p>
+                        <div class="min-max-slider" data-legendnum="2">
+                            <input
+                                id="min"
+                                class="min"
+                                name="min"
+                                type="range"
+                                step="1"
+                                min="14"
+                                max="90"
+                            >
+                            <input
+                                id="max"
+                                class="max"
+                                name="max"
+                                type="range"
+                                step="1"
+                                min="14"
+                                max="90"
+                            >
                         </div>
-                        <p class="answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <div class="row extras answer">
-                            <div class="col-sm-12 col-md-auto col-lg-6">
-                                <h1>Hello</h1>
+                    </div>
+                    <div class="col-sm-12 col-md-auto col-lg-4">
+                        <p>
+                            Investment Size
+                        </p>
+                        <div class="min-max-slider" data-legendnum="2">
+                            <input
+                                id="min"
+                                class="min"
+                                name="min"
+                                type="range"
+                                step="1"
+                                min="14"
+                                max="90"
+                            >
+                            <input
+                                id="max"
+                                class="max"
+                                name="max"
+                                type="range"
+                                step="1"
+                                min="14"
+                                max="90"
+                            >
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-auto col-lg-12">
+                        <div class="topic">
+                            <div class="open">
+                                <h2 class="question" style="float: right; margin-top: -5%;">
+                                    Extras
+                                </h2>
+                                <span class="faq-t"></span>
                             </div>
-                            <div class="col-sm-12 col-md-auto col-lg-12">
-                                <h2>World</h2>
+                            <p class="answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <div class="row extras answer">
+                                <div class="col-sm-12 col-md-auto col-lg-6">
+                                    <h1>Hello</h1>
+                                </div>
+                                <div class="col-sm-12 col-md-auto col-lg-12">
+                                    <h2>World</h2>
+                                </div>
                             </div>
-                            <hr>
                         </div>
                     </div>
                 </div>
@@ -130,9 +152,9 @@
                     <div class="col-md-4 browsecol">
                         <div class="browsebox">
                             {% if profile.profile_status == 'Pending'%}
-                            <i class="fas fa-circle" style="color: gold; float: right; font-size: 20px; margin-left: 1em;"></i>
+                            <i class="fas fa-circle" style="color: gold; float: right; font-size: 20px; margin:0 1em;"></i>
                             {% elif profile.profile_status == 'Accepted'%}
-                            <i class="fas fa-circle" style="color: green; float: right; font-size: 20px; margin-left: 1em;"></i>
+                            <i class="fas fa-circle" style="color: green; float: right; font-size: 20px; margin:0 1em;"></i>
                             {% endif %}
                             <p>
                                 <strong>Buisness Associate, Seeking Business Loan: Company offering a broad spectrum of services to its clients. IT service</strong>
@@ -140,7 +162,7 @@
                                 <span style="color: #3aafa9;">Electrical Services Company Seeking Loan in Mumbai, India</span>
                                 <ul class="dashed">
                                     <li>
-                                        Our Company offers Our Company offers Our Company offers Our Company offers Our Company offers Our Company offers Our Company offers Our Company offers Our Company offers Our Company offers Our Company offers Our Company offers
+                                        Our company offers a broad spectrum of services of services such as electrification, digital marketing, ITES, meeting and verification to its clients. - Currently, we have over 7 client for our electrical services, 4 clients for our digital marketing
                                     </li>
                                 </ul>
                             </p>

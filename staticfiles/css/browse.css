@@ -1,3 +1,6 @@
+.browse {
+  padding: 0 5%;
+}
 .browse h1 {
   font-size: 30px;
   margin-top: 2%;
@@ -25,16 +28,13 @@
   box-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.37);
 }
 
-.browse .browserange {
-  margin: 2% 0;
-}
-
 /* Min and Max Range Slider */
 .min-max-slider {
   position: relative;
-  width: 200px;
+  width: 100%;
   text-align: justify;
   margin-bottom: 50px;
+  background-color: blue;
 }
 .min-max-slider > label {
   display: none;
@@ -76,12 +76,13 @@ span.value.upper::after {
   -webkit-appearance: none;
   outline: none !important;
   background: transparent;
+  height: 50px;
   background-image: linear-gradient(
     to bottom,
     transparent 0%,
     transparent 30%,
-    silver 30%,
-    silver 60%,
+    #3aafa9 30%,
+    #3aafa9 60%,
     transparent 60%,
     transparent 100%
   );
@@ -90,10 +91,10 @@ span.value.upper::after {
   -webkit-appearance: none; /* Override default look */
   appearance: none;
   width: 10px; /* Set a specific slider handle width */
-  height: 20px; /* Slider handle height */
+  height: 30px; /* Slider handle height */
   background: #eee; /* Green background */
   cursor: pointer; /* Cursor on hover */
-  border: 1px solid gray;
+  border: 1px solid #3aafa9;
   border-radius: 0.5em;
 }
 .min-max-slider > input::-webkit-slider-runnable-track {
@@ -168,22 +169,39 @@ span.value.upper::after {
   background-color: white;
   width: 100%;
   margin: 3% auto;
+  padding: 3% 0% 3% 3%;
+  border-radius: 1em;
+  box-shadow: 0px 6px 5px -5px rgba(94, 93, 93, 0.61) inset,
+    2px 4px 9px -5px white inset;
+  border: 0.1em solid rgba(170, 170, 170, 0.3);
+}
+
+.browsebox p {
+  font-size: 18px;
+}
+
+.browsebox2 {
+  background-color: white;
+  width: 90%;
+  margin: 2% auto;
   padding: 3%;
   border-radius: 1em;
-  box-shadow: 0px 6px 5px -5px #000 inset, 2px 4px 9px -5px green inset;
+  box-shadow: 0px 6px 5px -5px rgba(94, 93, 93, 0.61) inset,
+    2px 4px 9px -5px white inset;
   border: 0.1em solid rgba(170, 170, 170, 0.3);
 }
 
 .dashed {
-  width: 95%;
-  margin-left: 2%;
-  margin-top: -2%;
+  width: 100%;
+  margin-left: 1%;
+  margin-top: -4%;
+  font-size: 15px;
 }
 
 .dashed li::before {
-  content: "\2014";
+  content: "-";
   position: absolute;
-  margin-left: -20px;
+  margin-left: -10px;
 }
 
 .browsebox .sociallist li {
@@ -191,7 +209,8 @@ span.value.upper::after {
   padding: 0 0.5em 0 0;
 }
 
-.browsebox table {
+.browsebox table,
+.browsebox2 table {
   width: 100%;
 }
 
@@ -213,7 +232,7 @@ span.value.upper::after {
   opacity: 0.5;
 }
 
-.browsebox .prof img {
+.browsebox2 .prof img {
   width: 10%;
   float: left;
   margin-right: 0.5em;
@@ -223,6 +242,15 @@ span.value.upper::after {
   background-color: #3aafa9;
   font-weight: bold;
   color: white;
+  width: 60%;
+  margin-top: -2%;
+}
+
+.browsebox2 .btnprop2 {
+  background-color: #3aafa9;
+  font-weight: bold;
+  color: white;
+  width: 90%;
   padding: 0.2em 2em;
   margin-top: -2%;
 }
