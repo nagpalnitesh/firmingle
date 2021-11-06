@@ -176,8 +176,13 @@ span.value.upper::after {
   border: 0.1em solid rgba(170, 170, 170, 0.3);
 }
 
-.browsebox p {
+.browsebox .bizp {
   font-size: 18px;
+  width: 90%;
+}
+
+.bizp span {
+  font-size: 16px;
 }
 
 .browsebox2 {
