@@ -1,360 +1,392 @@
 {% extends  'base.html' %}
 {% load static %}
 {% block content %}
-<!-- Confidential Information -->
-<div class="confinfo">
-    <h1>Confidential Information</h1>
-    <p>
-        Please enter your own details here. Information entered here is not publicly displayed.
-    </p>
-    <div class="confinf">
-        <form action="{% url 'investform_save'%}" id="msform" method="post">
-            {% csrf_token %}
-            <fieldset>
-                <h2 class="fs-title">Personal Details</h2>
-                <h3 class="fs-subtitle">Tell us something more about you</h3>
-                <div class="form-row">
-                    <div class="form-group col-md-12">
-                        <label for="iname">Name</label>
-                        <input
-                            type="text"
-                            class="form-control"
-                            id="iname"
-                            name="iname"
-                            value="{{user.first_name}} {{user.last_name}}"
-                            placeholder="enter your name"
-                        >
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="iphone">Your Mobile Number</label>
-                        <input
-                            type="text"
-                            class="form-control"
-                            id="iphone"
-                            name="iphone"
-                            placeholder="Enter your Mobile Number"
-                        >
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="iemail">Email</label>
-                        <input
-                            type="email"
-                            class="form-control"
-                            id="iemail"
-                            name="iemail"
-                            value="{{user.email}}"
-                            placeholder="enter official email for quick verification"
-                        >
-                    </div>
-                </div>
-                <input
-                    type="button"
-                    name="next"
-                    class="next action-button"
-                    value="Next"
-                >
-            </fieldset>
-            <fieldset>
-                <h2 class="fs-title">Social Profiles</h2>
-                <h3 class="fs-subtitle">Your presence on the social network</h3>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="iprof">You are a(n)</label>
-                        <input
-                            type="text"
-                            class="form-control"
-                            name="iprof"
-                            placeholder="enter your profession"
-                        >
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="iinterest">You are interested in</label>
-                        <input
-                            type="text"
-                            class="form-control"
-                            name="iinterest"
-                            placeholder="Enter your interest"
-                        >
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="ifind">Select business' industry</label>
-                        <input
-                            type="text"
-                            class="form-control"
-                            name="ifind"
-                            placeholder="enter your business' industry"
-                        >
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="iloc">Select locations you are interested in</label>
-                        <input
-                            type="text"
-                            class="form-control"
-                            name="iloc"
-                            placeholder="enter your business location"
-                        >
-                    </div>
-                </div>
-                <input
-                    type="button"
-                    name="previous"
-                    class="previous action-button-previous"
-                    value="Previous"
-                >
-                <input
-                    type="button"
-                    name="next"
-                    class="next action-button"
-                    value="Next"
-                >
-            </fieldset>
-            <fieldset>
-                <h2 class="fs-title">Social Profiles2</h2>
-                <h3 class="fs-subtitle">Your presence on the social network</h3>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="iprice">Provide your Investment Range</label>
-                        <input
-                            type="number"
-                            class="form-control"
-                            name="iprice"
-                            placeholder="enter your profession"
-                        >
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="icloc">Your Current Location</label>
-                        <input
-                            type="text"
-                            class="form-control"
-                            name="icloc"
-                            placeholder="Enter your business entity type"
-                        >
-                    </div>
-                    <div class="form-group col-md-12">
-                        <label for="icomp">Your Company</label>
-                        <input
-                            type="text"
-                            class="form-control"
-                            name="icomp"
-                            placeholder="About your business"
-                        >
-                    </div>
-                    <div class="form-group col-md-12">
-                        <label for="idesg">Your Designation</label>
-                        <input
-                            type="text"
-                            class="form-control"
-                            name="idesg"
-                            placeholder="Your Business highlights"
-                        >
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="ilink">Company Website or Linkedin Profile</label>
-                        <input
-                            type="text"
-                            class="form-control"
-                            name="ilink"
-                            placeholder="All products and services list"
-                        >
-                    </div>
-                    <div class="form-group col-md-6">
-                        <div class="upload">
-                            <label for="chooseiimage">Company Logo</label>
-                            <input
-                                type="file"
-                                class="form-control-file"
-                                name="chooseiimage"
-                                accept="image/*"
-                                multiple
-                                name="chooseiimage"
-                            >
+<div class="content">
+    <div class="container-fluid">
+        <!-- navbar -->
+        {% include 'components/navbar.html' %}
+        <!-- ends -->
+        <!-- Business Information -->
+        <div class="confinfo">
+            <div class="confin">
+                <form action="{% url 'businessAdd'%}" id="msform" method="post">
+                    {% csrf_token %}
+                    <fieldset>
+                        <h1>Confidential Information</h1>
+                        <p>
+                            Please enter your own details here. Information entered here is not publicly displayed.
+                        </p>
+                        <div class="fieldset1">
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label for="iname">Name</label>
+                                    <input
+                                        type="text"
+                                        class="form-control forminput2"
+                                        id="iname"
+                                        name="iname"
+                                        value="{{user.first_name}} {{user.last_name}}"
+                                        placeholder="enter your name"
+                                    >
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="iphone">Your Mobile Number</label>
+                                    <input
+                                        type="text"
+                                        class="form-control forminput"
+                                        id="iphone"
+                                        name="iphone"
+                                        placeholder="Enter your Mobile Number"
+                                    >
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="iemail">Email</label>
+                                    <input
+                                        type="email"
+                                        class="form-control forminput"
+                                        id="iemail"
+                                        name="iemail"
+                                        value="{{user.email}}"
+                                        placeholder="enter official email for quick verification"
+                                    >
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group col-md-12">
-                        <label for="ilink2">Company Website or Linkedin Profile</label>
                         <input
-                            type="text"
-                            class="form-control"
-                            name="ilink2"
-                            placeholder="All products and services list"
+                            type="button"
+                            name="next"
+                            class="next action-button"
+                            value="Submit"
                         >
-                    </div>
-                    <div class="form-group col-md-12">
-                        <label for="isec">Your company's sector</label>
-                        <input
-                            type="text"
-                            class="form-control"
-                            name="isec"
-                            placeholder="Your facilities"
-                        >
-                    </div>
-                </div>
-                <input
-                    type="button"
-                    name="previous"
-                    class="previous action-button-previous"
-                    value="Previous"
-                >
-                <input
-                    type="button"
-                    name="next"
-                    class="next action-button"
-                    value="Next"
-                >
-            </fieldset>
-            <fieldset>
-                <h2 class="fs-title">Create your account</h2>
-                <h3 class="fs-subtitle">Fill in your credentials</h3>
-                <div class="form-row">
-                    <div class="form-group col-md-12">
-                        <label for="ifactors">factors you look for in a business</label>
-                        <input
-                            type="text"
-                            class="form-control"
-                            name="ifactors"
-                            placeholder="your profit margin percentage"
-                        >
-                    </div>
-                    <div class="form-group col-md-12">
-                        <label for="iassets">About your Company</label>
-                        <input
-                            type="text"
-                            class="form-control"
-                            name="iassets"
-                            placeholder="enter your business assets"
-                        >
-                    </div>
-                    <div class="form-group col-md-4">
-                        <div class="upload">
-                            <label for="chooseprofile">Profile Picture</label>
-                            <input
-                                type="file"
-                                class="form-control-file"
-                                name="chooseprofile"
-                                accept="image/*"
-                                multiple
-                            >
+                    </fieldset>
+                    <fieldset>
+                        <h1>Business Information</h1>
+                        <p>
+                            Information entered here is displayed publicly to match you with the right set of investors and buyers. Do not mention business name/ information which can identify the business.
+                        </p>
+                        <div class="fieldset1">
+                            <h2>
+                                <strong>Basic Information</strong>
+                            </h2>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="iprof">You are a(n)</label>
+                                    <input
+                                        type="text"
+                                        class="form-control forminput"
+                                        name="iprof"
+                                        placeholder="enter your profession"
+                                    >
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="iinterest">You are interested in</label>
+                                    <input
+                                        type="text"
+                                        class="form-control forminput"
+                                        name="iinterest"
+                                        placeholder="Enter your interest"
+                                    >
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="ifind">Select business' industry</label>
+                                    <input
+                                        type="text"
+                                        class="form-control forminput"
+                                        name="ifind"
+                                        placeholder="enter your business' industry"
+                                    >
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="iloc">Select locations you are interested in</label>
+                                    <input
+                                        type="text"
+                                        class="form-control forminput"
+                                        name="iloc"
+                                        placeholder="enter your business location"
+                                    >
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group col-md-4">
-                        <div class="upload">
-                            <label for="chooseterms">Attach Corporate Profile and Terms of Engagement if any</label>
-                            <input
-                                type="file"
-                                class="form-control-file"
-                                name="chooseterms"
-                                accept="application/pdf, image/*"
-                                multiple
-                            >
+                        <input
+                            type="button"
+                            name="next"
+                            class="next action-button"
+                            value="Next"
+                        >
+                    </fieldset>
+                    <fieldset>
+                        <h1>Business Information</h1>
+                        <p>
+                            Information entered here is displayed publicly to match you with the right set of investors and buyers. Do not mention business name/ information which can identify the business.
+                        </p>
+                        <input
+                            type="button"
+                            name="previous"
+                            class="previous action-button-previous"
+                            value="GO BACK"
+                        >
+                        <div class="fieldset1">
+                            <h2>
+                                <strong>Detailed Information</strong>
+                            </h2>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="iprice">Provide your Investment Range</label>
+                                    <input
+                                        type="number"
+                                        class="form-control forminput"
+                                        name="iprice"
+                                        placeholder="enter your profession"
+                                    >
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="icloc">Your Current Location</label>
+                                    <input
+                                        type="text"
+                                        class="form-control forminput"
+                                        name="icloc"
+                                        placeholder="Enter your business entity type"
+                                    >
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="icomp">Your Company</label>
+                                    <input
+                                        type="text"
+                                        class="form-control forminput2"
+                                        name="icomp"
+                                        placeholder="About your business"
+                                    >
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="idesg">Your Designation</label>
+                                    <input
+                                        type="text"
+                                        class="form-control forminput2"
+                                        name="idesg"
+                                        placeholder="Your Business highlights"
+                                    >
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="ilink">Company Website or Linkedin Profile</label>
+                                    <input
+                                        type="text"
+                                        class="form-control forminput2"
+                                        name="ilink"
+                                        placeholder="All products and services list"
+                                    >
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <div class="upload">
+                                        <label for="chooseiimage">Company Logo</label>
+                                        <input
+                                            type="file"
+                                            class="form-control-file"
+                                            name="chooseiimage"
+                                            accept="image/*"
+                                            multiple
+                                            name="chooseiimage"
+                                        >
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="ilink2">Company Website or Linkedin Profile</label>
+                                    <input
+                                        type="text"
+                                        class="form-control forminput2"
+                                        name="ilink2"
+                                        placeholder="All products and services list"
+                                    >
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="isec">Your company's sector</label>
+                                    <input
+                                        type="text"
+                                        class="form-control forminput2"
+                                        name="isec"
+                                        placeholder="Your facilities"
+                                    >
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group col-md-4">
-                        <div class="upload">
-                            <label for="chooseproof">Attach proof of business for faster verification</label>
-                            <input
-                                type="file"
-                                name="chooseproof"
-                                accept="image/*, application/pdf"
-                                multiple
-                            >
+                        <input
+                            type="button"
+                            name="next"
+                            class="next action-button"
+                            value="Next"
+                        >
+                    </fieldset>
+                    <fieldset>
+                        <h1>Business Information</h1>
+                        <p>
+                            Information entered here is displayed publicly to match you with the right set of investors and buyers. Do not mention business name/ information which can identify the business.
+                        </p>
+                        <input
+                            type="button"
+                            name="previous"
+                            class="previous action-button-previous"
+                            value="GO BACK"
+                        >
+                        <div class="fieldset1">
+                            <h2>
+                                <strong>Extra Information</strong>
+                            </h2>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label for="ifactors">factors you look for in a business</label>
+                                    <input
+                                        type="text"
+                                        class="form-control forminput2"
+                                        name="ifactors"
+                                        placeholder="your profit margin percentage"
+                                    >
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="iassets">About your Company</label>
+                                    <input
+                                        type="text"
+                                        class="form-control forminput2"
+                                        name="iassets"
+                                        placeholder="enter your business assets"
+                                    >
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <div class="upload">
+                                        <label for="chooseprofile">Profile Picture</label>
+                                        <input
+                                            type="file"
+                                            class="form-control-file"
+                                            name="chooseprofile"
+                                            accept="image/*"
+                                            multiple
+                                        >
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <div class="upload">
+                                        <label for="chooseterms">Attach Corporate Profile and Terms of Engagement if any</label>
+                                        <input
+                                            type="file"
+                                            class="form-control-file"
+                                            name="chooseterms"
+                                            accept="application/pdf, image/*"
+                                            multiple
+                                        >
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <div class="upload">
+                                        <label for="chooseproof">Attach proof of business for faster verification</label>
+                                        <input
+                                            type="file"
+                                            name="chooseproof"
+                                            accept="image/*, application/pdf"
+                                            multiple
+                                        >
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <input
-                    type="button"
-                    name="previous"
-                    class="previous action-button-previous"
-                    value="Previous"
-                >
-                <input
-                    type="submit"
-                    name="submit"
-                    class="submit action-button"
-                    value="Submit"
-                >
-            </fieldset>
-        </form>
+                        <input
+                            type="submit"
+                            name="submit"
+                            class="submit action-button"
+                            value="Submit"
+                        >
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <!-- ends -->
+        <!-- Confidential Information -->
+        <!-- <div class="confinf">
+            <div class="confinf coninvest">
+                <form action="{% url 'investform_save'%}" id="msform" method="post">
+                    {% csrf_token %}
+                    
+                </form>
+            </div>
+        </div> -->
+        <!-- ends -->
     </div>
 </div>
+<!-- footer -->
+{% include 'components/footer1.html' %}
 <!-- ends -->
 <!-- form display script -->
 <script>
+    $(document).ready(function(){
+        var current_fs, next_fs, previous_fs; //fieldsets
+        var opacity;
+        var current = 1;
+        var steps = $("fieldset").length;
+        
+        setProgressBar(current);
+        
+        $(".next").click(function(){
+            current_fs = $(this).parent();
+            next_fs = $(this).parent().next();
 
-    //jQuery time
-    var current_fs, next_fs, previous_fs; //fieldsets
-    var left, opacity, scale; //fieldset properties which we will animate
-    var animating; //flag to prevent quick multi-click glitches
-    $(".next").click(function(){
-        if(animating) return false;
-        animating = true;
+            //Add Class Active
+            $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
 
-        current_fs = $(this).parent();
-        next_fs = $(this).parent().next();
+            //show the next fieldset
+            next_fs.show();
+            //hide the current fieldset with style
+            current_fs.animate({opacity: 0}, {
+                step: function(now) {
+                // for making fielset appear animation
+                    opacity = 1 - now;
 
-        //activate next step on progressbar using the index of next_fs
-        $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
-
-        //show the next fieldset
-        next_fs.show();
-        //hide the current fieldset with style
-        current_fs.animate({opacity: 0}, {
-            step: function(now, mx) {
-                //as the opacity of current_fs reduces to 0 - stored in "now"
-                //1. scale current_fs down to 80%
-                scale = 1 - (1 - now) * 0.2;
-                //2. bring next_fs from the right(50%)
-                left = (now * 50)+"%";
-                //3. increase opacity of next_fs to 1 as it moves in
-                opacity = 1 - now;
-                current_fs.css({
-            'transform': 'scale('+scale+')',
-            'position': 'absolute'
-          });
-                next_fs.css({'left': left, 'opacity': opacity});
-            },
-            duration: 800,
-            complete: function(){
-                current_fs.hide();
-                animating = false;
-            },
-            //this comes from the custom easing plugin
-            easing: 'easeInOutBack'
+                    current_fs.css({
+                        'display': 'none',
+                        'position': 'relative'
+                    });
+                    next_fs.css({'opacity': opacity});
+                },
+                duration: 500
+            });
+            setProgressBar(++current);
         });
-    });
 
-    $(".previous").click(function(){
-        if(animating) return false;
-        animating = true;
+        $(".previous").click(function(){
 
-        current_fs = $(this).parent();
-        previous_fs = $(this).parent().prev();
+            current_fs = $(this).parent();
+            previous_fs = $(this).parent().prev();
 
-        //de-activate current step on progressbar
-        $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+            //Remove class active
+            $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
 
-        //show the previous fieldset
-        previous_fs.show();
-        //hide the current fieldset with style
-        current_fs.animate({opacity: 0}, {
-            step: function(now, mx) {
-                //as the opacity of current_fs reduces to 0 - stored in "now"
-                //1. scale previous_fs from 80% to 100%
-                scale = 0.8 + (1 - now) * 0.2;
-                //2. take current_fs to the right(50%) - from 0%
-                left = ((1-now) * 50)+"%";
-                //3. increase opacity of previous_fs to 1 as it moves in
-                opacity = 1 - now;
-                current_fs.css({'left': left});
-                previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
-            },
-            duration: 800,
-            complete: function(){
-                current_fs.hide();
-                animating = false;
-            },
-            //this comes from the custom easing plugin
-            easing: 'easeInOutBack'
+            //show the previous fieldset
+            previous_fs.show();
+
+            //hide the current fieldset with style
+            current_fs.animate({opacity: 0}, {
+                step: function(now) {
+                // for making fielset appear animation
+                    opacity = 1 - now;
+
+                    current_fs.css({
+                        'display': 'none',
+                        'position': 'relative'
+                    });
+                    previous_fs.css({'opacity': opacity});
+                },
+                duration: 500
+            });
+            setProgressBar(--current);
         });
+
+        function setProgressBar(curStep){
+            var percent = parseFloat(100 / steps) * curStep;
+            percent = percent.toFixed();
+            $(".progress-bar")
+                .css("width",percent+"%")
+        }
+
+        // $(".submit").click(function(){
+        //     return false;
+        // })
+
     });
 </script>
 <!-- ends -->

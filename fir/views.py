@@ -309,7 +309,25 @@ def businessAdd(request):
             email=confemail,
             phone=confphone,
             profession=confprof,
-            business_established=confdate, business_location=confloc, industry=confind, interested_in=confinterest, company=confcompany, no_employees=confhow, legal=conflegal, describe=confdes, describe_new=confdesc1, product_list=conflist, highlights=confhigh, monthly_sales=confsale, yearly_sales=confyear, ebitda=confprofit, physical_assets=confphy, assets=confassets, photos=chooseimage, docs=choosedocs, proof=choosefast)
+            business_established=confdate, 
+            business_location=confloc, 
+            industry=confind, 
+            interested_in=confinterest, 
+            company=confcompany, 
+            no_employees=confhow, 
+            legal=conflegal, 
+            describe=confdes, 
+            describe_new=confdesc1, 
+            product_list=conflist, 
+            highlights=confhigh, 
+            monthly_sales=confsale, 
+            yearly_sales=confyear, 
+            ebitda=confprofit, 
+            physical_assets=confphy, 
+            assets=confassets, 
+            photos=chooseimage, 
+            docs=choosedocs, 
+            proof=choosefast)
         biz_obj.save()
         messages.success(
             request, " Your Business Profile succefully submitted")

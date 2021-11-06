@@ -1,0 +1,199 @@
+
+
+
+
+
+
+/*form styles*/
+
+.confinfo {
+  background-color: #ee0979;
+  margin: 2em 0;
+  padding: 2em 5%;
+}
+
+#msform {
+  /* Form Id*/
+  position: relative;
+  margin-top: 30px;
+  background-color: green;
+  padding: 1em;
+}
+
+#msform fieldset {
+  /* Fieldset */
+  background: red;
+  border-radius: 0.5em;
+  box-shadow: 0em 0em 0.2em rgba(59, 59, 59, 0.308);
+  padding: 20px 30px;
+  box-sizing: border-box;
+  width: 100%;
+
+  /*stacking fieldsets above each other*/
+  position: relative;
+}
+
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+  display: none;
+}
+
+/*inputs*/
+#msform .forminput,
+#msform textarea {
+  padding: 15px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  color: #2c3e50;
+  font-size: 16px;
+  width: 90%;
+  border-bottom: 0.1em solid black;
+}
+
+#msform input:focus,
+#msform textarea:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border-bottom: 0.1em solid #3aafa9;
+  outline-width: 0;
+  transition: All 0.5s ease-in;
+  -webkit-transition: All 0.5s ease-in;
+  -moz-transition: All 0.5s ease-in;
+  -o-transition: All 0.5s ease-in;
+}
+
+/*buttons*/
+#msform .action-button {
+  width: 100%;
+  background: #3aafa9;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 0.2em;
+  cursor: pointer;
+  padding: 0.5em 0;
+  margin: 1em 0;
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+  background: whitesmoke;
+  color: #3aafa9;
+}
+
+#msform .action-button-previous {
+  width: 100px;
+  font-weight: bold;
+  color: Black;
+  cursor: pointer;
+}
+
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #c5c5f1;
+}
+
+/* Grid Check */
+.formcheck {
+  margin-left: 1em;
+}
+/* ends */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+    //jQuery time
+    var current_fs, next_fs, previous_fs; //fieldsets
+    var left, opacity, scale; //fieldset properties which we will animate
+    var animating; //flag to prevent quick multi-click glitches
+    $(".next").click(function(){
+        if(animating) return false;
+        animating = true;
+
+        current_fs = $(this).parent();
+        next_fs = $(this).parent().next();
+
+        //activate next step on progressbar using the index of next_fs
+        $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+        //show the next fieldset
+        next_fs.show();
+        //hide the current fieldset with style
+        current_fs.animate({opacity: 0}, {
+            step: function(now, mx) {
+                //as the opacity of current_fs reduces to 0 - stored in "now"
+                //1. scale current_fs down to 80%
+                scale = 1 - (1 - now) * 0.2;
+                //2. bring next_fs from the right(50%)
+                left = (now * 50)+"%";
+                //3. increase opacity of next_fs to 1 as it moves in
+                opacity = 1 - now;
+                current_fs.css({
+            'transform': 'scale('+scale+')',
+            'position': 'absolute'
+          });
+                next_fs.css({'left': left, 'opacity': opacity});
+            },
+            duration: 800,
+            complete: function(){
+                current_fs.hide();
+                animating = false;
+            },
+            //this comes from the custom easing plugin
+            easing: 'easeInOutBack'
+        });
+    });
+
+    $(".previous").click(function(){
+        if(animating) return false;
+        animating = true;
+
+        current_fs = $(this).parent();
+        previous_fs = $(this).parent().prev();
+
+        //de-activate current step on progressbar
+        $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+        //show the previous fieldset
+        previous_fs.show();
+        //hide the current fieldset with style
+        current_fs.animate({opacity: 0}, {
+            step: function(now, mx) {
+                //as the opacity of current_fs reduces to 0 - stored in "now"
+                //1. scale previous_fs from 80% to 100%
+                scale = 0.8 + (1 - now) * 0.2;
+                //2. take current_fs to the right(50%) - from 0%
+                left = ((1-now) * 50)+"%";
+                //3. increase opacity of previous_fs to 1 as it moves in
+                opacity = 1 - now;
+                current_fs.css({'left': left});
+                previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+            },
+            duration: 800,
+            complete: function(){
+                current_fs.hide();
+                animating = false;
+            },
+            //this comes from the custom easing plugin
+            easing: 'easeInOutBack'
+        });
+    });
+</script>
