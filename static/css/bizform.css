@@ -35,12 +35,14 @@
   display: none;
 }
 
-#msform input {
+#msform input,
+#msform select {
   border: none;
   border-radius: 0;
 }
 
-#msform .forminput {
+#msform .forminput,
+#msform select {
   padding: 15px 0;
   margin-bottom: 10px;
   color: #2c3e50;
